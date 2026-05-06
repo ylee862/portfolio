@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Yedam Lee — UX/UI Designer & Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">YN.</a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#projects">Work</a>
+    <a href="#contact">Contact</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☀️</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow reveal">UI/UX Designer & Developer</div>
+    <h1 class="hero-name reveal" style="transition-delay:0.1s">
+      Yedam<br><em>Lee.</em>
+    </h1>
+    <p class="hero-tagline reveal" style="transition-delay:0.2s">
+      I design to make everyone feel easy — removing what isn't needed so what matters actually lands.
+    </p>
+    <!-- <div class="hero-ctas reveal" style="transition-delay:0.3s">
+      <a href="#projects" class="btn-primary">View Work</a>
+      <a href="#contact" class="btn-ghost">Get in Touch</a>
+    </div> -->
+    <div class="hero-position reveal" style="transition-delay:0.4s">
+      <div class="position-item"><div class="position-dot"></div>UX/UI Designer</div>
+      <div class="position-item"><div class="position-dot" style="background:var(--ink3)"></div>Developer</div>
+      <div class="position-item"><div class="position-dot" style="background:var(--ink3)"></div>Researcher</div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">scroll</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label reveal">About</div>
+  <div class="about-grid">
+    <div>
+      <h2 class="about-heading reveal">Research-first.<br>Designed to feel effortless.</h2>
+      <p class="about-bio reveal" style="transition-delay:0.1s">
+        Designer with a foundation in computer science. I move seamlessly from research to interface to code — turning insights into products that actually ship.
+      </p>
+      <p class="about-bio reveal" style="transition-delay:0.15s">
+        I design for immediate understanding. Clear paths, minimal friction, and experiences that feel intuitive from the first interaction.
+      </p>
+      <div class="reveal" style="transition-delay:0.2s">
+        <div class="dev-badge">I can read and write code — smoother dev collaboration, less back-and-forth</div>
+      </div>
+    </div>
+    <div class="skills-col reveal" style="transition-delay:0.15s">
+      <div class="skill-group-label">UX Research</div>
+      <div class="skill-chips">
+        <span class="chip">User interviews</span>
+        <span class="chip">Usability testing</span>
+        <span class="chip">Affinity mapping</span>
+        <span class="chip">Personas</span>
+        <span class="chip">Journey mapping</span>
+      </div>
+      <div class="skill-group-label">Design</div>
+      <div class="skill-chips">
+        <span class="chip">Figma</span>
+        <span class="chip">Wireframing</span>
+        <span class="chip">Prototyping</span>
+        <span class="chip">Design systems</span>
+        <span class="chip">Interaction design</span>
+      </div>
+      <div class="skill-group-label">Development</div>
+      <div class="skill-chips">
+        <span class="chip">React</span>
+        <span class="chip">Python</span>
+        <span class="chip">HTML / CSS</span>
+        <span class="chip">FastAPI</span>
+        <span class="chip">MongoDB</span>
+      </div>
+      <div class="skill-group-label">Foundations</div>
+      <div class="skill-chips">
+        <span class="chip">HCI principles</span>
+        <span class="chip">Accessibility</span>
+        <span class="chip">Cognitive load</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="projects-header">
+    <div>
+      <div class="section-label reveal">Selected Work</div>
+      <h2 class="projects-heading reveal" style="transition-delay:0.1s">Three projects.<br><em style="font-family:'DM Serif Display',serif;font-style:italic;color:var(--accent)">Real problems.</em></h2>
+    </div>
+  </div>
+
+  <div class="carousel-wrapper reveal" style="transition-delay:0.2s">
+    <div class="carousel-track">
+
+      <!-- USRI -->
+      <div class="project-card" onclick="openModal('usri')">
+        <div class="card-visual card-visual-usri">
+          <span class="card-glyph">◎</span>
+          <div class="card-overlay"><span class="card-overlay-text">View Case Study</span></div>
+        </div>
+        <div class="card-body">
+          <div class="card-category">UX Research · HCI</div>
+          <div class="card-title">Student Well-being App</div>
+          <div class="card-desc">Research-to-prototype for a sleep and emotional regulation tool for university students — from lit review to conference presentation.</div>
+          <div class="card-tags">
+            <span class="card-tag">Figma</span>
+            <span class="card-tag">Usability Testing</span>
+            <span class="card-tag">Affinity Mapping</span>
+            <span class="card-tag">Think-aloud</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- NANOBANANA -->
+      <div class="project-card" onclick="openModal('nano')">
+        <div class="card-visual card-visual-nano">
+          <span class="card-glyph">◐</span>
+          <div class="card-overlay"><span class="card-overlay-text">View Case Study</span></div>
+        </div>
+        <div class="card-body">
+          <div class="card-category">Feature Design · Personal</div>
+          <div class="card-title">Nanobanana Enhancement</div>
+          <div class="card-desc">Replaced text-based creative prompts with visual selectors — removing the vocabulary barrier for non-expert users entirely.</div>
+          <div class="card-tags">
+            <span class="card-tag">Interaction Design</span>
+            <span class="card-tag">Community Research</span>
+            <span class="card-tag">Cognitive Load</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- WORDTROPOLIS -->
+      <div class="project-card" onclick="openModal('word')">
+        <div class="card-visual card-visual-word">
+          <span class="card-glyph">❋</span>
+          <div class="card-overlay"><span class="card-overlay-text">View Case Study</span></div>
+        </div>
+        <div class="card-body">
+          <div class="card-category">HCI Project · Gamification</div>
+          <div class="card-title">Wordtropolis</div>
+          <div class="card-desc">Gamified spelling platform for young learners — redesigned around how children naturally learn: through play and visible progress.</div>
+          <div class="card-tags">
+            <span class="card-tag">Figma</span>
+            <span class="card-tag">Java Swing</span>
+            <span class="card-tag">Gamification</span>
+            <span class="card-tag">Child HCI</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section id="skills-tools">
+  <div class="section-label reveal">Tools & Skills</div>
+  <h2 class="tools-heading reveal" style="transition-delay:0.1s">What I work with.</h2>
+  <div class="tools-grid reveal" style="transition-delay:0.2s">
+    <div class="tool-card"><span class="tool-icon">✦</span><div class="tool-name">Figma</div><div class="tool-cat">Design</div></div>
+    <div class="tool-card"><span class="tool-icon">⬡</span><div class="tool-name">React</div><div class="tool-cat">Development</div></div>
+    <div class="tool-card"><span class="tool-icon">◎</span><div class="tool-name">Python</div><div class="tool-cat">Development</div></div>
+    <div class="tool-card"><span class="tool-icon">▣</span><div class="tool-name">FastAPI</div><div class="tool-cat">Backend</div></div>
+    <div class="tool-card"><span class="tool-icon">◑</span><div class="tool-name">MongoDB</div><div class="tool-cat">Data</div></div>
+    <div class="tool-card"><span class="tool-icon">◈</span><div class="tool-name">HTML / CSS</div><div class="tool-cat">Development</div></div>
+    <div class="tool-card"><span class="tool-icon">❋</span><div class="tool-name">User Research</div><div class="tool-cat">UX</div></div>
+    <div class="tool-card"><span class="tool-icon">⬟</span><div class="tool-name">HCI Methods</div><div class="tool-cat">Research</div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label reveal">Contact</div>
+  <h2 class="contact-heading reveal" style="transition-delay:0.1s">Let's work<br><em>together.</em></h2>
+  <p class="contact-sub reveal" style="transition-delay:0.15s">Open to internships, full-time/part-time roles, and collaborative projects. Response within 24 hours.</p>
+
+  <div class="contact-form reveal" style="transition-delay:0.2s">
+    <div class="form-row">
+      <label>Name</label>
+      <input type="text" id="fname" placeholder="Your name" />
+      <span class="field-error" id="err-name">Please enter your name.</span>
+    </div>
+    <div class="form-row">
+      <label>Email</label>
+      <input type="email" id="femail" placeholder="your@email.com" />
+      <span class="field-error" id="err-email">Please enter a valid email address.</span>
+    </div>
+    <div class="form-row">
+      <label>Message</label>
+      <textarea id="fmessage" placeholder="Tell me about the role or project..."></textarea>
+      <span class="field-error" id="err-message">Please enter your message.</span>
+    </div>
+    <button class="btn-primary" onclick="handleSubmit()" style="width:100%;margin-top:6px">Send Message</button>
+    <div class="form-success" id="formSuccess">✓ Message sent — talk soon.</div>
+  </div>
+
+  <div class="contact-links reveal" style="transition-delay:0.3s">
+    <a href="mailto:ylee862ylee@gmail.com" class="contact-link">✉ Email</a>
+    <a href="https://www.linkedin.com/in/yedam-lee-1bb43a281" class="contact-link" target="_blank">in LinkedIn</a>
+    <a href="https://github.com/ylee862" class="contact-link" target="_blank">⌥ GitHub</a>
+  </div>
+</section>
+
+<footer>
+  Designed & coded by Yedam Lee · ylee862.github.io
+</footer>
+
+<!-- MODALS -->
+<div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
+  <div class="modal" id="modalContent">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+// Cursor
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursor-ring');
+let mx = 0, my = 0, rx = 0, ry = 0;
+document.addEventListener('mousemove', e => {
+  mx = e.clientX; my = e.clientY;
+  cursor.style.transform = `translate(calc(${mx}px - 50%), calc(${my}px - 50%))`;
+});
+function animateRing() {
+  rx += (mx - rx) * 0.12;
+  ry += (my - ry) * 0.12;
+  ring.style.transform = `translate(calc(${rx}px - 50%), calc(${ry}px - 50%))`;
+  requestAnimationFrame(animateRing);
+}
+animateRing();
+
+// Theme
+const toggle = document.getElementById('themeToggle');
+let dark = false;
+toggle.onclick = () => {
+  dark = !dark;
+  document.documentElement.setAttribute('data-theme', dark ? 'dark' : '');
+  toggle.textContent = dark ? '🌙' : '☀️';
+};
+
+// Reveal on scroll
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.12 });
+reveals.forEach(r => obs.observe(r));
+
+// Contact form
+function handleSubmit() {
+  const name = document.getElementById('fname');
+  const email = document.getElementById('femail');
+  const message = document.getElementById('fmessage');
+  const errName = document.getElementById('err-name');
+  const errEmail = document.getElementById('err-email');
+  const errMessage = document.getElementById('err-message');
+
+  // Reset errors
+  [name, email, message].forEach(el => el.classList.remove('input-error'));
+  [errName, errEmail, errMessage].forEach(el => el.classList.remove('visible'));
+
+  // Validate
+  let valid = true;
+  if (!name.value.trim()) {
+    name.classList.add('input-error');
+    errName.classList.add('visible');
+    valid = false;
+  }
+  const emailVal = email.value.trim();
+  const emailOk = emailVal && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal);
+  if (!emailOk) {
+    email.classList.add('input-error');
+    errEmail.classList.add('visible');
+    valid = false;
+  }
+  if (!message.value.trim()) {
+    message.classList.add('input-error');
+    errMessage.classList.add('visible');
+    valid = false;
+  }
+
+  if (!valid) return;
+
+  // Open mailto with pre-filled content
+  const subject = encodeURIComponent(`Portfolio contact from ${name.value.trim()}`);
+  const body = encodeURIComponent(`Name: ${name.value.trim()}\nEmail: ${emailVal}\n\n${message.value.trim()}`);
+  window.location.href = `mailto:ylee862ylee@gmail.com?subject=${subject}&body=${body}`;
+
+  // Show success and clear form
+  const el = document.getElementById('formSuccess');
+  el.style.display = 'block';
+  setTimeout(() => el.classList.add('show'), 10);
+  name.value = '';
+  email.value = '';
+  message.value = '';
+}
+
+// Modal data
+const projects = {
+  usri: {
+    category: 'UX Research · Summer Internship',
+    title: 'Student Well-being App',
+    summary: 'A full research-to-prototype pipeline for a mobile application focused on sleep quality and emotional regulation in university students. Presented at a virtual research conference.',
+    visualClass: 'card-visual-usri',
+    glyph: '◎',
+    tags: ['Figma','Usability Testing','Think-aloud','Pre/Post Surveys','Affinity Mapping','Personas','Journey Mapping'],
+    steps: [
+      { num: '01 — Problem', heading: 'Students struggle to manage sleep and stress, but existing apps don\'t address the psychological dimension.', body: 'I started with a structured literature review across sleep science, emotional regulation, and student wellness research. The goal was to validate the problem space before designing anything — confirming that the gap was real, not assumed.' },
+      { num: '02 — Research', heading: 'Mapping behavior and psychology before touching Figma.', body: 'I defined user needs and psychological factors shaping student well-being through behavioral analysis. This produced a research framework that structured every design decision downstream — not a list of features, but a model of why students fail to regulate.' },
+      { num: '03 — Design', heading: 'Research artifacts became the interface.', body: 'Wireframes, a style guide, and an interactive Figma prototype were built directly from research findings. No arbitrary decisions — each component traces back to a validated user need or behavioral insight.' },
+      { num: '04 — Testing', heading: 'Think-aloud sessions + pre/post surveys to measure real shift in perception.', body: 'I designed and facilitated usability sessions, collecting both qualitative pain points and quantitative perception data. Findings were synthesized via affinity diagrams and journey maps to surface what to change and why.' },
+      { num: '05 — Outcome', heading: 'Final prototype presented at a virtual research conference.', body: 'The process produced a refined, tested prototype that demonstrated measurable improvement in usability perception. The full research-to-presentation cycle was completed within a single summer internship.' }
+    ]
+  },
+  nano: {
+    category: 'Feature Design · Personal Project',
+    title: 'Nanobanana Feature Enhancement',
+    summary: 'Identified that creative terminology was locking beginner users out of a photo tool. Redesigned the prompting experience entirely — replacing text with visual selectors.',
+    visualClass: 'card-visual-nano',
+    glyph: '◐',
+    tags: ['Interaction Design','Community Research','Cognitive Load','Visual UI','UX Strategy'],
+    steps: [
+      { num: '01 — Problem', heading: 'Beginners couldn\'t get started because the tool spoke in expert language.', body: 'Through informal research in online communities, I confirmed that the main barrier wasn\'t capability — it was vocabulary. Users didn\'t know what "Rembrandt lighting" or "Dutch angle" meant, so they couldn\'t use the tool at all.' },
+      { num: '02 — Insight', heading: 'The gap was in the language layer, not the feature itself.', body: 'The existing text-based prompt input assumed prior knowledge. The fix wasn\'t a glossary — it was removing the assumption entirely. If users could see options rather than name them, the vocabulary barrier disappears.' },
+      { num: '03 — Design', heading: 'Visual selectors for angle, lighting, and composition — no terminology required.', body: 'I designed a feature that replaces text prompts with visual selection grids. Users choose what they want by looking, not describing. Each selection is a visual sample, not a label.' },
+      { num: '04 — Outcome', heading: 'Reduced cognitive load, increased exploration, better onboarding.', body: 'The redesign made the tool approachable without simplifying its power. Non-experts could now explore options they previously didn\'t know existed. Engagement improved because understanding improved.' }
+    ]
+  },
+  word: {
+    category: 'HCI Project · Gamification',
+    title: 'Wordtropolis',
+    summary: 'A gamified spelling learning platform designed for young students. Identified the core failures of traditional spelling tools and rebuilt the experience around how children actually learn.',
+    visualClass: 'card-visual-word',
+    glyph: '❋',
+    tags: ['Figma','Java Swing','Gamification','Child HCI','Adaptive Learning','Multi-sensory Design'],
+    steps: [
+      { num: '01 — Problem', heading: 'Spelling tools are boring by design — and that\'s a design failure.', body: 'Existing tools suffered from low engagement, static interaction, and unclear feedback. Children were learning despite the interface, not because of it. The root issue: these tools were built around content delivery, not the psychology of how kids actually retain and stay motivated.' },
+      { num: '02 — Research', heading: 'How do children learn? Through play, feedback, and visible progress.', body: 'I grounded the redesign in learning science: intrinsic motivation, spaced repetition, and multi-sensory reinforcement. The system needed to feel like a game — where the learning is the mechanic, not a layer on top of it.' },
+      { num: '03 — Design', heading: 'Missions → boss battle progression to sustain motivation over time.', body: 'I designed a narrative-driven progression system with clear milestones, visual feedback, and a boss battle as the culminating challenge. The arc gave children a reason to return — and a sense of accomplishment when they did.' },
+      { num: '04 — Build', heading: 'Figma prototype → implemented in Java Swing with adaptive difficulty.', body: 'The full interactive prototype was built and implemented. Adaptive learning adjusted difficulty based on performance. Multi-sensory feedback (visual, auditory cues) reinforced correct responses and kept the experience legible for young users.' },
+      { num: '05 — Outcome', heading: 'An engaging system that aligns interface design with how children actually learn.', body: 'Wordtropolis demonstrated that the gap between educational software and effective learning is a design problem — not a content problem. A well-designed interaction loop can make practice feel like play.' }
+    ]
+  }
+};
+
+function openModal(key) {
+  const p = projects[key];
+  const stepsHtml = p.steps.map(s => `
+    <div class="case-step">
+      <div class="step-num">${s.num}</div>
+      <div>
+        <div class="step-heading">${s.heading}</div>
+        <div class="step-body">${s.body}</div>
+      </div>
+    </div>
+  `).join('');
+  const tagsHtml = p.tags.map(t => `<span class="modal-tag">${t}</span>`).join('');
+
+  document.getElementById('modalBody').innerHTML = `
+    <div class="modal-eyebrow">${p.category}</div>
+    <h2 class="modal-title">${p.title}</h2>
+    <p class="modal-summary">${p.summary}</p>
+    <div class="modal-visual ${p.visualClass}">${p.glyph}</div>
+    <div class="tag-row">${tagsHtml}</div>
+    ${stepsHtml}
+  `;
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeModal();
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
