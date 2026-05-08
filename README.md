@@ -1,6 +1,6 @@
 # Portfolio — Yedam Lee
 
-Live site: https://yourusername.github.io/portfolio/
+Live site: https://ylee862.github.io/portfolio/
 
 ## About
 
