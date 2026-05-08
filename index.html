@@ -14,6 +14,9 @@
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursor-ring"></div>
 
+<!-- BACK BUTTON (shared) -->
+<button class="case-back" id="caseBack" onclick="closeCasePage()">Back to Work</button>
+
 <!-- NAV -->
 <nav>
   <a href="#hero" class="nav-logo">YN.</a>
@@ -35,10 +38,6 @@
     <p class="hero-tagline reveal" style="transition-delay:0.2s">
       I design to make everyone feel easy — removing what isn't needed so what matters actually lands.
     </p>
-    <!-- <div class="hero-ctas reveal" style="transition-delay:0.3s">
-      <a href="#projects" class="btn-primary">View Work</a>
-      <a href="#contact" class="btn-ghost">Get in Touch</a>
-    </div> -->
     <div class="hero-position reveal" style="transition-delay:0.4s">
       <div class="position-item"><div class="position-dot"></div>UX/UI Designer</div>
       <div class="position-item"><div class="position-dot" style="background:var(--ink3)"></div>Developer</div>
@@ -114,6 +113,9 @@
       <!-- USRI -->
       <div class="project-card" onclick="openModal('usri')">
         <div class="card-visual card-visual-usri">
+            <!-- 📸 PHOTO TIP: Replace glyph with an actual app screenshot or mockup.
+               Add: <img class="card-visual-img" src="your-usri-preview.jpg" alt="Well-being App preview">
+               Then remove the card-glyph span below. -->
           <span class="card-glyph">◎</span>
           <div class="card-overlay"><span class="card-overlay-text">View Case Study</span></div>
         </div>
@@ -224,11 +226,741 @@
   Designed & coded by Yedam Lee · ylee862.github.io
 </footer>
 
-<!-- MODALS -->
-<div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
-  <div class="modal" id="modalContent">
-    <button class="modal-close" onclick="closeModal()">✕</button>
-    <div id="modalBody"></div>
+<!-- ============================================
+     CASE STUDY PAGES (full-screen overlays)
+     ============================================ -->
+
+<!-- ── USRI CASE STUDY ── -->
+<div class="case-page" id="case-usri">
+  <div class="case-content">
+
+    <!-- HERO -->
+    <div class="case-hero">
+      <div class="case-eyebrow">UX Research · Behavioral Design · Summer Internship</div>
+      <h1 class="case-title">Student Well-being App</h1>
+        <p class="case-subtitle">
+        A research-driven behavioral awareness experience designed to help students recognize emotional patterns, contextual triggers, and stress responses over time.
+        </p>    
+        <div class="case-meta">
+        <span class="case-meta-tag">Figma</span>
+        <span class="case-meta-tag">Usability Testing</span>
+        <span class="case-meta-tag">UX Research</span>
+        <span class="case-meta-tag">Think-aloud Testing</span>
+        <span class="case-meta-tag">Pre/Post Surveys</span>
+        <span class="case-meta-tag">Affinity Mapping</span>
+        <span class="case-meta-tag">Personas</span>
+        <span class="case-meta-tag">Journey Mapping</span>
+      </div>
+      <p class="case-intro">
+        I wanted to explore why wellness apps often fail to create meaningful behavioral change. Most tools help users record emotions, but very few help them understand the context behind them. This project explored how behavioral awareness could be designed directly into the product experience — helping students recognize emotional triggers, reflect on patterns over time, and build healthier stress responses through guided intervention and self-awareness.
+        </p>
+
+      <!-- 📸 HERO IMAGE — Replace with a polished mockup composition showing 2–3 app screens.
+           Recommended: export a Figma frame with dark background, angled iPhone mockups, and your key screens.
+           <img src="usri-hero.jpg" alt="Student Well-being App screens"> -->
+      <div class="case-hero-visual">
+        <div class="case-hero-placeholder">
+          <div class="ph-glyph">◎</div>
+          <div>
+            📸 Add your hero mockup here<br>
+            <span style="opacity:0.6">Export from Figma: 2–3 app screens on dark background</span><br>
+            <span style="opacity:0.5;font-size:9px">Replace this div with: &lt;img src="usri-hero.jpg" alt="..."&gt;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 1 — CORE INSIGHT -->
+    <div class="case-section">
+      <div class="case-section-label">The Problem</div>
+      <div class="insight-statement">
+        Students didn't need<br>more tracking.<br>
+        <em>They needed behavioral awareness.</em>
+        </div>
+      <p class="insight-support">
+        Students already tracked sleep and mood. The missing piece was understanding how emotional and environmental patterns affected behavior over time. Apps were giving users a mirror they couldn't read.
+      </p>
+
+      <div class="case-split">
+        <div>
+          <!-- 📸 Research synthesis visual — affinity map close-up, behavioral framework diagram, or sticky note clustering.
+               Crop tightly to a meaningful section — don't show the full board.
+               <img src="usri-affinity-map.jpg" alt="Affinity mapping session"> -->
+          <div class="img-placeholder">
+            <div class="ph-inner">
+              <div class="ph-icon">🗂</div>
+              📸 Affinity map / sticky note synthesis<br>
+              <span style="opacity:0.6">Crop to a meaningful cluster, not the full board</span>
+            </div>
+          </div>
+          <div class="img-caption">Research synthesis — affinity mapping session</div>
+        </div>
+        <div>
+          <!-- 📸 Journey map or behavioral framework excerpt -->
+          <div class="img-placeholder">
+            <div class="ph-inner">
+              <div class="ph-icon">🗺</div>
+              📸 Journey map excerpt or behavioral framework<br>
+              <span style="opacity:0.6">A cropped section showing emotional states or pain points</span>
+            </div>
+          </div>
+          <div class="img-caption">Journey map — student emotional patterns over a typical week</div>
+        </div>
+      </div>
+
+      <div class="insight-cards">
+        <div class="insight-card">
+          <div class="insight-card-num">Finding 01</div>
+          <div class="insight-card-text">Students tracked behaviors passively — logging without reflection or follow-through</div>
+        </div>
+        <div class="insight-card">
+          <div class="insight-card-num">Finding 02</div>
+          <div class="insight-card-text">Emotional triggers were nearly impossible to identify without contextual cues</div>
+        </div>
+        <div class="insight-card">
+          <div class="insight-card-num">Finding 03</div>
+          <div class="insight-card-text">Existing apps emphasized data logging over self-reflection and behavioral change</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2 — RESEARCH → DESIGN TRANSLATION -->
+    <div class="case-section">
+      <div class="case-section-label">Research → Design</div>
+
+      <div class="zigzag-row">
+        <div class="zigzag-visual">
+          <!-- 📸 Persona or journey map excerpt — a single user story that anchors this section.
+               Show the "Student Sarah" moment: exhausted, scrolling a tracker app at midnight, learning nothing. -->
+          <div class="img-placeholder">
+            <div class="ph-inner">
+              <div class="ph-icon">👤</div>
+              📸 Persona card or journey map section<br>
+              <span style="opacity:0.6">Export persona from Figma — show a key emotional moment</span>
+            </div>
+          </div>
+          <div class="img-caption">Persona — behavioral patterns informing IA decisions</div>
+        </div>
+        <div class="zigzag-text">
+          <h3 class="zigzag-heading">Behavioral patterns shaped the information architecture</h3>
+          <p class="zigzag-body">Research revealed students needed contextual reflection rather than isolated metrics. Instead of prioritizing dashboards, the experience was structured around connecting emotional states, routines, and sleep quality into a single awareness loop. The IA wasn't designed from convention — it was designed from observed behavior.</p>
+        </div>
+      </div>
+
+      <div class="zigzag-row flip">
+        <div class="zigzag-text">
+          <h3 class="zigzag-heading">Designing for reflection instead of tracking</h3>
+          <p class="zigzag-body">The interface intentionally de-emphasized analytics and increased focus on behavioral interpretation through guided reflection moments. Instead of a dashboard of numbers, users were met with questions: "What was different about Tuesday?" These weren't prompts — they were the product.</p>
+        </div>
+        <div class="zigzag-visual">
+          <!-- 📸 Annotated wireframe-to-final comparison.
+               Best format: side-by-side in Figma with arrows + callout text boxes.
+               Export as a single wide image.
+               Annotations to include: "Removed: metric grid → Reason: users ignored numbers"
+                                       "Added: reflection prompt → Research finding: students needed questions not data" -->
+          <div class="img-placeholder">
+            <div class="ph-inner">
+              <div class="ph-icon">📐</div>
+              📸 Wireframe → Final UI comparison<br>
+              <span style="opacity:0.6">Side-by-side with annotation arrows showing what changed and why</span>
+            </div>
+          </div>
+          <div class="img-caption">Annotated design evolution — from wireframe to tested prototype</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 3 — KEY DESIGN DECISIONS -->
+    <div class="case-section">
+      <div class="case-section-label">Key Design Decisions</div>
+      <div class="design-cards">
+        <div class="design-card">
+          <div class="design-card-visual">
+            <!-- 📸 App screen showing the reflection flow — the first thing a user sees when they open the app. -->
+            <div class="ph-icon">🔄</div>
+          </div>
+          <div class="design-card-body">
+            <div class="design-card-title">Reflection-first flow</div>
+            <div class="design-card-text">Shifted the experience from passive logging toward behavioral interpretation — awareness before data.</div>
+          </div>
+        </div>
+        <div class="design-card">
+          <div class="design-card-visual">
+            <!-- 📸 The emotion + sleep correlation screen — your most distinctive UI moment. -->
+            <div class="ph-icon">📊</div>
+          </div>
+          <div class="design-card-body">
+            <div class="design-card-title">Emotion + sleep correlation</div>
+            <div class="design-card-text">Helped users identify behavioral patterns over time instead of isolated, disconnected events.</div>
+          </div>
+        </div>
+        <div class="design-card">
+          <div class="design-card-visual">
+            <!-- 📸 The minimal UI layout — your cleanest screen showing cognitive simplicity. -->
+            <div class="ph-icon">◻</div>
+          </div>
+          <div class="design-card-body">
+            <div class="design-card-title">Cognitive simplicity</div>
+            <div class="design-card-text">Reduced interface complexity to keep focus on self-awareness rather than overwhelming users with analytics.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 4 — TESTING & ITERATION -->
+    <div class="case-section">
+      <div class="case-section-label">Testing & Iteration</div>
+      <div class="case-split">
+        <div>
+          <!-- 📸 Testing evidence — can be:
+               - A photo of your testing setup (laptop + participant, with face blurred if needed)
+               - Usability feedback notes on sticky notes or Miro
+               - Affinity cluster of test findings
+               These don't need to be polished. Real evidence reads as credibility. -->
+          <div class="img-placeholder">
+            <div class="ph-inner">
+              <div class="ph-icon">🎙</div>
+              📸 Think-aloud testing setup or feedback wall<br>
+              <span style="opacity:0.6">Can be a photo of sticky note synthesis or Miro board. Real is better than polished here.</span>
+            </div>
+          </div>
+          <div class="img-caption">Think-aloud usability sessions — pre/post survey synthesis</div>
+        </div>
+        <div>
+          <div class="pull-quote">"Users began verbalizing behavioral patterns on their own."</div>
+          <div class="finding-list">
+            <div class="finding-item">
+              <div class="finding-num">01</div>
+              <div>Users initially arrived expecting a standard tracker — the reflection-first framing required a brief mindset shift on entry</div>
+            </div>
+            <div class="finding-item">
+              <div class="finding-num">02</div>
+              <div>Reflection prompts triggered significantly deeper, more self-aware verbal responses than logging prompts did in early testing</div>
+            </div>
+            <div class="finding-item">
+              <div class="finding-num">03</div>
+              <div>The biggest friction was a conceptual transition, not a navigation problem — which validated the entire design approach</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 5 — FINAL OUTCOME -->
+    <div class="case-section">
+      <div class="case-section-label">Final Outcome</div>
+      <div class="outcome-grid">
+        <div class="outcome-screens">
+          <!-- 📸 Your 4 best screens — one per slot.
+               Recommended: onboarding, daily reflection, emotion/sleep correlation, insight visualization.
+               Export as 9:16 ratio PNGs from Figma. -->
+          <div class="screen-slot">
+            <div class="ph-inner"><div class="ph-icon">📱</div>Onboarding screen</div>
+          </div>
+          <div class="screen-slot">
+            <div class="ph-inner"><div class="ph-icon">📱</div>Reflection flow</div>
+          </div>
+          <div class="screen-slot">
+            <div class="ph-inner"><div class="ph-icon">📱</div>Emotion insight</div>
+          </div>
+          <div class="screen-slot">
+            <div class="ph-inner"><div class="ph-icon">📱</div>Sleep patterns</div>
+          </div>
+        </div>
+        <div class="outcome-summary">
+          <div class="outcome-title">Outcome</div>
+          <ul class="outcome-bullets">
+            <li>Presented at virtual research conference — end-to-end research and prototype validated externally</li>
+            <li>Validated behavioral-awareness as a viable design approach for student wellness tools</li>
+            <li>Completed full research-to-prototype pipeline within a single summer internship timeline</li>
+            <li>Pre/post surveys showed measurable improvement in usability perception after the reflection-first redesign</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 6 — REFLECTION -->
+    <div class="reflection-block">
+      <div class="reflection-label">Reflection</div>
+      <p class="reflection-text">
+        "This project changed how I think about behavioral UX. I learned that designing for well-being is less about collecting information and more about helping users recognize themselves within it."
+      </p>
+    </div>
+
+  </div><!-- /case-content -->
+</div><!-- /case-usri -->
+
+
+<!-- ── NANOBANANA CASE STUDY ── -->
+<div class="case-page" id="case-nano">
+  <div class="case-content">
+
+    <!-- SECTION 1 — HERO -->
+    <div class="case-hero">
+      <div class="case-eyebrow">Feature Design · UX Strategy · Personal Project</div>
+      <h1 class="case-title">Nanobanana Feature Enhancement</h1>
+      <p class="case-subtitle">Reducing cognitive friction in AI-assisted photo editing through visual interaction design.</p>
+      <div class="case-meta">
+        <span class="case-meta-tag">Interaction Design</span>
+        <span class="case-meta-tag">Community Research</span>
+        <span class="case-meta-tag">Visual UI</span>
+        <span class="case-meta-tag">UX Strategy</span>
+        <span class="case-meta-tag">Cognitive Load Reduction</span>
+      </div>
+      <p class="case-intro">
+        I noticed beginner users weren't struggling with the tool's capabilities — they were struggling with its language. Creative terminology created an invisible barrier that prevented exploration before users even started.
+      </p>
+
+      <!-- 📸 HERO IMAGE — Show your visual selector interface side-by-side with the old text prompt.
+           Best: a wide Figma export showing the image-based option grid (lighting, angle, composition previews).
+           Replace the div below with: <img src="nano-hero.jpg" alt="Nanobanana visual selector UI"> -->
+      <div class="case-hero-visual" style="background: linear-gradient(135deg, #FEF0E8 0%, #FDE2CC 100%); min-height: 360px;">
+        <div class="case-hero-placeholder" style="color: #C44A10;">
+          <div class="ph-glyph" style="color: #C44A10;">◐</div>
+          <div>
+            📸 Hero UI composition — visual selector interface + image grid<br>
+            <span style="opacity:0.6">Show: lighting previews, composition options, before/after interaction concept</span><br>
+            <span style="opacity:0.5;font-size:9px">Replace with: &lt;img src="nano-hero.jpg" alt="..."&gt;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2 — CORE INSIGHT -->
+    <div class="case-section">
+      <div class="case-section-label">Core Insight</div>
+
+      <div class="case-split">
+        <div>
+          <div class="insight-statement">
+            The barrier wasn't<br>functionality.<br>
+            <em>It was vocabulary.</em>
+          </div>
+          <p class="insight-support">
+            Users didn't know terms like "Dutch angle" or "Rembrandt lighting," so they couldn't access features they technically already had. The tool wasn't broken — the language was.
+          </p>
+        </div>
+        <div>
+          <!-- 📸 Research evidence — show confusing terminology screenshots, community posts, annotated friction points.
+               Zoom in tightly. A Reddit thread screenshot with annotations reads as genuine research.
+               Options: annotated Nanobanana UI with terminology circled, community discussion screenshot, cognitive overload diagram.
+               Replace with: <img src="nano-research-evidence.jpg" alt="Confusing terminology examples"> -->
+          <div class="img-placeholder">
+            <div class="ph-inner">
+              <div class="ph-icon">💬</div>
+              📸 Confusing terminology screenshots + community discussion<br>
+              <span style="opacity:0.6">Annotate friction points — circle the terms users didn't understand</span>
+            </div>
+          </div>
+          <div class="img-caption">Community research — annotated onboarding friction points</div>
+        </div>
+      </div>
+
+      <div class="insight-cards">
+        <div class="insight-card">
+          <div class="insight-card-num">Insight 01</div>
+          <div class="insight-card-text">Users feared using the wrong terminology — so they didn't try at all</div>
+        </div>
+        <div class="insight-card">
+          <div class="insight-card-num">Insight 02</div>
+          <div class="insight-card-text">Exploration depended entirely on prior creative or photography knowledge</div>
+        </div>
+        <div class="insight-card">
+          <div class="insight-card-num">Insight 03</div>
+          <div class="insight-card-text">Text prompts assumed expertise — they were a gate, not an invitation</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 3 — RESEARCH → DESIGN TRANSLATION -->
+    <div class="case-section">
+      <div class="case-section-label">Research → Design</div>
+
+      <div class="zigzag-row">
+        <div class="zigzag-visual">
+          <!-- 📸 Community research visual — Reddit/forum excerpts, user pain point mapping, annotated frustration moments.
+               Can be a screenshot of a post with key phrases highlighted, or a Miro pain point map.
+               Replace with: <img src="nano-community-research.jpg" alt="Community research findings"> -->
+          <div class="img-placeholder">
+            <div class="ph-inner">
+              <div class="ph-icon">🔍</div>
+              📸 Community research — Reddit/forum excerpts or pain point map<br>
+              <span style="opacity:0.6">Highlight the exact phrases that reveal the vocabulary barrier</span>
+            </div>
+          </div>
+          <div class="img-caption">Community research — onboarding frustration patterns</div>
+        </div>
+        <div class="zigzag-text">
+          <h3 class="zigzag-heading">Users couldn't describe what they couldn't visualize</h3>
+          <p class="zigzag-body">The interface depended on users already understanding photography language. This created an accessibility gap where beginners couldn't explore features they didn't know how to name. The problem wasn't capability — it was translation. Users had a visual idea in their head but no vocabulary bridge to the interface.</p>
+        </div>
+      </div>
+
+      <div class="zigzag-row flip">
+        <div class="zigzag-text">
+          <h3 class="zigzag-heading">Replacing terminology with visual recognition</h3>
+          <p class="zigzag-body">Instead of typing expert terminology, users select visual examples directly. The interaction shifts from recall-based input — "remember the right word" — to recognition-based exploration: "pick what looks right." The cognitive demand drops from expert memory to beginner intuition. The feature set stays the same. The barrier disappears.</p>
+        </div>
+        <div class="zigzag-visual">
+          <!-- 📸 Wireframe → final interaction comparison.
+               Best: a side-by-side Figma export.
+               LEFT: old text prompt input field (blank, intimidating)
+               RIGHT: new image selector grid (lighting styles as visual thumbnails)
+               Add annotation callouts: "Recall-based → Recognition-based" / "Expert vocabulary removed" / "Visual browsing = experimentation"
+               Replace with: <img src="nano-wireframe-comparison.jpg" alt="Before/after interaction comparison"> -->
+          <div class="img-placeholder">
+            <div class="ph-inner">
+              <div class="ph-icon">↔</div>
+              📸 Side-by-side comparison: text prompt input vs. visual selector grid<br>
+              <span style="opacity:0.6">Add annotation arrows: "Recall → Recognition" / "Expert gate removed"</span>
+            </div>
+          </div>
+          <div class="img-caption">Interaction model shift — from recall to recognition</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 4 — KEY DESIGN DECISIONS -->
+    <div class="case-section">
+      <div class="case-section-label">Key Design Decisions</div>
+      <div class="design-cards">
+        <div class="design-card">
+          <div class="design-card-visual">
+            <!-- 📸 Visual selector UI — the image grid showing lighting/angle/composition options as thumbnails.
+                 Replace ph-icon with: <img src="nano-card-recognition.jpg" alt="Visual selector"> -->
+            <div class="ph-icon">👁</div>
+          </div>
+          <div class="design-card-body">
+            <div class="design-card-title">Recognition over recall</div>
+            <div class="design-card-text">Users choose by seeing instead of remembering technical terminology. The interface does the translation.</div>
+          </div>
+        </div>
+        <div class="design-card">
+          <div class="design-card-visual">
+            <!-- 📸 Style preview browser — showing a user browsing visual style options without knowing their names.
+                 Replace with: <img src="nano-card-exploration.jpg" alt="Style preview browser"> -->
+            <div class="ph-icon">🔭</div>
+          </div>
+          <div class="design-card-body">
+            <div class="design-card-title">Exploration without expertise</div>
+            <div class="design-card-text">Removed the assumption that users already understood creative language. Power stays, gatekeeping goes.</div>
+          </div>
+        </div>
+        <div class="design-card">
+          <div class="design-card-visual">
+            <!-- 📸 Guided beginner flow — the onboarding moment where a new user sees their first visual grid.
+                 Replace with: <img src="nano-card-onboarding.jpg" alt="Visual-first onboarding"> -->
+            <div class="ph-icon">✦</div>
+          </div>
+          <div class="design-card-body">
+            <div class="design-card-title">Visual-first onboarding</div>
+            <div class="design-card-text">Lowered intimidation and encouraged experimentation through immediate, consequence-free visual feedback.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 5 — INTERACTION FLOW -->
+    <div class="case-section">
+      <div class="case-section-label">Interaction Flow</div>
+      <div class="insight-statement" style="margin-bottom: 1rem;">
+        Reducing friction by<br><em>removing translation effort.</em>
+      </div>
+      <p class="insight-support">
+        Users no longer needed to convert visual intent into technical vocabulary. The interface handled that translation for them — turning an expert tool into an approachable one without reducing its capabilities.
+      </p>
+
+      <!-- 📸 LARGE ANNOTATED UI SEQUENCE — this is the most visual section.
+           Show a 3–4 step interaction flow as a horizontal strip or stacked sequence:
+           Step 1: User opens the feature → sees empty text prompt (old)
+           Step 2: New experience — image grid appears with lighting/angle/composition thumbnails
+           Step 3: User taps a thumbnail → immediate style preview updates
+           Step 4: Final output with selected style applied
+           Export from Figma as a single wide image or a 2×2 grid.
+           Add minimal annotation labels on each step. -->
+      <div class="img-placeholder" style="margin-top: 2rem;">
+        <div class="ph-inner" style="min-height: 280px;">
+          <div class="ph-icon" style="font-size:36px;">▶</div>
+          📸 Annotated interaction flow — 3 to 4 step sequence<br>
+          <span style="opacity:0.6">Show: visual selection → instant preview → output. Wide Figma export works best here.</span><br>
+          <span style="opacity:0.5;font-size:9px">Recommended: 1400×500px exported as a single strip image</span>
+        </div>
+      </div>
+      <div class="img-caption">Interaction sequence — from intent to output without terminology</div>
+    </div>
+
+    <!-- SECTION 6 — FINAL OUTCOME -->
+    <div class="case-section">
+      <div class="case-section-label">Final Outcome</div>
+      <div class="outcome-grid">
+        <div>
+          <!-- 📸 SHOWCASE — show your best 3–4 screens:
+               - Final visual selector system (the main grid)
+               - Mobile view of the selector
+               - Desktop/comparison view showing old vs new
+               - Onboarding interaction moment
+               Stack them or use a 2×2 grid layout. -->
+          <div class="outcome-screens">
+            <div class="screen-slot" style="aspect-ratio: 4/3;">
+              <div class="ph-inner"><div class="ph-icon">🖥</div>Visual selector — desktop</div>
+            </div>
+            <div class="screen-slot" style="aspect-ratio: 4/3;">
+              <div class="ph-inner"><div class="ph-icon">📱</div>Mobile view</div>
+            </div>
+            <div class="screen-slot" style="aspect-ratio: 4/3;">
+              <div class="ph-inner"><div class="ph-icon">↔</div>Before / after comparison</div>
+            </div>
+            <div class="screen-slot" style="aspect-ratio: 4/3;">
+              <div class="ph-inner"><div class="ph-icon">✦</div>Onboarding moment</div>
+            </div>
+          </div>
+        </div>
+        <div class="outcome-summary">
+          <div class="outcome-title">Outcome</div>
+          <ul class="outcome-bullets">
+            <li>Reduced cognitive barriers for beginner users — onboarding no longer requires prior creative knowledge</li>
+            <li>Increased accessibility of advanced creative features through visual interaction</li>
+            <li>Encouraged exploration — users discovered options they didn't know existed</li>
+            <li>Reframed prompting as recognition instead of recall, fundamentally shifting the interaction model</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 7 — REFLECTION -->
+    <div class="reflection-block">
+      <div class="reflection-label">Reflection</div>
+      <p class="reflection-text">"This project reinforced how often UX friction comes from assumptions embedded in language. Sometimes accessibility is not about simplifying features — it's about simplifying interpretation."</p>
+    </div>
+
+  </div>
+</div><!-- /case-nano -->
+
+
+<!-- ── WORDTROPOLIS CASE STUDY ── -->
+<div class="case-page" id="case-word">
+  <div class="case-content">
+
+    <!-- SECTION 1 — HERO -->
+    <div class="case-hero">
+      <div class="case-eyebrow">HCI Project · Gamification</div>
+      <h1 class="case-title">Wordtropolis</h1>
+      <p class="case-subtitle">A gamified spelling learning platform designed for young students — built around how children actually learn, stay motivated, and retain information over time.</p>
+      <div class="case-meta">
+        <span class="case-meta-tag">Figma</span>
+        <span class="case-meta-tag">Java Swing</span>
+        <span class="case-meta-tag">Gamification</span>
+        <span class="case-meta-tag">Child HCI</span>
+        <span class="case-meta-tag">Adaptive Learning</span>
+        <span class="case-meta-tag">Multi-sensory Design</span>
+      </div>
+      <p class="case-intro">
+        Existing spelling tools were boring by design — and that's a design failure. Children were learning despite the interface, not because of it. I wanted to close that gap: build a system where the learning IS the game mechanic, not content dressed up in a game shell.
+      </p>
+
+      <!-- 📸 HERO IMAGE — Show your most exciting game screen: the boss battle, level map, or mission select.
+           High energy, colorful, clearly a game — this needs to not look like a student project.
+           Replace the div below with: <img src="wordtropolis-hero.jpg" alt="Wordtropolis game UI"> -->
+      <div class="case-hero-visual" style="background: linear-gradient(135deg, #EEF0FE 0%, #DEDFFE 100%); min-height: 360px;">
+        <div class="case-hero-placeholder" style="color: #4040B8;">
+          <div class="ph-glyph" style="color: #4040B8;">❋</div>
+          <div>
+            📸 Hero visual — boss battle screen, level map, or mission UI<br>
+            <span style="opacity:0.6">Show your most exciting, high-energy game screen — this sets the tone</span><br>
+            <span style="opacity:0.5;font-size:9px">Replace with: &lt;img src="wordtropolis-hero.jpg" alt="..."&gt;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2 — THE PROBLEM -->
+    <div class="case-section">
+      <div class="case-section-label">The Problem</div>
+
+      <div class="insight-statement">
+        Spelling tools are boring<br>by design.<br>
+        <em>That's a design failure.</em>
+      </div>
+      <p class="insight-support">
+        Existing tools suffered from low engagement, static interaction, and unclear feedback loops. Children were learning in spite of the interface — not because of it. The root issue: these tools were built around content delivery, not around the psychology of how kids actually stay motivated and retain information.
+      </p>
+
+      <div class="insight-cards">
+        <div class="insight-card">
+          <div class="insight-card-num">Problem 01</div>
+          <div class="insight-card-text">Low engagement — tools prioritized content delivery over motivation and reward loops</div>
+        </div>
+        <div class="insight-card">
+          <div class="insight-card-num">Problem 02</div>
+          <div class="insight-card-text">Static, repetitive interaction — no sense of progress, narrative, or meaningful challenge</div>
+        </div>
+        <div class="insight-card">
+          <div class="insight-card-num">Problem 03</div>
+          <div class="insight-card-text">Feedback was unclear or delayed — children didn't know why they were right or wrong</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 3 — RESEARCH → DESIGN TRANSLATION -->
+    <div class="case-section">
+      <div class="case-section-label">Research → Design</div>
+
+      <div class="zigzag-row">
+        <div class="zigzag-visual">
+          <!-- 📸 Research grounding — show your learning science references or a comparison of traditional vs game-based engagement.
+               Options: screenshot of a competing tool annotated with its failures, a motivation framework diagram, or a child engagement research excerpt.
+               Replace with: <img src="word-research.jpg" alt="Research grounding"> -->
+          <div class="img-placeholder">
+            <div class="ph-inner">
+              <div class="ph-icon">📚</div>
+              📸 Research grounding — annotated competitor analysis or engagement framework<br>
+              <span style="opacity:0.6">Show what existing tools got wrong — annotate their failure points</span>
+            </div>
+          </div>
+          <div class="img-caption">Existing tool analysis — engagement failures annotated</div>
+        </div>
+        <div class="zigzag-text">
+          <h3 class="zigzag-heading">Learning science grounded every design decision</h3>
+          <p class="zigzag-body">The redesign wasn't based on intuition about what kids might like. It was grounded in three principles from learning science: intrinsic motivation (children engage more when challenge feels meaningful), spaced repetition (returning to difficult words at optimal intervals improves retention), and multi-sensory reinforcement (visual + audio feedback accelerates learning). Each design decision traces back to one of these principles.</p>
+        </div>
+      </div>
+
+      <div class="zigzag-row flip">
+        <div class="zigzag-text">
+          <h3 class="zigzag-heading">The game arc wasn't decoration — it was the structure</h3>
+          <p class="zigzag-body">Instead of wrapping content in a game skin, the mission → boss battle progression IS the information architecture. Each mission is a spaced repetition session. The boss battle is the mastery check. The narrative arc gives children a reason to return — and a real sense of accomplishment when they reach the end. The progression system was designed before the visual layer.</p>
+        </div>
+        <div class="zigzag-visual">
+          <!-- 📸 Game progression map — the mission flow showing how levels lead to boss battle.
+               Best: your Figma user flow or the in-game level select screen annotated.
+               Replace with: <img src="word-progression.jpg" alt="Mission progression arc"> -->
+          <div class="img-placeholder">
+            <div class="ph-inner">
+              <div class="ph-icon">🗺</div>
+              📸 Mission progression map — level flow to boss battle<br>
+              <span style="opacity:0.6">Annotate: "Spaced repetition session" / "Mastery check" / "Narrative milestone"</span>
+            </div>
+          </div>
+          <div class="img-caption">Game arc — learning structure mapped to narrative progression</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 4 — KEY DESIGN DECISIONS -->
+    <div class="case-section">
+      <div class="case-section-label">Key Design Decisions</div>
+      <div class="design-cards">
+        <div class="design-card">
+          <div class="design-card-visual">
+            <!-- 📸 Mission select or level map screen — show the progression arc visually.
+                 Replace ph-icon with: <img src="word-card-missions.jpg" alt="Mission progression"> -->
+            <div class="ph-icon">🎯</div>
+          </div>
+          <div class="design-card-body">
+            <div class="design-card-title">Missions → boss battle arc</div>
+            <div class="design-card-text">Gave children a meaningful destination and a sense of narrative momentum — not just a streak counter.</div>
+          </div>
+        </div>
+        <div class="design-card">
+          <div class="design-card-visual">
+            <!-- 📸 Adaptive difficulty in action — show a difficulty level change or word difficulty indicator.
+                 Replace with: <img src="word-card-adaptive.jpg" alt="Adaptive difficulty"> -->
+            <div class="ph-icon">📈</div>
+          </div>
+          <div class="design-card-body">
+            <div class="design-card-title">Adaptive difficulty</div>
+            <div class="design-card-text">The system adjusted challenge based on performance — spaced repetition baked into the game loop, not bolted on top.</div>
+          </div>
+        </div>
+        <div class="design-card">
+          <div class="design-card-visual">
+            <!-- 📸 Multi-sensory feedback moment — correct answer screen with visual celebration + audio cue indicator.
+                 Replace with: <img src="word-card-feedback.jpg" alt="Multi-sensory feedback"> -->
+            <div class="ph-icon">✨</div>
+          </div>
+          <div class="design-card-body">
+            <div class="design-card-title">Multi-sensory feedback</div>
+            <div class="design-card-text">Visual celebration + audio cues on correct responses reinforce learning and maintain engagement for young users.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 5 — BUILD -->
+    <div class="case-section">
+      <div class="case-section-label">Design → Build</div>
+      <div class="insight-statement" style="margin-bottom: 1rem;">
+        This wasn't just a concept.
+        <em>It was a fully realized interactive prototype.</em>
+      </div>
+      <p class="insight-support">
+        The full interactive prototype was designed in Figma, then fully implemented in Java Swing. This wasn't a hand-off to a developer — I built it. The adaptive difficulty algorithm, the multi-sensory feedback system, and the complete game loop were coded and running.
+      </p>
+
+      <div class="zigzag-row" style="margin-top: 2.5rem;">
+        <div class="zigzag-visual">
+          <!-- 📸 Figma prototype → Java Swing side-by-side.
+               Show your Figma frames alongside actual running screenshots.
+               This is the most powerful credibility signal in this case study — design AND build.
+               Replace with: <img src="word-figma-to-build.jpg" alt="Figma to Java Swing implementation"> -->
+          <div class="img-placeholder">
+            <div class="ph-inner">
+              <div class="ph-icon">⚙️</div>
+              📸 Figma prototype → Java Swing implementation side-by-side<br>
+              <span style="opacity:0.6">This is your strongest credibility moment — show both design and build</span>
+            </div>
+          </div>
+          <div class="img-caption">Figma → Java Swing — designed and built by the same person</div>
+        </div>
+        <div class="zigzag-text">
+          <h3 class="zigzag-heading">From prototype to implementation — end to end</h3>
+          <p class="zigzag-body">The adaptive difficulty algorithm tracked performance in real-time, adjusting word difficulty using a spaced repetition model. Multi-sensory feedback — visual animations and audio cues — was implemented to reinforce correct responses immediately. The boss battle sequence was fully animated. Every design decision that started in research ended up in running code.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 6 — FINAL OUTCOME -->
+    <div class="case-section">
+      <div class="case-section-label">Final Outcome</div>
+      <div class="outcome-grid">
+        <div class="outcome-screens">
+          <!-- 📸 Your 4 best screens:
+               - Mission select / level map
+               - Active spelling challenge screen
+               - Correct answer feedback / celebration moment
+               - Boss battle screen
+               These should feel energetic and designed — not like a school project. -->
+          <div class="screen-slot" style="aspect-ratio: 4/3;">
+            <div class="ph-inner"><div class="ph-icon">🗺</div>Mission select</div>
+          </div>
+          <div class="screen-slot" style="aspect-ratio: 4/3;">
+            <div class="ph-inner"><div class="ph-icon">🔤</div>Spelling challenge</div>
+          </div>
+          <div class="screen-slot" style="aspect-ratio: 4/3;">
+            <div class="ph-inner"><div class="ph-icon">✨</div>Feedback moment</div>
+          </div>
+          <div class="screen-slot" style="aspect-ratio: 4/3;">
+            <div class="ph-inner"><div class="ph-icon">⚔️</div>Boss battle</div>
+          </div>
+        </div>
+        <div class="outcome-summary">
+          <div class="outcome-title">Outcome</div>
+          <ul class="outcome-bullets">
+            <li>Demonstrated that the gap between educational software and effective learning is a design problem — not a content problem</li>
+            <li>Shipped a fully implemented, running product — not just a prototype or mockup</li>
+            <li>Adaptive difficulty system successfully adjusted word challenge based on real-time performance</li>
+            <li>Multi-sensory feedback loop created the engagement and repetition conditions for genuine retention</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 7 — REFLECTION -->
+    <div class="reflection-block">
+      <div class="reflection-label">Reflection</div>
+      <p class="reflection-text">"Wordtropolis taught me that building well is part of designing well. When you can take a system from research to code, you stop making decisions that look good on screen but fall apart in practice. The constraint of implementation made the design better."</p>
+    </div>
+
   </div>
 </div>
 
