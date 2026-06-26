@@ -91,3 +91,40 @@ function handleSubmit() {
   setTimeout(() => el.classList.add('show'), 10);
   name.value = ''; email.value = ''; message.value = '';
 }
+
+function openLightbox(src, alt) {
+  const overlay = document.getElementById('lightboxOverlay');
+  const img = document.getElementById('lightboxImg');
+  img.src = src;
+  img.alt = alt || '';
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightboxOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+// Stop clicks on the image itself from closing the overlay
+document.getElementById('lightboxImg').addEventListener('click', e => e.stopPropagation());
+
+// Make all case-study images clickable (run after DOM ready)
+document.addEventListener('DOMContentLoaded', () => {
+  const selectors = [
+    '.case-hero-visual img',
+    '.zigzag-visual img',
+    '.research-block img',
+    '.screen-slot img',
+    '.outcome-screens img',
+    '.case-section img',
+    '.case-split img'
+  ];
+  document.querySelectorAll(selectors.join(', ')).forEach(img => {
+    img.classList.add('lightbox-trigger');
+    img.addEventListener('click', e => {
+      e.stopPropagation();
+      openLightbox(img.src, img.alt);
+    });
+  });
+});
