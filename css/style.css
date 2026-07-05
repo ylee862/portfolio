@@ -518,10 +518,11 @@
   .screen-slot {
     border-radius: 12px; overflow: hidden;
     background: var(--bg2); border: 0.5px solid var(--border);
-    aspect-ratio: 9/16; position: relative;
-    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    display: flex; flex-direction: column;
   }
-  .screen-slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .screen-slot img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+  .screen-slot .img-caption { padding: 0.6rem 0.75rem 0.75rem; margin-top: 0; }
   .screen-slot .ph-inner {
     display: flex; flex-direction: column; align-items: center; gap: 6px;
     font-family: 'DM Mono', monospace; font-size: 9px;
