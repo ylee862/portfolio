@@ -71,6 +71,7 @@
         <span class="chip">Affinity mapping</span>
         <span class="chip">Personas</span>
         <span class="chip">Journey mapping</span>
+        <span class="chip">PRD writing</span>
       </div>
       <div class="skill-group-label">Design</div>
       <div class="skill-chips">
@@ -87,6 +88,8 @@
         <span class="chip">HTML / CSS</span>
         <span class="chip">FastAPI</span>
         <span class="chip">MongoDB</span>
+        <span class="chip">Firebase</span>
+        <span class="chip">Flutter</span>
       </div>
       <div class="skill-group-label">Foundations</div>
       <div class="skill-chips">
@@ -103,12 +106,31 @@
   <div class="projects-header">
     <div>
       <div class="section-label reveal">Selected Work</div>
-      <h2 class="projects-heading reveal" style="transition-delay:0.1s">Three projects.<br><em style="font-family:'DM Serif Display',serif;font-style:italic;color:var(--accent)">Real problems.</em></h2>
+      <h2 class="projects-heading reveal" style="transition-delay:0.1s">Selected projects.<br><em style="font-family:'DM Serif Display',serif;font-style:italic;color:var(--accent)">Real problems.</em></h2>
     </div>
   </div>
 
   <div class="carousel-wrapper reveal" style="transition-delay:0.2s">
     <div class="carousel-track">
+
+      <!-- Fitoday -->
+      <div class="project-card" onclick="openCasePage('fitoday')">
+        <div class="card-visual card-visual-fitoday">
+          <img class="card-visual-img" src="images/fitoday/fitoday_hero.png" alt="Fitoday app preview">
+          <div class="card-overlay"><span class="card-overlay-text">View Case Study</span></div>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Fitoday</div>
+          <div class="card-desc">A once-a-day outfit-sharing app — from competitive research and usability testing through to a production Firebase/Flutter build I'm currently engineering solo.</div>
+          <div class="card-tags">
+            <span class="card-tag">Figma</span>
+            <span class="card-tag">Usability Testing</span>
+            <span class="card-tag">PRD</span>
+            <span class="card-tag">Firebase</span>
+            <span class="card-tag">Flutter</span>
+          </div>
+        </div>
+      </div>
 
       <!-- USRI -->
       <div class="project-card" onclick="openCasePage('usri')">
@@ -180,6 +202,9 @@
     <div class="tool-card"><span class="tool-icon">◈</span><div class="tool-name">HTML / CSS</div><div class="tool-cat">Development</div></div>
     <div class="tool-card"><span class="tool-icon">❋</span><div class="tool-name">User Research</div><div class="tool-cat">UX</div></div>
     <div class="tool-card"><span class="tool-icon">⬟</span><div class="tool-name">HCI Methods</div><div class="tool-cat">Research</div></div>
+    <div class="tool-card"><span class="tool-icon">✦</span><div class="tool-name">Firebase</div><div class="tool-cat">Backend</div></div>
+    <div class="tool-card"><span class="tool-icon">⬡</span><div class="tool-name">User Research</div><div class="tool-cat">UX</div></div>
+    <div class="tool-card"><span class="tool-icon">◎</span><div class="tool-name">HCI Methods</div><div class="tool-cat">Research</div></div>
   </div>
 </section>
 
@@ -224,6 +249,320 @@
      CASE STUDY PAGES
      ============================================ -->
 
+<!-- FITODAY CASE STUDY -->
+ <div class="case-page" id="case-fitoday">
+  <div class="case-content">
+
+    <!-- HERO -->
+    <div class="case-hero">
+      <div class="case-eyebrow">Product Design + Full-Stack Development · Research & Design Complete · In Active Development</div>
+      <h1 class="case-title">Fitoday</h1>
+      <p class="case-subtitle">
+        A niche social app for fashion enthusiasts to share one outfit a day, get structured community feedback, and track their style progression — designed and being built solo, end to end.
+      </p>
+      <div class="case-meta">
+        <span class="case-meta-tag">Figma</span>
+        <span class="case-meta-tag">Competitive Research</span>
+        <span class="case-meta-tag">Surveys</span>
+        <span class="case-meta-tag">Usability Testing</span>
+        <span class="case-meta-tag">Product Requirements Doc</span>
+        <span class="case-meta-tag">Flutter</span>
+        <span class="case-meta-tag">Firebase / Cloud Functions</span>
+      </div>
+
+      <div class="case-hero-visual" style="background: linear-gradient(135deg, #FBEFE8 0%, #F1D2C1 100%); min-height: 360px;">
+        <img src="images/fitoday/fitoday_mockup.png" alt="Fitoday core interaction — three-option rating, optional comments, and rated system" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
+      </div>
+    </div>
+
+    <!-- PROJECT SNAPSHOT -->
+    <div class="case-section">
+      <div class="case-section-label">Project Snapshot</div>
+      <div class="outcome-summary">
+        <ul class="outcome-bullets">
+          <li><strong>Role:</strong> Solo — Product Designer, UX Researcher &amp; Full-Stack Developer</li>
+          <li><strong>Timeline:</strong> 8–10 weeks, ongoing</li>
+          <li><strong>Platform:</strong> iOS (Flutter)</li>
+          <li><strong>Stack:</strong> Flutter/Dart, Firebase (Auth, Firestore, Cloud Functions, Blaze plan)</li>
+          <li><strong>Status:</strong> Research, PRD, and Figma design complete — auth &amp; backend security completed, core Cloud Functions in progress</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SECTION 0 — THE SPARK -->
+    <div class="case-section">
+      <div class="case-section-label">The Spark</div>
+      <div class="insight-statement">
+        It didn't start with a market gap.<br>
+        <em>It started with scrolling Instagram, wishing someone would just tell me what was wrong with my outfit.</em>
+      </div>
+      <p class="insight-support">
+        I kept looking at fashion influencers and wondering how they always managed to look put-together — and wishing one of them could point at my outfit and tell me, specifically, what to fix: the colour combination, the length, the proportions, all the small judgment calls that are hard to make about yourself. Generic compliments don't help with that. Structured, honest feedback does.
+      </p>
+      <p class="insight-support">
+        That was a personal itch, not a product idea. What turned it into one was a simple question: was I really the only person who felt this way? That question is what sent me into research instead of straight into Figma.
+      </p>
+    </div>
+
+    <!-- SECTION 1 — CORE INSIGHT / COMPETITIVE RESEARCH -->
+    <div class="case-section">
+      <div class="case-section-label">Core Insight</div>
+      <div class="insight-statement">
+        People weren't short on places<br>to post an outfit.
+        <em>They were short on a place to actually get feedback on it.</em>
+      </div>
+      <p class="insight-support">
+        To find out if others felt the same way, I looked at where fashion content already lives — Instagram, Pinterest, Lemon8 — and read through user reviews of each. The pattern was consistent: people don't trust these platforms anymore, whether because of ad density, opaque algorithms, or moderation that feels arbitrary. None of them were built for a specific, recurring loop of "post my outfit, get real feedback, see myself improve."
+      </p>
+
+      <div class="lit-review-notes">
+        <div class="sticky-note sticky-up">
+          <div class="sticky-quote-mark">"</div>
+          <div class="sticky-text">Pinterest used to be a kind of safe place... now it's filled with AI generated content I can never seem to get rid of.</div>
+          <div class="sticky-source">Pinterest user review</div>
+        </div>
+        <div class="sticky-note sticky-down">
+          <div class="sticky-quote-mark">"</div>
+          <div class="sticky-text">Their algorithm takes this kind of content to the highest peak... full of nudity, toxicity.</div>
+          <div class="sticky-source">Instagram user review</div>
+        </div>
+        <div class="sticky-note sticky-up">
+          <div class="sticky-quote-mark">"</div>
+          <div class="sticky-text">Another version of TikTok — depressing, clickbait, I wouldn't use it again.</div>
+          <div class="sticky-source">Lemon8 user review</div>
+        </div>
+        <div class="sticky-note sticky-down">
+          <div class="sticky-quote-mark">"</div>
+          <div class="sticky-text">I am scared that people will judge me — I don't think my fashion sense is that good enough.</div>
+          <div class="sticky-source">Survey participant</div>
+        </div>
+        <div class="img-caption">A sample of the competitive review research and early survey responses that shaped the product.</div>
+      </div>
+
+      <!-- competitive matrix, built as a self-contained inline table so it doesn't rely on styling this HTML file doesn't ship with -->
+      <div style="overflow-x:auto; margin-top:2rem;">
+        <table style="width:100%; border-collapse:collapse; font-family:'DM Mono',monospace; font-size:0.85rem;">
+          <thead>
+            <tr style="border-bottom:2px solid var(--accent, #B5502E);">
+              <th style="text-align:left; padding:10px 12px;">Platform</th>
+              <th style="text-align:left; padding:10px 12px;">Strength</th>
+              <th style="text-align:left; padding:10px 12px;">Where it falls short for fashion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid rgba(0,0,0,0.08);">
+              <td style="padding:10px 12px;">Instagram</td>
+              <td style="padding:10px 12px;">Large audience</td>
+              <td style="padding:10px 12px;">Fashion content buried under unrelated content and algorithmic noise</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(0,0,0,0.08);">
+              <td style="padding:10px 12px;">Pinterest</td>
+              <td style="padding:10px 12px;">Inspiration discovery</td>
+              <td style="padding:10px 12px;">No mechanism for personal feedback on your own outfit</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(0,0,0,0.08);">
+              <td style="padding:10px 12px;">TikTok</td>
+              <td style="padding:10px 12px;">Discovery, virality</td>
+              <td style="padding:10px 12px;">Hard to track personal style progression over time</td>
+            </tr>
+            <tr>
+              <td style="padding:10px 12px;">BeReal</td>
+              <td style="padding:10px 12px;">Daily authenticity habit</td>
+              <td style="padding:10px 12px;">Not fashion-focused at all</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="insight-cards" style="margin-top:2rem;">
+        <div class="insight-card">
+          <div class="insight-card-num">Finding 01</div>
+          <div class="insight-card-text">People want honest feedback on their outfit but are afraid of public criticism — a small, 12-person survey (student/fashion-enthusiast sample) surfaced this consistently</div>
+        </div>
+        <div class="insight-card">
+          <div class="insight-card-num">Finding 02</div>
+          <div class="insight-card-text">Fashion inspiration is saved everywhere — Pinterest, Instagram, TikTok — with no centralized memory of it, and no link back to the person's own wardrobe</div>
+        </div>
+        <div class="insight-card">
+          <div class="insight-card-num">Finding 03</div>
+          <div class="insight-card-text">Style growth is invisible on existing platforms; people can't see whether they're actually getting better at dressing themselves over time</div>
+        </div>
+      </div>
+
+      <div class="research-block" style="margin-top:2rem;">
+        <h3 class="zigzag-heading" style="margin-top:1.5rem;">A note on research scope</h3>
+        <p class="zigzag-body">The competitive review analysis and the 12-person survey were both informal, self-run research — not a statistically representative study. I'm treating the findings above as directional signal that shaped the product, not as validated market data.</p>
+      </div>
+
+      <p class="insight-support" style="margin-top:2rem;">
+        That confirmed the hunch: there wasn't a place built specifically for daily outfit accountability, honest feedback, and visible style progress. That gap — not just my own curiosity — is what I started designing for.
+      </p>
+
+    </div>
+
+    <!-- SECTION 2 — PERSONAS / RESEARCH → DESIGN -->
+    <div class="case-section">
+      <div class="case-section-label">Research → Requirements</div>
+      <div class="insight-statement">
+        Once the gap was confirmed,<br>
+        <em>I went straight into writing the requirements.</em>
+      </div>
+      <p class="insight-support">
+        Rather than sketching screens first, I wrote a full product requirements document directly from the research: onboarding &amp; style personalization, posting constraints, a dual-tab search engine, community rating &amp; anonymized voter feedback, a gamified leveling system, and social/wishlist features — plus non-functional requirements around load times and the "midnight crunch" write-load spike when every user's daily score finalizes at once. Writing the PRD myself, rather than jumping straight to UI, is what let every later design decision trace back to a specific finding instead of a gut feeling.
+      </p>
+    </div>
+
+    <div class="case-section">
+      <div class="case-section-label">Who It's For</div>
+      <p class="insight-support" style="margin-bottom:1.5rem;">
+        With the requirements drafted, the next question was who, specifically, I was building each of them for.
+      </p>
+
+      <div class="zigzag-row">
+        <div class="zigzag-visual">
+          <img src="images/fitoday/fitoday_chloe_persona.png" alt="Persona — Chloe Lin, Fashion Creator" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
+          <div class="img-caption">Persona — Chloe Lin, Fashion Creator.</div>
+        </div>
+        <div class="zigzag-visual">
+          <img src="images/fitoday/fitoday_marcus_persona.png" alt="Persona — Marcus Vance, Style Seeker" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
+            <div class="img-caption">Persona — Marcus Vance, Style Seeker.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2.5 — FROM WIREFRAME TO HIGH-FIDELITY SCREEN -->
+    <div class="case-section">
+      <div class="case-section-label">From Wireframe to Screen</div>
+      <p class="insight-support" style="margin-bottom:1.5rem;">
+        Every flow started as a paper-thin wireframe before any visual design decisions were made — typography, colour, spacing, and imagery all came after the interaction pattern was validated.
+      </p>
+
+      <div class="zigzag-row">
+        <div class="zigzag-visual">
+          <img src="images/fitoday/fitoday_wireframe_mainscreen.png" alt="Wireframe — main home page" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
+          <div class="img-caption">Early wireframe — main home page - rating system.</div>
+        </div>
+        <div class="zigzag-visual">
+          <video autoplay loop muted playsinline style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
+            <source src="videos/fitoday/fitoday_final_mainscreen.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+          <div class="img-caption">Final UI — Rating & optional feedback section.</div>
+        </div>
+      </div>
+
+    <!-- SECTION 3 — CRITICAL DESIGN DECISIONS -->
+    <div class="case-section">
+      <div class="case-section-label">Critical Design Decisions</div>
+      <p class="insight-support" style="margin-bottom:1.5rem;">Three constraints carry almost the entire product. Each one was a deliberate trade-off, not a default.</p>
+      <div class="design-cards">
+        <div class="design-card">
+          <div class="design-card-body">
+            <div class="design-card-title">One post per day, not unlimited</div>
+            <div class="design-card-text">Unlimited posting was the obvious default, but it leads to spam and a noisy feed. A strict daily limit creates scarcity, forces more thoughtful posting, and gives the habit loop somewhere to attach itself.</div>
+          </div>
+        </div>
+        <div class="design-card">
+          <div class="design-card-body">
+            <div class="design-card-title">Three-option rating, not likes</div>
+            <div class="design-card-text">A like is a binary signal that tells you nothing about how to improve. "Could be Improved / It's Okay / It's Awesome" forces a real judgment while staying lightweight enough to answer in one tap.</div>
+          </div>
+        </div>
+        <div class="design-card">
+          <div class="design-card-body">
+            <div class="design-card-title">Show who voted, hide what they voted</div>
+            <div class="design-card-text">Fully public ratings discourage honest feedback and create social pressure. Fully anonymous voting removes accountability. Showing the voter list but hiding the individual rating splits the difference.</div>
+          </div>
+        </div>
+      </div>
+
+      <img src="images/fitoday/fitoday_profile.png" alt="Wireframe — Profile Page" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
+
+    </div>
+
+    <!-- SECTION 4 — USABILITY TESTING & ITERATION -->
+    <div class="case-section">
+      <div class="case-section-label">Validation & Iteration</div>
+      <p class="insight-support">
+        I ran a 5-person usability test on the Figma prototype, asking participants to post an outfit, save an item, and use the rating system — recording task success, completion time, and where people got stuck.
+      </p>
+      <div class="finding-list">
+        <div class="finding-item">
+          <div class="finding-num">01</div>
+          <div>The three-option rating system tested well — all five participants understood it immediately with no explanation needed</div>
+        </div>
+        <div class="finding-item">
+          <div class="finding-num">02</div>
+          <div>Several participants wanted a way to explain <em>why</em> they gave a rating, not just which of the three options they picked<br><br>"but I want people to tell me WHERE to improve not just how good it looks"</div>
+        </div>
+        <div class="finding-item">
+          <div class="finding-num">03</div>
+          <div>One participant didn't want their historical scores visible to others at all — surfacing a privacy need the original scope hadn't accounted for</div>
+        </div>
+        <div class="finding-item">
+          <div class="finding-num">04</div>
+          <div>A participant who mis-tapped submit during testing wanted to correct their vote — surfacing a need for vote modification within the rating window</div>
+        </div>
+      </div>
+
+      <div class="research-block" style="margin-top:2rem;">
+        <h3 class="zigzag-heading" style="margin-top:1.5rem;">What changed between V1 and V2</h3>
+        <p class="zigzag-body">
+          Three changes came directly out of that test: an optional comment field after rating; a per-user toggle for whether rated outfits show on a public profile or stay private to the owner; and the ability to change a vote within the 24-hour rating window instead of it being final on submit.
+        </p>
+      </div>
+
+      <img src="images/fitoday/fitoday_v1v2.png" alt="Wireframe — comparison of V1 and V2" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
+
+    </div>
+
+    <!-- SECTION 5 — DESIGN TO ENGINEERING -->
+    <div class="case-section">
+      <div class="case-section-label">Design → Engineering</div>
+      <div class="insight-statement" style="margin-bottom:1rem;">
+        The PRD didn't stop at the design handoff.<br>
+        <em>I'm the one building against it.</em>
+      </div>
+      <p class="insight-support">
+        Because I wrote the requirements myself, I've been able to build the backend directly against them rather than reinterpreting someone else's spec. The account-security requirements alone (rate limiting, lockout behaviour, input sanitization) needed real backend engineering, not just UI states — which is where the "computer science foundation" I lean on elsewhere in this portfolio actually gets used in production.
+      </p>
+      <div class="outcome-summary">
+        <div class="outcome-title">Worked on so far</div>
+        <ul class="outcome-bullets">
+          <li>Auth flows (email/password + Google Sign-In) with Riverpod state management and auth-aware routing via go_router</li>
+          <li>A <code>secureLogin</code> Cloud Function: per-IP rate limiting, a five-attempt lockout with progressive delay, and a lockout notification email</li>
+          <li>Generic, non-specific error messages throughout auth to prevent account enumeration</li>
+          <li>Local testing pipeline via the Firebase Emulator Suite, gated behind debug-mode checks so it never touches production</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SECTION 6 — CURRENT STATUS -->
+    <div class="case-section">
+      <div class="case-section-label">Current Status</div>
+      <div class="outcome-summary">
+        <div class="outcome-title">Where it stands</div>
+        <ul class="outcome-bullets">
+          <li>Research, personas, full PRD, and Figma prototype complete, validated through a 5-person usability test</li>
+          <li>Onboarding, auth UI, and secure login/account-creation backend are built and working in the emulator</li>
+          <li>Currently building out the Cloud Functions for daily score finalization, the search engine, and the leveling system</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SECTION 7 — REFLECTION -->
+    <div class="reflection-block">
+      <div class="reflection-label">Reflection</div>
+      <p class="reflection-text">
+        "This is the project that forced me to stop treating 'design' and 'engineering feasibility' as separate stages. Writing my own PRD and then having to actually implement it — rate limiting, lockout logic, the midnight write-load spike — meant every design decision had to survive being built, not just presented. It changed how I write requirements now: I write them the way I'd want to receive them as the engineer on the other end."
+      </p>
+    </div>
+
+  </div>
+</div>
+</div><!-- /case-fitoday -->
+
+
 <!-- ── USRI CASE STUDY ── -->
 <div class="case-page" id="case-usri">
   <div class="case-content">
@@ -245,9 +584,6 @@
         <span class="case-meta-tag">Personas</span>
         <span class="case-meta-tag">Journey Mapping</span>
       </div>
-      <p class="case-intro">
-        During a 17-week summer research internship — working alongside a team that included education faculty — I led the research and design of this platform end to end. The full research process and design decisions are documented below; final high-fidelity designs are confidential while backend and chatbot development continues.
-      </p>
 
 
       <div class="case-hero-visual">
@@ -260,9 +596,9 @@
       <div class="case-section-label">Project Snapshot</div>
       <div class="outcome-summary">
         <ul class="outcome-bullets">
-          <li><strong>Role:</strong> Lead UX Researcher &amp; Designer</li>
-          <li><strong>Timeline:</strong> 17 weeks, Summer 2025</li>
-          <li><strong>Team:</strong> Worked with a team including education faculty</li>
+          <li><strong>Role:</strong> Lead UX Researcher &amp; Designer &amp; Intern</li>
+          <li><strong>Timeline:</strong> 17 weeks, Summer Internship 2025</li>
+          <li><strong>Team:</strong> Worked with a team including education faculty and senior developers</li>
           <li><strong>Tools:</strong> Figma, usability testing protocol, affinity mapping</li>
           <li><strong>Status:</strong> Research &amp; design complete — backend/chatbot development ongoing, final UI confidential</li>
         </ul>
@@ -473,7 +809,7 @@
     <div class="case-hero">
       <div class="case-eyebrow">Feature Design · UX Strategy · Self-Initiated</div>
       <h1 class="case-title">Nanobanana Feature Enhancement</h1>
-      <p class="case-subtitle">Reducing cognitive friction in AI-assisted photo editing through visual interaction design.</p>
+      <p class="case-subtitle">Reducing cognitive friction in AI-assisted photo editing through visual interaction design after identifying the accessibility gap through community research and proposing a concrete interaction redesign to address it.</p>
       <div class="case-meta">
         <span class="case-meta-tag">Interaction Design</span>
         <span class="case-meta-tag">Community Research</span>
@@ -481,10 +817,9 @@
         <span class="case-meta-tag">UX Strategy</span>
         <span class="case-meta-tag">Cognitive Load Reduction</span>
       </div>
-      <p class="case-intro">
-        Nanobanana is an AI-powered creative tool that generates images and videos from user prompts — designed for photographers, videographers, and general creative users. <br><br>I identified a usability gap through community research: beginner users weren't failing because the tool lacked capability. They were failing before they even got started, because the interface required creative and technical vocabulary they simply didn't have.
-
-        My focus was identifying the accessibility gap through community research and proposing a concrete interaction redesign to address it.</p>
+      <div class="case-hero-visual">
+        <img src="images/nano/nano_hero_section.png" alt="Nanobanana hero section" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
+      </div>
     </div>
 
     <!-- PROJECT SNAPSHOT -->
@@ -632,7 +967,7 @@
     <div class="case-hero">
       <div class="case-eyebrow">Gamification · Learning Experience Design · Child HCI</div>
       <h1 class="case-title">Wordtropolis</h1>
-      <p class="case-subtitle">A gamified spelling learning platform designed for young students — built around how children actually learn, stay motivated, and retain information over time.</p>
+      <p class="case-subtitle">A gamified spelling learning platform designed for young students — built around motivation psychology, adaptive challenge, and meaningful progression.         The project ran under a tight academic timeline, which pushed us to prioritize decisions quickly and ground every choice in learning science rather than intuition.</p>
       <div class="case-meta">
         <span class="case-meta-tag">Figma</span>
         <span class="case-meta-tag">Java Swing</span>
@@ -641,9 +976,6 @@
         <span class="case-meta-tag">Adaptive Learning</span>
         <span class="case-meta-tag">Multi-sensory Design</span>
       </div>
-      <p class="case-intro">
-        As part of a 12-week university course team project, I led the UI design and implemented the Java Swing build, reimagining an existing spelling game through the lens of behavioural design and child-centered interaction principles. Rather than preserving the original structure, the team rebuilt the system around motivation psychology, adaptive challenge, and meaningful progression — exploring how learning experiences can sustain engagement over time. The project ran under a tight academic timeline, which pushed us to prioritize decisions quickly and ground every choice in learning science rather than intuition.
-      </p>
 
       <div class="case-hero-visual" style="background: linear-gradient(135deg, #EEF0FE 0%, #DEDFFE 100%); min-height: 360px;">
             <img src="images/wordtropolis/word_map.png" alt="Wordtropolis game UI" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
