@@ -168,7 +168,6 @@
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 5rem; align-items: start; margin-top: 3rem;
   }
-
   .about-photo-wrap {
     border-radius: var(--radius-lg);
     overflow: hidden;
@@ -182,7 +181,6 @@
     object-fit: cover;
     display: block;
   }
-
   .about-heading {
     font-family: 'DM Serif Display', serif;
     font-size: clamp(30px, 4vw, 46px); line-height: 1.1;
@@ -269,6 +267,36 @@
   }
   @media (max-width: 680px) { .challenge-solution-grid { grid-template-columns: 1fr; } }
 
+  /* Flow comparison rows — instant vs physical vs HiHello */
+  .flow-compare { margin: 1.5rem 0; }
+  .flow-compare-row {
+    display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
+    padding: 0.9rem 0; border-bottom: 0.5px solid var(--border);
+  }
+  .flow-compare-row:last-child { border-bottom: none; }
+  .flow-compare-label {
+    font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 600;
+    color: var(--ink3); width: 130px; flex-shrink: 0;
+  }
+  .flow-compare-row.accent .flow-compare-label { color: var(--accent); }
+  .flow-steps { font-family: 'DM Mono', monospace; font-size: 12.5px; color: var(--ink2); }
+  .flow-compare-row.accent .flow-steps { color: var(--ink); font-weight: 500; }
+
+  /* Revision moments — made visually distinct, not buried as generic text */
+  .revision-block {
+    border-left: 3px solid var(--accent);
+    background: var(--accent-pale);
+    padding: 1.6rem 1.8rem;
+    border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+    margin: 1.75rem 0;
+  }
+  .revision-label {
+    font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 12px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .revision-label::before { content: '↻'; font-size: 14px; }
+
   .case-img-placeholder {
     display: flex; align-items: center; justify-content: center;
     min-height: 260px; width: 100%;
@@ -310,66 +338,6 @@
     border-radius: 100px; color: var(--ink3);
   }
 
-  /* Flow comparison rows — instant vs physical vs HiHello */
-.flow-compare {
-  margin: 1.5rem 0;
-  border-top: 0.5px solid var(--border);
-}
-.flow-compare-row {
-  display: flex;
-  align-items: baseline;
-  gap: 1.5rem;
-  padding: 1rem 0;
-  border-bottom: 0.5px solid var(--border);
-}
-.flow-compare-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--ink3);
-  width: 150px;
-  flex-shrink: 0;
-  line-height: 1.4;
-}
-.flow-compare-row.accent {
-  background: var(--accent-pale);
-  margin: 0 -1rem;
-  padding: 1rem;
-  border-radius: var(--radius);
-  border-bottom: 0.5px solid var(--accent-mid);
-}
-.flow-compare-row.accent .flow-compare-label {
-  color: var(--accent);
-}
-.flow-steps {
-  font-family: 'DM Mono', monospace;
-  font-size: 13px;
-  color: var(--ink2);
-  line-height: 1.6;
-  letter-spacing: 0.01em;
-}
-.flow-compare-row.accent .flow-steps {
-  color: var(--ink);
-  font-weight: 500;
-}
-
-@media (max-width: 600px) {
-  .flow-compare-row {
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-  .flow-compare-label {
-    width: auto;
-  }
-  .flow-compare-row.accent {
-    margin: 0;
-  }
-  .flow-steps {
-    font-size: 12px;
-    word-break: break-word;
-  }
-}
-
   @media (max-width: 900px) {
     .intro-work-grid { grid-template-columns: 1fr; }
     .intro-col { position: static; margin-bottom: 3rem; }
@@ -396,6 +364,15 @@
     transform: translateX(0);
   }
 
+  /* Standalone case-study pages (separate .html files, not overlay) */
+  body.standalone-case .case-page {
+    position: static; inset: auto; transform: none;
+    overflow: visible; z-index: auto; background: transparent;
+  }
+  body.standalone-case .case-back {
+    opacity: 1 !important; pointer-events: all !important;
+  }
+
   /* Back button */
   .case-back {
     position: fixed; top: 1.4rem; left: 1.8rem; z-index: 600;
@@ -405,7 +382,7 @@
     color: var(--ink2); cursor: none; background: var(--bg);
     border: 0.5px solid var(--border); border-radius: 100px;
     padding: 8px 18px; transition: all var(--transition);
-    opacity: 0; pointer-events: none;
+    opacity: 0; pointer-events: none; text-decoration: none;
   }
   .case-back.visible { opacity: 1; pointer-events: all; }
   .case-back:hover { color: var(--accent); border-color: var(--accent-mid); background: var(--accent-pale); }

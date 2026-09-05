@@ -84,8 +84,7 @@
           <div class="work-desc">A student well-being app that goes beyond logging feelings. Through a short self-assessment, students identify which of three research-backed competencies — emotion regulation, resilience &amp; adaptability, and social-emotional regulation — they're weakest in, then follow a structured path to actually build it. During UX-internship, I led UX research with 18 students and designed the experience alongside faculty and senior designers.</div>
           <div class="work-tags">
             <span class="card-tag">Figma</span>
-            <span class="card-tag">Usability Testing</span>
-            <span class="card-tag">Affinity Mapping</span>
+            <span class="card-tag">Behavioural Design</span>
           </div>
         </div>
       </div>
@@ -120,8 +119,7 @@
           <div class="work-desc">A digital envelope experience exploring how to bring the intentionality of physical letters into digital messaging. I designed, coded, and deployed this digital letter-writing app solo.</div>
           <div class="work-tags">
             <span class="card-tag">Figma</span>
-            <span class="card-tag">Responsive Web</span>
-            <span class="card-tag">AI-Assisted Dev</span>
+            <span class="card-tag">Claude Code</span>
           </div>
         </div>
       </div>
@@ -208,11 +206,8 @@
       <div class="case-meta">
         <span class="case-meta-tag">Figma</span>
         <span class="case-meta-tag">Competitive Research</span>
-        <span class="case-meta-tag">Surveys</span>
         <span class="case-meta-tag">Usability Testing</span>
-        <span class="case-meta-tag">Product Requirements Doc</span>
-        <span class="case-meta-tag">Flutter</span>
-        <span class="case-meta-tag">Firebase / Cloud Functions</span>
+        <span class="case-meta-tag">Flutter / Firebase</span>
       </div>
 
       <div>
@@ -467,16 +462,16 @@
         </div>
       </div>
 
-      <div class="research-block" style="margin-top:2rem;">
-        <h3 class="zigzag-heading" style="margin-top:1.5rem;">Design Changes</h3>
-        <p class="zigzag-body">
-          <ul class="outcome-bullets">
-            <li>Added optional comments after ratings because participants wanted actionable feedback.</li>
-            <li>Added privacy controls after users expressed concerns about exposing historical ratings.</li>
-            <li>Allowed vote changes during the rating window after observing accidental submissions.</li>
-          </ul>
-        </p>
-        <img src="images/fitoday/fitoday_v1v2.png" alt="Wireframe — comparison of V1 and V2" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
+      <div class="revision-block">
+        <div class="revision-label">Where I changed my mind</div>
+        <p class="zigzag-body" style="margin-bottom:1rem;">I assumed a three-option rating would be enough on its own. It wasn't — people wanted to say <em>why</em>, not just <em>what</em>. Three of my original assumptions got revised after five conversations:</p>
+        <ul class="outcome-bullets">
+          <li>Added optional comments after ratings — a quick tap wasn't giving people enough room to actually help.</li>
+          <li>Added privacy controls after someone flatly said they didn't want their history visible — a need the original scope hadn't considered at all.</li>
+          <li>Allowed vote changes during the rating window after watching someone mis-tap and have no way to fix it.</li>
+        </ul>
+        <img src="images/fitoday/fitoday_v1v2.png" alt="Wireframe — comparison of V1 and V2" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: var(--radius); margin-top:1.2rem;">
+        <div class="img-caption">V1 → V2 — what the testing above actually changed on screen.</div>
       </div>
 
 
@@ -889,11 +884,6 @@
         <span class="case-meta-tag">Figma</span>
         <span class="case-meta-tag">Usability Testing</span>
         <span class="case-meta-tag">UX Research</span>
-        <span class="case-meta-tag">Think-aloud Testing</span>
-        <span class="case-meta-tag">Pre/Post Surveys</span>
-        <span class="case-meta-tag">Affinity Mapping</span>
-        <span class="case-meta-tag">Personas</span>
-        <span class="case-meta-tag">Journey Mapping</span>
       </div>
 
 
@@ -987,16 +977,22 @@
         <div class="zigzag-visual">
           <img src="images/usri/usri_competitive_research.png" alt="competitive research" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
       </div>
+    </div>
 
-      <div class="zigzag-text">
-          <h3 class="zigzag-heading">An alternative we considered and rejected</h3>
-          <p class="zigzag-body">Our initial direction focused on sleep tracking. The literature showed sleep only explained part of the picture and emotion regulation + resilience + social emotion regulartion mattered too. So we shifted to a competency-based approach instead.
-        </div>
-
+    <div class="revision-block" style="margin-top: 2rem;">
+      <div class="revision-label">Where we changed our minds</div>
+      <p class="zigzag-body" style="margin-bottom:1rem;">We didn't start here. Our first instinct was sleep tracking as sleep is the obvious lever for student well-being, and it felt like a safe, well-supported place to start.</p>
+      <div class="zigzag-row" style="margin-top:0;">
         <div class="zigzag-visual">
           <img src="images/usri/usri_sitemap.png" alt="sitemap" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
-          <div class="img-caption">Initial sleep tracking approach - sitemap</div>
+          <div class="img-caption">The sitemap we actually built for the sleep-tracking direction, before we abandoned it.</div>
+        </div>
+        <div class="zigzag-text">
+          <p class="zigzag-body">The literature review kept pulling us away from it: sleep only explained part of the picture. Emotion regulation, resilience, and social-emotional skills mattered just as much — and none of them were about sleep at all. Keeping sleep-tracking would have meant building the easy answer instead of the right one.</p>
+        </div>
       </div>
+    </div>
+    
     </div>
 
     <!-- SECTION 2 — MEET THE USER -->
