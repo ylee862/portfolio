@@ -296,6 +296,27 @@
   }
   .revision-label::before { content: '↻'; font-size: 14px; }
 
+  .confidential-ribbon {
+    position: absolute; top: 50%; left: 50%;
+    width: 150%; height: 28px;
+    transform: translate(-50%, -50%) rotate(-32deg);
+    background: rgba(18,22,26,0.85);
+    overflow: hidden; z-index: 5; pointer-events: none;
+    display: flex; align-items: center;
+  }
+  .confidential-ribbon-track {
+    display: flex; white-space: nowrap;
+    animation: ribbon-scroll 9s linear infinite;
+  }
+  .confidential-ribbon-track span {
+    font-family: 'DM Mono', monospace; font-size: 10.5px;
+    letter-spacing: 2px; color: #fff; flex-shrink: 0;
+  }
+  @keyframes ribbon-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
   .case-img-placeholder {
     display: flex; align-items: center; justify-content: center;
     min-height: 260px; width: 100%;
@@ -546,6 +567,15 @@
     margin-bottom: 1rem; color: var(--ink);
   }
   .zigzag-body { font-size: 14px; color: var(--ink2); line-height: 1.8; }
+
+  .quote-callout {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: clamp(19px, 2.4vw, 26px);
+    line-height: 1.45;
+    color: var(--ink);
+    margin: 1.3rem 0;
+  }
 
   /* Design decision cards */
   .design-cards {
