@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Yedam Lee — Product & UX/UI Designer</title>
+<title>Yedam Lee | UX & Product Designer</title>
+<meta name="description" content="Yedam Lee is a UX & product designer with a computer science background who researches the problem, designs the flow, and builds it." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -13,9 +14,6 @@
 
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursor-ring"></div>
-
-<!-- BACK BUTTON (shared) -->
-<button class="case-back" id="caseBack" onclick="closeCasePage()">Back to Work</button>
 
 <!-- NAV -->
 <nav>
@@ -28,16 +26,16 @@
   </div>
 </nav>
 
-<!-- HERO + WORK (sticky intro / big visuals) -->
+<!-- HERO + WORK -->
 <section id="hero">
   <div class="intro-work-grid">
 
     <!-- LEFT: sticky intro -->
     <div class="intro-col">
-      <div class="hero-eyebrow reveal">Product & UX Designer</div>
+      <div class="hero-eyebrow reveal">Product &amp; UX Designer</div>
       <h1 class="hero-name reveal" style="transition-delay:0.1s">Yedam<br><em>Lee.</em></h1>
       <p class="hero-tagline reveal" style="transition-delay:0.15s">
-        I am a product and UX designer who creates meaningful experiences by solving real-world problems with intention and then helping to bring those solutions to life.
+        I studied computer science, then got more curious about why people get stuck than about the code itself. Now I research the problem, design the flow, and build it.
       </p>
       <div class="hero-position reveal" style="transition-delay:0.2s">
         <div class="position-item"><div class="position-dot"></div>Product Design</div>
@@ -53,11 +51,30 @@
     <!-- RIGHT: big project visuals -->
     <div class="work-col" id="projects">
 
-      <!-- USRI -->
-      <div class="work-row reveal" onclick="openCasePage('usri')">
+      <!-- 01 FITODAY -->
+      <a class="work-row reveal" href="fitoday.html">
         <div class="work-visual">
-          <img src="images/usri/usri_hero_section.png" alt="Well-being App preview">
-          <div class="confidential-ribbon">
+          <img src="images/fitoday/fitoday_hero.png" alt="Fitoday app preview">
+          <div class="work-overlay"><span>View Case Study</span></div>
+        </div>
+        <div class="work-meta">
+          <div class="work-index">01</div>
+          <div class="work-title">Fitoday</div>
+          <div class="work-desc">Get outfit feedback the way you'd ask a friend, with honest opinions on what to change. I designed, researched, and am building this social fashion app solo, end to end.</div>
+          <div class="work-tags">
+            <span class="card-tag">Figma</span>
+            <span class="card-tag">Usability Testing</span>
+            <span class="card-tag">Firebase</span>
+            <span class="card-tag">Flutter</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 02 USRI -->
+      <a class="work-row reveal" href="usri.html">
+        <div class="work-visual">
+          <img src="images/usri/usri_hero_section.png" alt="Student well-being app preview">
+          <div class="confidential-ribbon" aria-hidden="true">
             <div class="confidential-ribbon-track">
               <span>FINAL UI CONFIDENTIAL &#8226; FINAL UI CONFIDENTIAL &#8226; FINAL UI CONFIDENTIAL &#8226; </span>
               <span>FINAL UI CONFIDENTIAL &#8226; FINAL UI CONFIDENTIAL &#8226; FINAL UI CONFIDENTIAL &#8226; </span>
@@ -67,70 +84,52 @@
           <div class="work-overlay"><span>View Case Study</span></div>
         </div>
         <div class="work-meta">
-          <div class="work-index">01</div>
+          <div class="work-index">02</div>
           <div class="work-title">Student Well-being App</div>
-          <div class="work-desc">A student well-being app that goes beyond logging feelings — a short self-assessment finds your weakest of three research-backed competencies, then guides you toward actually building it.</div>
+          <div class="work-desc">A student well-being app that goes beyond logging feelings. A short self-assessment finds your weakest of three research-backed competencies, then guides you toward actually building it.</div>
           <div class="work-tags">
             <span class="card-tag">Figma</span>
+            <span class="card-tag">UX Research</span>
             <span class="card-tag">Behavioural Design</span>
           </div>
         </div>
-      </div>
+      </a>
 
-
-      <!-- Fitoday -->
-      <div class="work-row reveal" onclick="openCasePage('fitoday')">
+      <!-- 03 HIHELLO -->
+      <a class="work-row reveal" href="hihello.html">
         <div class="work-visual">
-          <img src="images/fitoday/fitoday_hero.png" alt="Fitoday app preview">
+          <img src="images/hihello/hihello_hero.png" alt="HiHello preview">
           <div class="work-overlay"><span>View Case Study</span></div>
         </div>
         <div class="work-meta">
-          <div class="work-index">02</div>
-          <div class="work-title">Fitoday</div>
-          <div class="work-desc">Get outfit feedback the same way you'd ask a friend and honest opinions on what to change. I designed, researched, and built this social fashion app solo, end to end.</div>
+          <div class="work-index">03</div>
+          <div class="work-title">HiHello</div>
+          <div class="work-desc">A digital envelope that brings the intention of physical letters into digital messaging. I designed, coded, and deployed this letter-writing app solo, and it's live.</div>
           <div class="work-tags">
             <span class="card-tag">Figma</span>
-            <span class="card-tag">Usability Testing</span>
-            <span class="card-tag">Firebase</span>
-            <span class="card-tag">Flutter</span>
+            <span class="card-tag">Front-End Development</span>
+            <span class="card-tag">Claude Code</span>
           </div>
         </div>
-      </div>
+      </a>
 
-      <!-- WORDTROPOLIS -->
-      <div class="work-row reveal" onclick="openCasePage('word')">
+      <!-- 04 WORDTROPOLIS -->
+      <a class="work-row reveal" href="wordtropolis.html">
         <div class="work-visual">
           <img src="images/wordtropolis/word_thumbnail.png" alt="Wordtropolis preview">
           <div class="work-overlay"><span>View Case Study</span></div>
         </div>
         <div class="work-meta">
-          <div class="work-index">03</div>
+          <div class="work-index">04</div>
           <div class="work-title">Wordtropolis</div>
-          <div class="work-desc">Redesign project: A gamified spelling platform for young learners, redesigned around how children naturally learn: through play and visible progress.</div>
+          <div class="work-desc">A redesign of a spelling game for young learners, rebuilt around how kids naturally learn: through play and visible progress.</div>
           <div class="work-tags">
             <span class="card-tag">Figma</span>
             <span class="card-tag">Java Swing</span>
             <span class="card-tag">Gamification</span>
           </div>
         </div>
-      </div>
-
-      <!-- HIHELLO -->
-      <div class="work-row reveal" onclick="openCasePage('hihello')">
-        <div class="work-visual">
-          <img src="images/hihello/hihello_hero.png" alt="HiHello preview">
-          <div class="work-overlay"><span>View Case Study</span></div>
-        </div>
-        <div class="work-meta">
-          <div class="work-index">04</div>
-          <div class="work-title">HiHello</div>
-          <div class="work-desc">A digital envelope experience exploring how to bring the intentionality of physical letters into digital messaging. I designed, coded, and deployed this digital letter-writing app solo.</div>
-          <div class="work-tags">
-            <span class="card-tag">Figma</span>
-            <span class="card-tag">Claude Code</span>
-          </div>
-        </div>
-      </div>
+      </a>
 
     </div>
   </div>
@@ -143,13 +142,13 @@
     <div>
       <h2 class="about-heading reveal">Research-driven.<br>Built to ship.</h2>
       <p class="about-bio reveal" style="transition-delay:0.1s">
-       I studied Computer Science, but got hooked on the layer above code. Why people struggle with products, and which problems are actually worth solving. Today I move between research, product decisions, interaction design, and the code that ships it.
+       I studied Computer Science, but got hooked on the layer above code: why people struggle with products, and which problems are actually worth solving. Today I move between research, product decisions, interaction design, and the code that ships it.
       </p>
       <p class="about-bio reveal" style="transition-delay:0.15s">
-        My habit: opening apps I use daily, noticing where I hesitate or get stuck, then asking whether that's a design problem or a product one — a confusing screen, or a feature that shouldn't exist yet. I design outward from that friction, and I'm just as willing to cut scope as I am to add polish.
+        My habit is opening apps I use daily, noticing where I hesitate or get stuck, and asking whether that's a design problem or a product one: a confusing screen, or a feature that shouldn't exist yet. I design outward from that friction, and I'm just as willing to cut scope as I am to add polish.
       </p>
       <div class="reveal" style="transition-delay:0.2s">
-        <div class="dev-badge">Every redesign, I ask: what problem is this solving, is it the right problem to solve right now, and what trade-off am I making by shipping it this way?</div>
+        <div class="dev-badge">Every redesign, I ask: what problem is this solving, is it the right problem right now, and what am I trading off by shipping it this way?</div>
       </div>
     </div>
 
@@ -167,1246 +166,37 @@
 
   <div class="contact-form reveal" style="transition-delay:0.2s">
     <div class="form-row">
-      <label>Name</label>
+      <label for="fname">Name</label>
       <input type="text" id="fname" placeholder="Your name" />
       <span class="field-error" id="err-name">Please enter your name.</span>
     </div>
     <div class="form-row">
-      <label>Email</label>
+      <label for="femail">Email</label>
       <input type="email" id="femail" placeholder="your@email.com" />
       <span class="field-error" id="err-email">Please enter a valid email address.</span>
     </div>
     <div class="form-row">
-      <label>Message</label>
+      <label for="fmessage">Message</label>
       <textarea id="fmessage" placeholder="Tell me about the role or project..."></textarea>
       <span class="field-error" id="err-message">Please enter your message.</span>
     </div>
     <button class="btn-primary" onclick="handleSubmit()" style="width:100%;margin-top:6px">Send Message</button>
-    <div class="form-success" id="formSuccess">✓ Message sent — talk soon.</div>
+    <div class="form-success" id="formSuccess">✓ Message sent. Talk soon.</div>
   </div>
 
   <div class="contact-links reveal" style="transition-delay:0.3s">
     <a href="mailto:ylee862ylee@gmail.com" class="contact-link">✉ Email</a>
-    <a href="https://www.linkedin.com/in/yedam-lee-1bb43a281" class="contact-link" target="_blank">in LinkedIn</a>
-    <a href="https://github.com/ylee862" class="contact-link" target="_blank">⌥ GitHub</a>
+    <a href="https://www.linkedin.com/in/yedam-lee-1bb43a281" class="contact-link" target="_blank" rel="noopener">in LinkedIn</a>
+    <a href="https://github.com/ylee862" class="contact-link" target="_blank" rel="noopener">⌥ GitHub</a>
   </div>
 </section>
 
 <footer>
-  Designed & coded by Yedam Lee · ylee862.github.io
+  Designed &amp; coded by Yedam Lee · ylee862.github.io
 </footer>
 
-<!-- ============================================
-     CASE STUDY PAGES
-     ============================================ -->
-
-<!-- FITODAY CASE STUDY -->
- <div class="case-page" id="case-fitoday">
-  <div class="case-content">
-
-    <!-- HERO -->
-    <div class="case-hero">
-      <div class="case-eyebrow">Product Design + Full-Stack Development · Research & Design Complete · In Active Development</div>
-      <h1 class="case-title">Fitoday</h1>
-      <p class="case-subtitle">
-          Fitoday is a social fashion app where you post your outfit and get real feedback from people whose taste you trust and not just likes. I introduced a three-option rating (love it / it's okay / rethink it) paired with optional written comments, so responses stay fast to give but still useful to receive.
-      </p>
-      <div class="case-meta">
-        <span class="case-meta-tag">Figma</span>
-        <span class="case-meta-tag">Competitive Research</span>
-        <span class="case-meta-tag">Usability Testing</span>
-        <span class="case-meta-tag">Flutter / Firebase</span>
-      </div>
-
-      <div>
-      <div class="case-hero-visual" style="background: linear-gradient(135deg, #FBEFE8 0%, #F1D2C1 100%); min-height: 360px;">
-        <img src="images/fitoday/fitoday_mockup.png" alt="Fitoday core interaction — three-option rating, optional comments, and rated system" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
-      </div>
-      </div>
-    </div>
-
-    <!-- PROJECT SNAPSHOT -->
-    <div class="case-section">
-      <div class="case-section-label">Project Snapshot</div>
-
-      <div class="challenge-solution-grid">
-        <div class="cs-block">
-          <div class="cs-label">Challenge</div>
-          <div class="cs-text">Fashion platforms are built for sharing outfits, not improving them. People get likes, but rarely feedback they can actually learn from.</div>
-        </div>
-        <div class="cs-block">
-          <div class="cs-label">Solution</div>
-          <div class="cs-text">A social fashion app where every outfit post gets a fast and structured rating plus optional comments. Here, feedback is built to be quick to give and genuinely useful to receive.</div>
-        </div>
-      </div>
-
-      <div class="outcome-summary" style="margin-top: 1.5rem;">
-        <ul class="outcome-bullets">
-          <li><strong>Role:</strong> Solo — Product Designer, UX Researcher &amp; Full-Stack Developer</li>
-          <li><strong>Timeline:</strong> 8–10 weeks, ongoing</li>
-          <li><strong>Platform:</strong> iOS (Flutter)</li>
-          <li><strong>Stack:</strong> Flutter/Dart, Firebase (Auth, Firestore, Cloud Functions)</li>
-          <li><strong>Status:</strong> Research, PRD, and Figma design complete — auth &amp; backend security in place, core Cloud Functions still in progress</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="stat-row">
-      <div class="stat-item">
-        <div class="stat-num">12</div>
-        <div class="stat-label">survey respondents in early research</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">5</div>
-        <div class="stat-label">usability test participants</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">1/day</div>
-        <div class="stat-label">post limit — a deliberate constraint, not a default</div>
-      </div>
-    </div>
-
-    <!-- SECTION 0 — THE SPARK -->
-    <div class="case-section">
-      <div class="case-section-label">The Spark</div>
-      <div class="insight-statement">
-        It didn't start with a market gap.<br>
-      </div>
-      <p class="insight-support">
-        Scrolling through Instagram, I kept wondering why some outfits looked put together and mine didn't. What I wanted wasn't more inspiration. It was honest feedback I could learn from.
-      </p>
-    </div>
-
-    <!-- SECTION 1 — CORE INSIGHT / COMPETITIVE RESEARCH -->
-    <div class="case-section">
-      <div class="case-section-label">Core Insight</div>
-      <div class="insight-statement">
-        People weren't short on places<br>to post an outfit.
-        <em>They were short on a place to actually get feedback on it.</em>
-      </div>
-      <p class="insight-support">
-        A competitive review and a 12-person survey confirmed the pattern: plenty of places to post, almost nowhere built for honest, constructive feedback.
-      </p>
-
-      <div class="lit-review-notes">
-        <div class="sticky-note sticky-up">
-          <div class="sticky-quote-mark">"</div>
-          <div class="sticky-text">Pinterest used to be a kind of safe place... now it's filled with AI generated content I can never seem to get rid of.</div>
-          <div class="sticky-source">Pinterest user review</div>
-        </div>
-        <div class="sticky-note sticky-down">
-          <div class="sticky-quote-mark">"</div>
-          <div class="sticky-text">Their algorithm takes this kind of content to the highest peak... full of nudity, toxicity.</div>
-          <div class="sticky-source">Instagram user review</div>
-        </div>
-        <div class="sticky-note sticky-up">
-          <div class="sticky-quote-mark">"</div>
-          <div class="sticky-text">Another version of TikTok — depressing, clickbait, I wouldn't use it again.</div>
-          <div class="sticky-source">Lemon8 user review</div>
-        </div>
-        <div class="sticky-note sticky-down">
-          <div class="sticky-quote-mark">"</div>
-          <div class="sticky-text">I am scared that people will judge me. I don't think my fashion sense is that good enough.</div>
-          <div class="sticky-source">Survey participant</div>
-        </div>
-        <div class="img-caption">A sample of the competitive review research and early survey responses that shaped the product.</div>
-      </div>
-
-      <div style="overflow-x:auto; margin-top:2rem;">
-        <table style="width:100%; border-collapse:collapse; font-family:'DM Mono',monospace; font-size:0.85rem;">
-          <thead>
-            <tr style="border-bottom:2px solid var(--accent, #B5502E);">
-              <th style="text-align:left; padding:10px 12px;">Platform</th>
-              <th style="text-align:left; padding:10px 12px;">Strength</th>
-              <th style="text-align:left; padding:10px 12px;">Where it falls short for fashion</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.08);">
-              <td style="padding:10px 12px;">Instagram</td>
-              <td style="padding:10px 12px;">Large audience</td>
-              <td style="padding:10px 12px;">Fashion content buried under unrelated content and algorithmic noise</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.08);">
-              <td style="padding:10px 12px;">Pinterest</td>
-              <td style="padding:10px 12px;">Inspiration discovery</td>
-              <td style="padding:10px 12px;">No mechanism for personal feedback on your own outfit</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(0,0,0,0.08);">
-              <td style="padding:10px 12px;">TikTok</td>
-              <td style="padding:10px 12px;">Discovery, virality</td>
-              <td style="padding:10px 12px;">Hard to track personal style progression over time</td>
-            </tr>
-            <tr>
-              <td style="padding:10px 12px;">BeReal</td>
-              <td style="padding:10px 12px;">Daily authenticity habit</td>
-              <td style="padding:10px 12px;">Not fashion-focused at all</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="img-caption" style="margin-top:0.5rem;">Comparison of existing fashion platforms — none built around structured, private feedback.</div>
-    </div>
-
-    <!-- SECTION 2 — PERSONAS / RESEARCH → DESIGN -->
-    <div class="case-section">
-      <div class="case-section-label">Research → Requirements</div>
-      <p class="insight-support">Before opening Figma, I wrote a PRD to translate the research findings directly into product requirements, so every design decision traced back to evidence.</p>
-      <div class="mini-diagram">
-        <svg viewBox="0 0 720 140" xmlns="http://www.w3.org/2000/svg">
-          <g style="font-family:'DM Mono',monospace; font-size:12px;">
-            <rect x="10" y="40" width="200" height="60" rx="10" style="fill:var(--bg); stroke:var(--border);"/>
-            <text x="110" y="65" text-anchor="middle" style="fill:var(--ink); font-weight:600;">Research findings</text>
-            <text x="110" y="82" text-anchor="middle" style="fill:var(--ink3); font-size:10px;">survey + competitive review</text>
-
-            <path d="M 220 70 L 260 70" style="stroke:var(--accent); stroke-width:1.5;" marker-end="url(#arrow)"/>
-
-            <rect x="270" y="40" width="180" height="60" rx="10" style="fill:var(--accent-pale); stroke:var(--accent-mid);"/>
-            <text x="360" y="65" text-anchor="middle" style="fill:var(--accent); font-weight:600;">PRD</text>
-            <text x="360" y="82" text-anchor="middle" style="fill:var(--ink3); font-size:10px;">requirements doc</text>
-
-            <path d="M 460 70 L 500 70" style="stroke:var(--accent); stroke-width:1.5;" marker-end="url(#arrow)"/>
-
-            <rect x="510" y="40" width="200" height="60" rx="10" style="fill:var(--bg); stroke:var(--border);"/>
-            <text x="610" y="65" text-anchor="middle" style="fill:var(--ink); font-weight:600;">Design decisions</text>
-            <text x="610" y="82" text-anchor="middle" style="fill:var(--ink3); font-size:10px;">onboarding, privacy, feedback</text>
-          </g>
-          <defs>
-            <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-              <path d="M0,0 L6,3 L0,6 Z" style="fill:var(--accent);"/>
-            </marker>
-          </defs>
-        </svg>
-      </div>
-    </div>
-
-    <div class="case-section">
-      <div class="case-section-label">Who It's For</div>
-      <div class="zigzag-row">
-        <div class="zigzag-visual">
-          <img src="images/fitoday/fitoday_chloe_persona.png" alt="Persona — Chloe Lin, Fashion Creator" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
-          <div class="img-caption">Persona — Chloe Lin, Fashion Creator.</div>
-        </div>
-        <div class="zigzag-visual">
-          <img src="images/fitoday/fitoday_marcus_persona.png" alt="Persona — Marcus Vance, Style Seeker" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
-            <div class="img-caption">Persona — Marcus Vance, Style Seeker.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 2.5 — FROM WIREFRAME TO HIGH-FIDELITY SCREEN -->
-    <div class="case-section">
-      <div class="case-section-label">From Wireframe to Screen</div>
-      <p class="insight-support" style="margin-bottom:1.5rem;">
-        I sketched rough drafts to get a feel for the user flow. I focused on the core interactions first, then refined the visual design.
-      </p>
-
-      <div class="zigzag-row">
-        <div class="zigzag-visual">
-          <img src="images/fitoday/fitoday_wireframe_mainscreen.png" alt="Wireframe — main home page" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
-          <div class="img-caption">Early wireframe of the main home page and rating system.</div>
-        </div>
-        <div class="zigzag-visual">
-          <video autoplay loop muted playsinline style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
-            <source src="videos/fitoday/fitoday_final_mainscreen.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-            </video>
-          <div class="img-caption">Final UI — Rating & optional feedback section.</div>
-        </div>
-      </div>
-
-    <!-- SECTION 3 — CRITICAL DESIGN DECISIONS -->
-    <div class="case-section">
-      <div class="case-section-label">Critical Design Decisions</div>
-      <p class="insight-support" style="margin-bottom:1.5rem;">Three deliberate constraints carry the product.</p>
-      <div class="design-cards">
-        <div class="design-card">
-          <div class="design-card-body">
-            <div class="design-card-title">One post per day</div>
-            <div class="design-card-text">Limiting users to one outfit each day encourages thoughtful posts, reduces feed clutter, and creates a habit people can realistically maintain.</div>
-          </div>
-        </div>
-        <div class="design-card">
-          <div class="design-card-body">
-            <div class="design-card-title">Three-option rating, not likes</div>
-            <div class="design-card-text">Likes don't explain how to improve. Three simple ratings make feedback quick to give while encouraging more meaningful responses.</div>
-          </div>
-        </div>
-        <div class="design-card">
-          <div class="design-card-body">
-            <div class="design-card-title">Show who voted, hide what they voted</div>
-            <div class="design-card-text">Showing who voted—but not how they voted—balances honest feedback with accountability.</div>
-          </div>
-        </div>
-      </div>
-
-      <img src="images/fitoday/fitoday_profile.png" alt="Wireframe — Profile Page" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
-
-    </div>
-
-    <!-- SECTION 4 — USABILITY TESTING & ITERATION -->
-    <div class="case-section">
-      <div class="case-section-label">Validation & Iteration</div>
-      <p class="insight-support">
-        I tested with five participants using think-aloud sessions to find where people hesitated or expected something different.
-      </p>
-      <div class="finding-list">
-        <div class="finding-item">
-          <div class="finding-num">01</div>
-          <div>The three-option rating system tested well — all five participants understood it immediately with no explanation needed</div>
-        </div>
-        <div class="finding-item">
-          <div class="finding-num">02</div>
-          <div>Several participants wanted a way to explain <em>why</em> they gave a rating, not just which of the three options they picked<br><br>"but I want people to tell me WHERE to improve not just how good it looks"</div>
-        </div>
-        <div class="finding-item">
-          <div class="finding-num">03</div>
-          <div>One participant didn't want their historical scores visible to others at all — surfacing a privacy need the original scope hadn't accounted for</div>
-        </div>
-        <div class="finding-item">
-          <div class="finding-num">04</div>
-          <div>A participant who mis-tapped submit during testing wanted to correct their vote — surfacing a need for vote modification within the rating window</div>
-        </div>
-      </div>
-
-      <div class="revision-block">
-        <div class="revision-label">Where I changed my mind</div>
-        <p class="zigzag-body" style="margin-bottom:1rem;">I assumed a three-option rating would be enough on its own. It wasn't — people wanted to say <em>why</em>, not just <em>what</em>. Three of my original assumptions got revised after five conversations:</p>
-        <ul class="outcome-bullets">
-          <li>Added optional comments after ratings — a quick tap wasn't giving people enough room to actually help.</li>
-          <li>Added privacy controls after someone flatly said they didn't want their history visible — a need the original scope hadn't considered at all.</li>
-          <li>Allowed vote changes during the rating window after watching someone mis-tap and have no way to fix it.</li>
-        </ul>
-        <img src="images/fitoday/fitoday_v1v2.png" alt="Wireframe — comparison of V1 and V2" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: var(--radius); margin-top:1.2rem;">
-        <div class="img-caption">V1 → V2 — what the testing above actually changed on screen.</div>
-      </div>
-
-
-    </div>
-
-    <!-- SECTION 5 — DESIGN TO ENGINEERING -->
-    <div class="case-section">
-      <div class="case-section-label">Design → Engineering</div>
-      <p class="insight-support">Instead of stopping at the prototype, I'm building the product myself in Flutter and Firebase. Auth and backend security are in place; the remaining Cloud Functions are still in progress.</p>
-    </div>
-
-    <!-- SECTION 6 — REFLECTION -->
-  <div class="reflection-block">
-      <div class="reflection-label">Reflection</div>
-      <p class="reflection-text">
-      "Writing the PRD before opening Figma changed how I think about design decisions.
-
-      Every screen, every constraint — the one-post-a-day limit, the three-option rating — traces back to a requirement I wrote down before I knew what it would look like. That discipline made trade-offs easier to defend, because I wasn't arguing for a design I liked, I was arguing for a requirement I'd already justified."           
-      </p>
-    </div>
-
-  </div>
-</div>
-</div><!-- /case-fitoday -->
-
-
-<!-- HIHELLO CASE STUDY -->
-<div class="case-page" id="case-hihello">
-  <div class="case-content">
-
-    <!-- HERO -->
-    <div class="case-hero">
-      <div class="case-eyebrow">Solo Project · Designed, Coded & Deployed</div>
-      <h1 class="case-title">HiHello</h1>
-      <p class="case-subtitle">
-        HiHello is a digital letter-writing app — pick a postcard style, write a note, attach up to two photos, then seal it before sending, with no edits after. I designed, coded, and deployed the whole experience solo, using it to explore how small rituals — not more features — can make a digital moment feel intentional.
-      </p>
-      <div class="case-meta">
-        <span class="case-meta-tag">Figma</span>
-        <span class="case-meta-tag">Responsive Web Design</span>
-        <span class="case-meta-tag">Front-End Development</span>
-        <span class="case-meta-tag">Deployment</span>
-        <span class="case-meta-tag">AI-Assisted Workflow</span>
-      </div>
-
-      <div>
-      <div class="case-hero-visual" style="background: linear-gradient(135deg, #FBEFE8 0%, #F1D2C1 100%); min-height: 360px;">
-        <img src="images/hihello/hihello_mockup.png" alt="HiHello core interaction — postcard selection, note writing, photo attachment, and sealing" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
-      </div>
-      </div>
-    </div>
-
-    <!-- PROJECT SNAPSHOT -->
-    <div class="case-section">
-      <div class="case-section-label">Project Snapshot</div>
-
-      <div class="challenge-solution-grid">
-        <div class="cs-block">
-          <div class="cs-label">Challenge</div>
-          <div class="cs-text">Digital messages are instant and forgettable. They are sent in seconds, then buried in a feed. There's no space left for the anticipation that made physical letters feel meaningful.</div>
-        </div>
-        <div class="cs-block">
-          <div class="cs-label">Solution</div>
-          <div class="cs-text">A digital letter-writing experience that reintroduces small, deliberate rituals — choosing a card, adding photos, sealing before sending — to make a digital moment feel intentional again.</div>
-        </div>
-      </div>
-
-      <div class="outcome-summary" style="margin-top: 1.5rem;">
-        <ul class="outcome-bullets">
-          <li><strong>Role:</strong> Solo — Product Designer &amp; Developer</li>
-          <li><strong>Timeline:</strong> 5 weeks</li>
-          <li><strong>Tools:</strong> Figma, Claude Code</li>
-          <li><strong>Status:</strong> Designed, built, and deployed — live on the web</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="stat-row">
-      <div class="stat-item">
-        <div class="stat-num">5-day</div>
-        <div class="stat-label">wait before a sealed envelope unlocks</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">6</div>
-        <div class="stat-label">postcard styles to choose from</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">2</div>
-        <div class="stat-label">max photos per letter — a deliberate cap</div>
-      </div>
-    </div>
-
-    <!-- SECTION 1 — DESIGN QUESTION -->
-    <div class="case-section">
-      <div class="case-section-label">Design Question</div>
-      <div class="insight-statement">
-        How might we bring the intentionality and anticipation<br>
-        <em>of physical letters into digital communication without bringing back the inconvenience of physical mail?</em>
-      </div>
-    </div>
-
-    <!-- SECTION 1.2 — THE OPPORTUNITY -->
-    <div class="case-section">
-      <div class="case-section-label">The Opportunity</div>
-      <p class="insight-support">Instant messaging optimized away every step between thinking of someone and reaching them. That's mostly good but it also erased the anticipation a physical letter still has. HiHello keeps the convenience of digital but puts a few of those steps back.</p>
-      <div class="flow-compare">
-        <div class="flow-compare-row">
-          <div class="flow-compare-label">Instant messaging</div>
-          <div class="flow-steps">Think → Type → Send → Read</div>
-        </div>
-        <div class="flow-compare-row">
-          <div class="flow-compare-label">Physical letter</div>
-          <div class="flow-steps">Think → Write → Personalize → Seal → Send → Wait → Open</div>
-        </div>
-        <div class="flow-compare-row accent">
-          <div class="flow-compare-label">HiHello</div>
-          <div class="flow-steps">Choose → Write → Personalize → Seal → Send → Wait → Open</div>
-        </div>
-      </div>
-      <p class="insight-support">The goal wasn't to make digital communication slower for its own sake. It was to make waiting itself part of the experience.</p>
-    </div>
-
-    <!-- SECTION 1.5 — IDEATION / PROCESS -->
-    <div class="case-section">
-      <div class="case-section-label">From Idea to Interface</div>
-      <p class="insight-support">
-        Before opening Figma, I brainstormed what makes the physical letter-writing ritual enjoyable.
-      </p>
-      <div class="zigzag-row">
-        <div class="zigzag-visual">
-          <img src="images/hihello/hihello_early_idea_gathering.jpg" alt="early idea gathering" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
-        </div>
-        <div class="zigzag-text">
-          <p class="zigzag-body">I listed every exciting part of sending a physical letter, then kept only what felt worth keeping and cut anything that would feel like a chore.</p>
-        </div>
-      </div>
-      <div class="zigzag-row flip">
-        <div class="zigzag-text">
-          <h3 class="zigzag-heading">Sketching before building</h3>
-          <p class="zigzag-body">Rough hand-drawn mockups let me test a few ritual mechanics quickly before deciding which ones actually earned their friction.</p>
-        </div>
-        <div class="zigzag-visual">
-          <img src="images/hihello/hihello_early_sketches.jpg" alt="early sketches" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 1.7 — DESIGN PRINCIPLES -->
-    <div class="case-section">
-      <div class="case-section-label">Design Principles</div>
-      <div class="design-cards">
-        <div class="design-card">
-          <div class="design-card-body">
-            <div class="design-card-title">01 — Make sending intentional</div>
-            <div class="design-card-text">The experience should feel like something the sender deliberately creates, not another disposable message.</div>
-          </div>
-        </div>
-        <div class="design-card">
-          <div class="design-card-body">
-            <div class="design-card-title">02 — Make digital feel tangible</div>
-            <div class="design-card-text">Envelopes, postcards, photos, and layered visual states borrow familiar physical cues.</div>
-          </div>
-        </div>
-        <div class="design-card">
-          <div class="design-card-body">
-            <div class="design-card-title">03 — Make personalization meaningful</div>
-            <div class="design-card-text">Choosing a postcard and adding photos makes the letter feel personal.</div>
-          </div>
-        </div>
-        <div class="design-card">
-          <div class="design-card-body">
-            <div class="design-card-title">04 — Treat waiting as part of the product</div>
-            <div class="design-card-text">Unlike most digital communication, HiHello intentionally introduces a delay instead of engineering it away.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 1.8 — USER FLOW -->
-    <div class="case-section">
-      <div class="case-section-label">User Flow</div>
-      <div class="mini-diagram">
-        <svg viewBox="0 0 760 150" xmlns="http://www.w3.org/2000/svg">
-          <g style="font-family:'DM Mono',monospace; font-size:11px;">
-            <rect x="10" y="45" width="220" height="60" rx="10" style="fill:var(--bg); stroke:var(--border);"/>
-            <text x="120" y="68" text-anchor="middle" style="fill:var(--ink); font-weight:600;">Compose</text>
-            <text x="120" y="85" text-anchor="middle" style="fill:var(--ink3); font-size:9.5px;">choose · write · photos · seal</text>
-
-            <path d="M 240 75 L 280 75" style="stroke:var(--accent); stroke-width:1.5;" marker-end="url(#arrow3)"/>
-
-            <rect x="290" y="35" width="200" height="80" rx="10" stroke-dasharray="4 3" style="fill:var(--accent-pale); stroke:var(--accent);"/>
-            <text x="390" y="65" text-anchor="middle" style="fill:var(--accent); font-weight:700;">5-Day Wait</text>
-            <text x="390" y="83" text-anchor="middle" style="fill:var(--ink3); font-size:9.5px;">envelope locked</text>
-            <text x="390" y="97" text-anchor="middle" style="fill:var(--ink3); font-size:9.5px;">recipient notified, can't open</text>
-
-            <path d="M 500 75 L 540 75" style="stroke:var(--accent); stroke-width:1.5;" marker-end="url(#arrow3)"/>
-
-            <rect x="550" y="45" width="200" height="60" rx="10" style="fill:var(--bg); stroke:var(--border);"/>
-            <text x="650" y="68" text-anchor="middle" style="fill:var(--ink); font-weight:600;">Receive</text>
-            <text x="650" y="85" text-anchor="middle" style="fill:var(--ink3); font-size:9.5px;">notified · open · read · save</text>
-          </g>
-          <defs>
-            <marker id="arrow3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-              <path d="M0,0 L6,3 L0,6 Z" style="fill:var(--accent);"/>
-            </marker>
-          </defs>
-        </svg>
-      </div>
-    </div>
-
-    <!-- SECTION 2 — LANDING -->
-    <div class="case-section">
-      <div class="case-section-label">First Impression</div>
-      <div class="zigzag-row">
-        <div class="zigzag-text">
-          <h3 class="zigzag-heading">One message, one action</h3>
-          <p class="zigzag-body">Before writing anything, you're asked to think of one person.</p>
-        </div>
-        <div class="zigzag-visual">
-          <img src="images/hihello/hihello_landing_page.png" alt="landing page" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 3 — POSTCARD SELECTION -->
-    <div class="case-section">
-      <div class="case-section-label">Design Decision · Choosing a Card</div>
-      <div class="zigzag-row flip">
-        <div class="zigzag-text">
-          <h3 class="zigzag-heading">Picking a card is picking a mood</h3>
-          <p class="zigzag-body">Six postcard styles stand in for choosing stationery before you write. This small ritual makes the letter feel chosen.</p>
-        </div>
-        <div class="zigzag-visual">
-          <img src="images/hihello/hihello_postcard_picker.png" alt="postcard picker" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 4 — WRITING + PHOTO CONSTRAINT -->
-    <div class="case-section">
-      <div class="case-section-label">Writing</div>
-      <div class="zigzag-row">
-        <div class="zigzag-text">
-          <h3 class="zigzag-heading">A hard limit of two photos, on purpose</h3>
-          <p class="zigzag-body">I put a hard cap of two photos on a platform with unlimited storage. The idea came from the fact that a physical letter can't hold twenty pictures.</p>
-        </div>
-        <div class="zigzag-visual">
-          <img src="images/hihello/hihello_writing_view.png" alt="writing view" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 5 — SEAL & SEND -->
-    <div class="case-section">
-      <div class="case-section-label">Sending</div>
-      <div class="zigzag-row flip">
-        <div class="zigzag-text">
-          <h3 class="zigzag-heading">"Seal it" rather than "send it"</h3>
-          <p class="zigzag-body">The final action is framed as sealing a letter, not sending a message, because that language brings back the finality of dropping something in a mailbox. Once sealed, it is delivered.</p>
-        </div>
-        <div class="zigzag-visual">
-          <img src="images/hihello/hihello_seal_send.png" alt="seal and send" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
-          <img src="images/hihello/hihello_to_be_shared.png" alt="to be shared" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 5.5 — WAITING -->
-    <div class="case-section">
-      <div class="case-section-label">Waiting</div>
-      <div class="zigzag-row">
-        <div class="zigzag-text">
-          <h3 class="zigzag-heading">The message becomes temporarily inaccessible</h3>
-          <p class="zigzag-body">The recipient is notified something is waiting for them, but can't open it yet. Making the envelope's existence visible and not its contents is what turns the delay into anticipation instead of just a hidden message.</p>
-        </div>
-        <div class="zigzag-visual">
-          <img src="images/hihello/hihello_waiting.png" alt="waiting" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 5.6 — OPENING -->
-    <div class="case-section">
-      <div class="case-section-label">Opening</div>
-      <div class="zigzag-row flip">
-        <div class="zigzag-text">
-          <h3 class="zigzag-heading">Finally ready to be read</h3>
-          <p class="zigzag-body">Once the wait ends, the recipient has to actively open the envelope rather than simply receive a message. They can then save the envelope and its contents as a PDF to keep.</p>
-        </div>
-        <div class="zigzag-visual">
-          <img src="images/hihello/hihello_ready_to_open.png" alt="ready to open" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
-          <img src="images/hihello/hihello_opened.png" alt="opened" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
-
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 6 — THE WAITING EXPERIENCE -->
-    <div class="case-section">
-      <div class="case-section-label">The Waiting Experience</div>
-      <div class="mini-diagram">
-        <svg viewBox="0 0 720 100" xmlns="http://www.w3.org/2000/svg">
-          <g style="font-family:'DM Mono',monospace; font-size:11px;">
-            <line x1="60" y1="30" x2="660" y2="30" style="stroke:var(--accent); stroke-width:2;"/>
-            <circle cx="60" cy="30" r="7" style="fill:var(--accent);"/>
-            <text x="60" y="55" text-anchor="middle" style="fill:var(--ink);">Day 0</text>
-            <text x="60" y="70" text-anchor="middle" style="fill:var(--ink3); font-size:9.5px;">Envelope sealed</text>
-
-            <circle cx="360" cy="30" r="7" style="fill:var(--accent);"/>
-            <text x="360" y="55" text-anchor="middle" style="fill:var(--ink);">Days 1–4</text>
-            <text x="360" y="70" text-anchor="middle" style="fill:var(--ink3); font-size:9.5px;">Locked — recipient notified, can't open</text>
-
-            <circle cx="660" cy="30" r="7" style="fill:var(--accent);"/>
-            <text x="660" y="55" text-anchor="middle" style="fill:var(--ink);">Day 5</text>
-            <text x="660" y="70" text-anchor="middle" style="fill:var(--ink3); font-size:9.5px;">Unlocked — available to open</text>
-          </g>
-        </svg>
-      </div>
-
-      <p class="insight-support" style="margin-top:1.5rem;">
-        I want to be upfront: no research was done to validate five days specifically. It's an intentional product experiment and not a finding.
-      </p>
-
-      <div class="finding-list" style="margin-top:1.5rem;">
-        <div class="finding-item">
-          <div class="finding-num">01</div>
-          <div>Does the wait create anticipation, or just frustration?</div>
-        </div>
-        <div class="finding-item">
-          <div class="finding-num">02</div>
-          <div>Is five days too long? Would 24 hours feel more natural?</div>
-        </div>
-        <div class="finding-item">
-          <div class="finding-num">03</div>
-          <div>Does the recipient understand <em>why</em> they have to wait?</div>
-        </div>
-        <div class="finding-item">
-          <div class="finding-num">04</div>
-          <div>Does anticipation actually make the message feel more meaningful once it's opened?</div>
-        </div>
-      </div>
-      <div class="img-caption" style="margin-top:0.8rem;">What I'd validate next — a simple A/B comparison of delay lengths (24hr / 5-day / 14-day) with real senders and recipients.</div>
-    </div>
-
-    <!-- SECTION 6 — DESIGN → BUILD -->
-    <div class="case-section">
-      <div class="case-section-label">From Design to Product</div>
-      <div class="insight-statement" style="margin-bottom: 1rem;">
-        Designed, coded, and deployed —<br>
-        <em>solo, end to end.</em>
-      </div>
-      <p class="insight-support">
-        HiHello was designed in Figma and built as a fully responsive web app for both mobile and desktop, then deployed independently. I used AI-assisted development (Claude Code) to move faster through front-end implementation while staying hands-on with every interaction and layout decision myself.
-      </p>
-
-      <div class="mini-diagram">
-        <svg viewBox="0 0 760 100" xmlns="http://www.w3.org/2000/svg">
-          <g style="font-family:'DM Mono',monospace; font-size:10.5px;">
-            <rect x="5" y="35" width="130" height="45" rx="8" style="fill:var(--bg); stroke:var(--border);"/>
-            <text x="70" y="62" text-anchor="middle" style="fill:var(--ink); font-weight:600;">Figma</text>
-            <path d="M 140 57 L 165 57" style="stroke:var(--accent); stroke-width:1.5;" marker-end="url(#arrow4)"/>
-
-            <rect x="170" y="35" width="150" height="45" rx="8" style="fill:var(--bg); stroke:var(--border);"/>
-            <text x="245" y="62" text-anchor="middle" style="fill:var(--ink); font-weight:600;">HTML/CSS/JS</text>
-            <path d="M 325 57 L 350 57" style="stroke:var(--accent); stroke-width:1.5;" marker-end="url(#arrow4)"/>
-
-            <rect x="355" y="35" width="150" height="45" rx="8" style="fill:var(--accent-pale); stroke:var(--accent-mid);"/>
-            <text x="430" y="62" text-anchor="middle" style="fill:var(--accent); font-weight:600;">Backend API</text>
-            <path d="M 510 57 L 535 57" style="stroke:var(--accent); stroke-width:1.5;" marker-end="url(#arrow4)"/>
-
-            <rect x="540" y="35" width="130" height="45" rx="8" style="fill:var(--bg); stroke:var(--border);"/>
-            <text x="605" y="62" text-anchor="middle" style="fill:var(--ink); font-weight:600;">Cloudflare</text>
-            <path d="M 675 57 L 700 57" style="stroke:var(--accent); stroke-width:1.5;" marker-end="url(#arrow4)"/>
-
-            <rect x="705" y="35" width="50" height="45" rx="8" style="fill:var(--bg); stroke:var(--border);"/>
-            <text x="730" y="62" text-anchor="middle" style="fill:var(--ink); font-weight:600; font-size:9px;">Live</text>
-          </g>
-          <defs>
-            <marker id="arrow4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-              <path d="M0,0 L6,3 L0,6 Z" style="fill:var(--accent);"/>
-            </marker>
-          </defs>
-        </svg>
-      </div>
-    </div>
-
-    <!-- SECTION 7 — REFLECTION -->
-    <div class="reflection-block">
-      <div class="reflection-label">Reflection</div>
-      <p class="reflection-text">
-        "This project pushed me to design friction on purpose which is quite counterintuitive as most of my work is about removing it. The five-day wait is a bet and I think that's fine: not every decision needs research behind it yet, it needs a clear hypothesis and a plan to test it. I'd want to run the delay-length comparison above next, with real senders and recipients, to see whether anticipation actually deepens how the message lands or if it just annoys people."
-      </p>
-    </div>
-
-  </div>
-</div>
-
-<!-- ── USRI CASE STUDY ── -->
-<div class="case-page" id="case-usri">
-  <div class="case-content">
-
-    <!-- HERO -->
-    <div class="case-hero">
-      <div class="case-eyebrow">Behavioural Design · Research & Design Complete · Development Ongoing</div>
-      <h1 class="case-title">Student Well-being App</h1>
-        <p class="case-subtitle">
-          During my UX-internship, I worked on a student well-being app that goes beyond logging feelings. Through a short self-assessment, students identify which of three research-backed competencies — emotion regulation, resilience &amp; adaptability, and social-emotional regulation — they're weakest in, then follow a structured path to actually build it. I led UX research and design, working closely with education faculty and senior developers.
-        </p>
-        <div class="case-meta">
-        <span class="case-meta-tag">Figma</span>
-        <span class="case-meta-tag">Usability Testing</span>
-        <span class="case-meta-tag">UX Research</span>
-      </div>
-
-
-      <div class="case-hero-visual">
-        <img src="images/usri/usri_hero_section.png" alt="Behavioural awareness framework" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
-      </div>
-    </div>
-
-    <!-- PROJECT SNAPSHOT -->
-    <div class="case-section">
-      <div class="case-section-label">Project Snapshot</div>
-
-      <div class="challenge-solution-grid">
-        <div class="cs-block">
-          <div class="cs-label">Challenge</div>
-          <div class="cs-text">Most well-being apps help students log or reflect on their feelings but it stops there. None translate that reflection into targeted skill-building.</div>
-        </div>
-        <div class="cs-block">
-          <div class="cs-label">Solution</div>
-          <div class="cs-text">A self-assessment that identifies a student's weakest competency across three research-backed areas, then a structured path — goals, challenges, reflection — to actually build it.</div>
-        </div>
-      </div>
-
-      <div class="outcome-summary" style="margin-top: 1.5rem;">
-        <ul class="outcome-bullets">
-          <li><strong>Role:</strong> Lead UX Researcher &amp; Designer</li>
-          <li><strong>Timeline:</strong> 17 weeks, Summer Internship 2025</li>
-          <li><strong>Team:</strong> Worked with a team including education faculty, senior developers and senior UX designers</li>
-          <li><strong>Tools:</strong> Figma, usability testing protocol, Python, MongoDB</li>
-          <li><strong>Status:</strong> Research &amp; design &amp; backend complete — chatbot development ongoing, final UI confidential</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="stat-row">
-      <div class="stat-item">
-        <div class="stat-num">18</div>
-        <div class="stat-label">students tested</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">70%</div>
-        <div class="stat-label">said the reflection experience would support their daily well-being</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">3</div>
-        <div class="stat-label">design changes shipped after testing</div>
-      </div>
-    </div>
-
-    <!-- SECTION 1 — CORE INSIGHT -->
-    <div class="case-section">
-      <div class="case-section-label">Core Insight</div>
-      <div class="insight-statement">
-        Students didn't need another place<br>to write about their feelings.<br>
-        <em>They needed a path to actually get better at handling them.</em>
-        </div>
-      <p class="insight-support">
-        Our literature review pointed to three competencies — emotion regulation, resilience &amp; adaptability, and social-emotional regulation — as the real drivers of student well-being. Logging a feeling doesn't build any of them. Deliberate, guided practice does.
-      </p>
-
-    <div class="lit-review-notes">
-    <div class="sticky-note sticky-up">
-        <div class="sticky-quote-mark">"</div>
-        <div class="sticky-text">By the time I realize something's wrong, it's been going on for weeks.</div>
-        <div class="sticky-source">F**** M****</div>
-    </div>
-    <div class="sticky-note sticky-down">
-        <div class="sticky-quote-mark">"</div>
-        <div class="sticky-text">I've tried mood apps but I never know what to do with the information after.</div>
-        <div class="sticky-source">Y***** L**</div>
-    </div>
-    <div class="sticky-note sticky-up">
-        <div class="sticky-quote-mark">"</div>
-        <div class="sticky-text">I can see I was sad on Tuesday but I don't remember what caused it.</div>
-        <div class="sticky-source">A*** K**</div>
-    </div>
-    <div class="sticky-note sticky-down">
-        <div class="sticky-quote-mark">"</div>
-        <div class="sticky-text">Rating my mood feels pointless when nothing changes after.</div>
-        <div class="sticky-source">A***** M*****</div>
-    </div>
-    <div class="img-caption">Pre-survey responses</div>
-    </div>
-
-    <div class="zigzag-row" style="margin-top: 2rem;">
-        <div class="zigzag-text">
-          <h3 class="zigzag-heading">The gap wasn't reflection. It was development.</h3>
-          <p class="zigzag-body">A competitive scan confirmed that existing apps already let students log and write about their feelings. None of them identified a specific competency a student was weak in and helped them actually improve it.</p>
-        </div>
-
-        <div class="zigzag-visual">
-          <img src="images/usri/usri_competitive_research.png" alt="competitive research" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
-      </div>
-    </div>
-
-    <div class="revision-block" style="margin-top: 2rem;">
-      <div class="revision-label">Where we changed our minds</div>
-      <p class="zigzag-body" style="margin-bottom:1rem;">We didn't start here. Our first instinct was sleep tracking as sleep is the obvious lever for student well-being, and it felt like a safe, well-supported place to start.</p>
-      <div class="zigzag-row" style="margin-top:0;">
-        <div class="zigzag-visual">
-          <img src="images/usri/usri_sitemap.png" alt="sitemap" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
-          <div class="img-caption">The sitemap we actually built for the sleep-tracking direction, before we abandoned it.</div>
-        </div>
-        <div class="zigzag-text">
-          <p class="zigzag-body">The literature review kept pulling us away from it: sleep only explained part of the picture. Emotion regulation, resilience, and social-emotional skills mattered just as much — and none of them were about sleep at all. Keeping sleep-tracking would have meant building the easy answer instead of the right one.</p>
-        </div>
-      </div>
-    </div>
-    
-    </div>
-
-    <!-- SECTION 2 — MEET THE USER -->
-    <div class="case-section">
-      <div class="case-section-label">Meet the User</div>
-          <img src="images/usri/usri_persona.png" alt="Persona - Jenna Andrews" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
-          <div class="img-caption">Persona — Jenna Andrews & Michael Lee.</div>
-    </div>
-
-    <!-- SECTION 3 — STRUCTURING THE EXPERIENCE -->
-    <div class="case-section">
-      <div class="case-section-label">Structuring the Experience</div>
-      <div class="zigzag-row">
-        <div class="zigzag-visual">
-          <img src="images/usri/usri_competency_levels.png" alt="Competency levels" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
-          <div class="img-caption">How to track & evaluate competency levels.</div>        
-        </div>
-        <div class="zigzag-text">
-          <h3 class="zigzag-heading">Setting clear goals before interface</h3>
-          <p class="zigzag-body">Before designing any screens, I worked out how competency levels would be tracked based on the literature review, and which features were essential for evaluating progress.</p>
-        </div>
-      </div>
-      <div class="zigzag-row flip">
-        <div class="zigzag-text">
-          <h3 class="zigzag-heading">Wireframe & Low-fidelity Prototype</h3>
-          <p class="zigzag-body">A wireframe and low-fidelity prototype let us roughly visualize the reflection flow and catch structural issues while they were still cheap to fix (the colour scheme and logo were later changed to a calmer style)</p>
-        </div>
-        <div class="zigzag-visual">
-          <img src="images/usri/usri_low_fidelity_prototype.png" alt="Low-fidelity prototype and wireframe" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
-          <div class="img-caption">Low-fidelity prototype screens + wireframe</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 4 — FROM INSIGHT TO SYSTEM -->
-    <div class="case-section">
-      <div class="case-section-label">From Insight to System</div>
-      <div class="zigzag-row">
-        <div class="zigzag-text">
-          <h3 class="zigzag-heading">Self-assessment first, not open-ended logging</h3>
-            <p class="zigzag-body">
-            Students start with a short self-assessment across the three competencies, which surfaces the one they're currently weakest in then guided goals, challenges, and monthly reflection track progress toward mastery. Rather than free-form mood logging, the app gives them a clear starting point and a reason to come back.
-            </p>        
-        </div>
-        <div class="zigzag-visual">
-            <img src="images/usri/usri_competency_progression.png" alt="Competency progression flow" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
-            <div class="img-caption">
-            The competency-based progression flow is shown as a diagram because the final UI is confidential.
-            </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 5 — KEY DESIGN DECISIONS -->
-    <div class="case-section">
-      <div class="case-section-label">Why these decisions mattered</div>
-      <div class="design-cards">
-        <div class="design-card">
-          <div class="design-card-body">
-            <div class="design-card-title">Self-assessment, not open logging</div>
-            <div class="design-card-text">Students start by identifying their weakest competency, not by freely logging whatever they feel — giving reflection a direction from day one.</div>
-          </div>
-        </div>
-        <div class="design-card">
-          <div class="design-card-body">
-            <div class="design-card-title">Three competencies, one focus at a time</div>
-            <div class="design-card-text">
-            Emotion regulation, resilience &amp; adaptability, and social-emotional regulation — students build one at a time instead of tracking everything at once.            
-            </div>          
-        </div>
-        </div>
-        <div class="design-card">
-          <div class="design-card-body">
-            <div class="design-card-title">Reduce mental effort</div>
-            <div class="design-card-text">The interface intentionally avoided overwhelming users with charts and analytics so they could focus on reflection instead of information overload.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 6 — TESTING & ITERATION -->
-    <div class="case-section">
-      <div class="case-section-label">Testing & Iteration</div>
-        <div>
-            
-          <img src="images/usri/usri_testing_analysis.png" alt="Testing analysis" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
-          
-          <p class="zigzag-body" style="margin-top: 1.5rem;">
-          Tested with 18 students across pre-surveys, think-aloud sessions, and post-surveys to measure how reflection changed the way they thought about their emotions, not just task completion.
-          </p>
-        </div>
-
-        <div class="case-section">
-        <div class="revision-block">
-          <div class="revision-label">Where we changed our minds — again</div>
-          <p class="zigzag-body" style="margin-bottom:1rem;">Our first full prototype had a lot going for it on paper — multiple tracking views, detailed progress analytics, several features running in parallel. Then we tested it with real students, and one comment stopped the whole team:</p>
-          <p class="quote-callout">"This feels like it's lost its purpose. I don't even understand what the app is about."</p>
-          <p class="zigzag-body">We went back to the literature review and re-read it against our original goal. Most of what we'd added didn't serve that goal directly so we cut it. What's shown in the next section is what survived that cut: one self-assessment, one weakest competency, one clear path forward.</p>
-        </div>
-      </div>
-
-        <div>
-        <h3 class="zigzag-heading" style="margin-top: 1.5rem;">What we changed after the user testing</h3>
-          <div class="finding-list">
-            <div class="finding-item">
-              <div class="finding-num">01</div>
-              <div>Redesigned onboarding after users expected a traditional mood tracker.</div>
-            </div>
-            <div class="finding-item">
-              <div class="finding-num">02</div>
-              <div>Strengthened social goal-sharing after participants described it as motivating.</div>
-            </div>
-            <div class="finding-item">
-                <div class="finding-num">03</div>
-                <div>Expanded reflection prompts after testing suggested they improved emotional clarity.</div>
-                </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 5 — CURRENT STATUS -->
-    <div class="case-section">
-      <div class="case-section-label">Current Status</div>
-      <div class="mini-diagram">
-        <svg viewBox="0 0 720 100" xmlns="http://www.w3.org/2000/svg">
-          <g style="font-family:'DM Mono',monospace; font-size:11px;">
-            <line x1="60" y1="30" x2="660" y2="30" style="stroke:var(--border); stroke-width:2;"/>
-            <line x1="60" y1="30" x2="480" y2="30" style="stroke:var(--accent); stroke-width:2;"/>
-
-            <circle cx="60" cy="30" r="7" style="fill:var(--accent);"/>
-            <text x="60" y="55" text-anchor="middle" style="fill:var(--ink);">Research</text>
-
-            <circle cx="240" cy="30" r="7" style="fill:var(--accent);"/>
-            <text x="240" y="55" text-anchor="middle" style="fill:var(--ink);">Design</text>
-
-            <circle cx="420" cy="30" r="7" style="fill:var(--accent);"/>
-            <text x="420" y="55" text-anchor="middle" style="fill:var(--ink);">Testing</text>
-
-            <circle cx="600" cy="30" r="7" style="fill:var(--bg); stroke:var(--accent); stroke-width:2;"/>
-            <text x="600" y="55" text-anchor="middle" style="fill:var(--ink);">Backend + chatbot</text>
-            <text x="600" y="70" text-anchor="middle" style="fill:var(--ink3); font-size:9.5px;">in progress</text>
-          </g>
-        </svg>
-      </div>
-      <p class="insight-support">Presented at an undergraduate research conference. Final high-fidelity UI is confidential while development continues.</p>
-    </div>
-
-    <!-- SECTION 6 — REFLECTION -->
-    <div class="reflection-block">
-      <div class="reflection-label">Reflection</div>
-      <p class="reflection-text">
-      "This project changed how I think about UX research.
-
-      Rather than asking how users interact with an interface, I became more interested in understanding why they behave the way they do in the first place.
-
-      That perspective continues to shape how I approach product design today."
-      </p>
-    </div>
-
-  </div><!-- /case-content -->
-</div><!-- /case-usri -->
-</div>
-
-
-
-<!-- ── WORDTROPOLIS CASE STUDY ── -->
-<div class="case-page" id="case-word">
-  <div class="case-content">
-
-    <!-- SECTION 1 — HERO -->
-    <div class="case-hero">
-      <div class="case-eyebrow">Gamification · Redesign · Learning Experience Design · Child HCI</div>
-      <h1 class="case-title">Wordtropolis</h1>
-      <p class="case-subtitle">Wordtropolis turns spelling practice into missions and boss battles — kids fight a boss to master a word instead of drilling flashcards. As UI lead, I introduced the mission-based progression system and built the full experience in Java Swing after prototyping in Figma.</p>
-      <div class="case-meta">
-        <span class="case-meta-tag">Figma</span>
-        <span class="case-meta-tag">Java Swing</span>
-        <span class="case-meta-tag">Gamification</span>
-        <span class="case-meta-tag">Child HCI</span>
-        <span class="case-meta-tag">Adaptive Learning</span>
-        <span class="case-meta-tag">Multi-sensory Design</span>
-      </div>
-
-      <div class="case-hero-visual" style="background: linear-gradient(135deg, #EEF0FE 0%, #DEDFFE 100%); min-height: 360px;">
-            <img src="images/wordtropolis/word_map.png" alt="Wordtropolis game UI" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
-      </div>
-    </div>
-
-    <div class="stat-row">
-      <div class="stat-item">
-        <div class="stat-num">3</div>
-        <div class="stat-label">learning-science principles driving every decision</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">12wk</div>
-        <div class="stat-label">academic timeline, team project</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">Figma→Java</div>
-        <div class="stat-label">prototyped, then fully implemented</div>
-      </div>
-    </div>
-
-    <!-- PROJECT SNAPSHOT -->
-    <div class="case-section">
-      <div class="case-section-label">Project Snapshot</div>
-
-      <div class="challenge-solution-grid">
-        <div class="cs-block">
-          <div class="cs-label">Challenge</div>
-          <div class="cs-text">The original spelling tool had low engagement and unclear feedback. It was built around content delivery and not around how kids actually stay motivated.</div>
-        </div>
-        <div class="cs-block">
-          <div class="cs-label">Solution</div>
-          <div class="cs-text">A mission → boss battle structure where every spelling challenge doubles as a spaced-repetition session, with adaptive difficulty and multi-sensory feedback keeping kids in the loop.</div>
-        </div>
-      </div>
-
-      <div class="outcome-summary" style="margin-top: 1.5rem;">
-        <ul class="outcome-bullets">
-          <li><strong>Role:</strong> Main UI design + Java Swing implementation, within a team</li>
-          <li><strong>Timeline:</strong> 12 weeks, university course project</li>
-          <li><strong>Team:</strong> Course team project</li>
-          <li><strong>Tools:</strong> Figma, Java Swing</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- SECTION 2 — THE PROBLEM -->
-    <div class="case-section">
-      <div class="case-section-label">The Problem</div>
-
-        <div>
-          <div class="insight-statement">
-            The original spelling tool was boring<br>by design.<br>
-            <em>That's a design failure.</em>
-        </div>
-          <p class="insight-support">
-            We evaluated the original tool directly against these three failure points before touching any redesign.
-        </p>
-        </div>
-        <div>
-          <img src="images/wordtropolis/word_old_game.png" alt="Old Spelling Game" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
-          <div class="img-caption">The original spelling game interface</div>
-        </div>
-
-      <div class="insight-cards">
-        <div class="insight-card">
-          <div class="insight-card-num">Problem 01</div>
-          <div class="insight-card-text">Low engagement — tools prioritized content delivery over motivation and reward loops</div>
-        </div>
-        <div class="insight-card">
-          <div class="insight-card-num">Problem 02</div>
-          <div class="insight-card-text">Static, repetitive interaction — no sense of progress, narrative, or meaningful challenge</div>
-        </div>
-        <div class="insight-card">
-          <div class="insight-card-num">Problem 03</div>
-          <div class="insight-card-text">Feedback was unclear or delayed — children didn't know their next action or whether the answer was right or wrong</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 3 — RESEARCH → DESIGN TRANSLATION -->
-    <div class="case-section">
-      <div class="case-section-label">Research → Design</div>
-
-      <div class="zigzag-row flip">
-        <div class="zigzag-text">
-          <h3 class="zigzag-heading" style="margin-top: 1.5rem;">Grounded in learning science, not intuition</h3>
-          <div class="design-cards" style="margin-top:1rem;">
-            <div class="design-card">
-              <div class="design-card-body">
-                <div class="design-card-title">Intrinsic motivation</div>
-                <div class="design-card-text">Children engage more when the challenge feels meaningful.</div>
-              </div>
-            </div>
-            <div class="design-card">
-              <div class="design-card-body">
-                <div class="design-card-title">Spaced repetition</div>
-                <div class="design-card-text">Returning to hard words at optimal intervals improves retention.</div>
-              </div>
-            </div>
-            <div class="design-card">
-              <div class="design-card-body">
-                <div class="design-card-title">Multi-sensory reinforcement</div>
-                <div class="design-card-text">Visual + audio feedback accelerates learning.</div>
-              </div>
-            </div>
-          </div>
-          <br><h3 class="zigzag-heading">The game arc structure</h3>
-          <p class="zigzag-body">The mission → boss battle progression is the core information architecture. Each mission is a spaced-repetition session; the boss battle is the mastery check. The progression system was designed before any visual decisions were made.</p>
-        </div>
-        <div class="zigzag-visual">
-          <img src="images/wordtropolis/word_flow_chart.png" alt="Mission progression arc" style="width:100%; border-radius: var(--radius); display:block;">
-          <div class="img-caption">Game arc — mission flow showing how levels lead to boss battle</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 4 — KEY DESIGN DECISIONS -->
-    <div class="case-section">
-      <div class="case-section-label">Key Design Decisions</div>
-      <div class="design-cards">
-        <div class="design-card">
-          <div class="design-card-body">
-            <div class="design-card-title">Mission-based progression</div>
-            <div class="design-card-text">Structured learning around visible goals and meaningful milestones to sustain engagement over time.</div>
-          </div>
-        </div>
-        <div class="design-card">
-          <div class="design-card-body">
-            <div class="design-card-title">Adaptive challenge system</div>
-            <div class="design-card-text">Difficulty adjusted dynamically based on performance, balancing frustration and accomplishment.</div>
-          </div>
-        </div>
-        <div class="design-card">
-          <div class="design-card-body">
-            <div class="design-card-title">Multi-sensory feedback</div>
-            <div class="design-card-text">Visual celebration + audio cues on correct responses reinforce learning and maintain engagement for young users.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 5 — BUILD -->
-    <div class="case-section">
-      <div class="case-section-label">Design → Build</div>
-      <div class="insight-statement" style="margin-bottom: 1rem;">
-        This wasn't just a concept.<br>
-        <em>It was a fully realized interactive prototype.</em>
-      </div>
-      <p class="insight-support">
-        The full experience was drafted in Figma and implemented in Java Swing, allowing gameplay pacing, adaptive challenge, and feedback systems to be tested beyond static mockups.
-      </p>
-
-      <div class="research-block">
-        <h3 class="zigzag-heading" style="margin-top: 1.5rem;">Designing through implementation</h3>
-        <p class="zigzag-body">Implementing it exposed how pacing, feedback timing, and adaptive challenge directly affected engagement in practice.</p>
-        <br><img src="images/wordtropolis/word_draft_to_finalized.png" alt="Figma to Java Swing implementation" style="width:100%; border-radius: var(--radius); display:block;">
-        <div class="img-caption">Figma draft to Java Swing build</div>
-    </div>
-    </div>
-
-    <!-- SECTION 6 — FINAL OUTCOME -->
-    <div class="case-section">
-      <div class="case-section-label">Final Outcome</div>
-      <div class="outcome-grid">
-        <div class="outcome-screens">
-    
-          <div class="screen-slot">
-            <img src="images/wordtropolis/word_cat_game.png" alt="Cat game screen">
-            <div class="img-caption">Mission screen — spelling challenge tied to the cat character, part of the spaced-repetition mission loop</div>
-          </div>
-          <div class="screen-slot">
-            <img src="images/wordtropolis/word_robber.png" alt="Robber screen">
-            <div class="img-caption">Narrative obstacle screen — gives the mission stakes beyond a plain word list</div>
-          </div>
-          <div class="screen-slot">
-            <img src="images/wordtropolis/word_broken_bridge.png" alt="Broken bridge screen">
-            <div class="img-caption">Progress-gated screen — visualizes the adaptive-challenge system blocking advancement until mastery</div>
-          </div>
-          <div class="screen-slot">
-            <img src="images/wordtropolis/word_boss_fight.png" alt="Boss fight screen">
-            <div class="img-caption">Boss battle — the mastery check that closes out each mission arc</div>
-          </div>
-        </div>
-        <div class="outcome-summary">
-          <div class="outcome-title">Outcome</div>
-          <ul class="outcome-bullets">
-            <li>
-              Reimagined a traditional spelling game using behavioural and child-centered UX principles
-            </li>
-
-            <li>
-              Explored how progression systems can support educational engagement and retention
-            </li>
-
-            <li>
-              Built a fully interactive prototype implementing adaptive challenge and multi-sensory feedback
-            </li>
-
-            <li>
-              Explored how gameplay structure can become the foundation of a learning experience rather than a decorative layer
-            </li>
-
-            <li>
-              Evaluated by course TAs and the professor, who noted it stood out from other teams' submissions — though it was not tested directly with children (see Reflection)
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 7 — REFLECTION -->
-    <div class="reflection-block">
-      <div class="reflection-label">Reflection</div>
-        <p class="reflection-text">
-        "Working within a tight school project timeline pushed me to prioritize decisions quickly and defend them clearly. Given more time, I would have explored more advanced adaptive features and conducted user testing with children directly."
-        </p>    
-    </div>
-
-  </div>
-</div>
-
 <div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox()">
-  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close image">✕</button>
   <img class="lightbox-img" id="lightboxImg" src="" alt="">
 </div>
 

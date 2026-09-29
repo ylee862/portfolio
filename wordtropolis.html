@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wordtropolis | Yedam Lee</title>
+<meta name="description" content="Wordtropolis case study: redesigning a spelling game for kids around missions and boss battles, prototyped in Figma and built in Java Swing." />
+<meta property="og:title" content="Wordtropolis | Yedam Lee" />
+<meta property="og:description" content="A gamified spelling game for kids, redesigned around missions and boss battles." />
+<meta property="og:image" content="images/wordtropolis/word_map.png" />
+<script>try{if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="standalone-case">
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">YL.</a>
+  <div class="nav-links">
+    <a href="index.html#projects">Work</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☀️</button>
+  </div>
+</nav>
+
+<main class="case-page" id="case-word">
+  <div class="case-content">
+
+    <a href="index.html#projects" class="case-back">All work</a>
+
+    <!-- HERO -->
+    <div class="case-hero">
+      <div class="case-eyebrow">Gamification · Redesign · Learning Experience Design · Child HCI</div>
+      <h1 class="case-title">Wordtropolis</h1>
+      <p class="case-subtitle">Wordtropolis turns spelling practice into missions and boss battles. Kids fight a boss to master a word instead of drilling flashcards. As UI lead, I introduced the mission-based progression system and built the full experience in Java Swing after prototyping it in Figma.</p>
+      <div class="case-meta">
+        <span class="case-meta-tag">Figma</span>
+        <span class="case-meta-tag">Java Swing</span>
+        <span class="case-meta-tag">Gamification</span>
+        <span class="case-meta-tag">Child HCI</span>
+        <span class="case-meta-tag">Adaptive Learning</span>
+        <span class="case-meta-tag">Multi-sensory Design</span>
+      </div>
+
+      <div class="case-hero-visual" style="background: linear-gradient(135deg, #EEF0FE 0%, #DEDFFE 100%); min-height: 360px;">
+        <img src="images/wordtropolis/word_map.png" alt="Wordtropolis mission map" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
+      </div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="stat-num">3</div>
+        <div class="stat-label">learning-science principles behind every decision</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">12wk</div>
+        <div class="stat-label">academic timeline, team project</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">Figma→Java</div>
+        <div class="stat-label">prototyped, then fully implemented</div>
+      </div>
+    </div>
+
+    <!-- PROJECT SNAPSHOT -->
+    <div class="case-section">
+      <div class="case-section-label">Project Snapshot</div>
+
+      <div class="challenge-solution-grid">
+        <div class="cs-block">
+          <div class="cs-label">Challenge</div>
+          <div class="cs-text">The original spelling tool had low engagement and unclear feedback. It was built around delivering content, not around how kids actually stay motivated.</div>
+        </div>
+        <div class="cs-block">
+          <div class="cs-label">Solution</div>
+          <div class="cs-text">A mission → boss battle structure where every spelling challenge doubles as a spaced-repetition session, with adaptive difficulty and multi-sensory feedback keeping kids in the loop.</div>
+        </div>
+      </div>
+
+      <div class="outcome-summary" style="margin-top: 1.5rem;">
+        <ul class="outcome-bullets">
+          <li><strong>Role:</strong> Main UI design + Java Swing implementation, within a team</li>
+          <li><strong>Timeline:</strong> 12 weeks, university HCI course project</li>
+          <li><strong>Team:</strong> Course team project</li>
+          <li><strong>Tools:</strong> Figma, Java Swing</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- THE PROBLEM -->
+    <div class="case-section">
+      <div class="case-section-label">The Problem</div>
+      <div>
+        <div class="insight-statement">
+          The original spelling tool was boring<br>by design.<br>
+          <em>That's a design failure.</em>
+        </div>
+        <p class="insight-support">
+          We evaluated the original tool against these three failure points before touching any redesign.
+        </p>
+      </div>
+      <div>
+        <img src="images/wordtropolis/word_old_game.png" alt="The original spelling game interface" style="width:100%; height:auto; object-fit:cover; border-radius: var(--radius);">
+        <div class="img-caption">The original spelling game interface.</div>
+      </div>
+
+      <div class="insight-cards">
+        <div class="insight-card">
+          <div class="insight-card-num">Problem 01</div>
+          <div class="insight-card-text">Low engagement: the tool prioritized content delivery over motivation and reward loops.</div>
+        </div>
+        <div class="insight-card">
+          <div class="insight-card-num">Problem 02</div>
+          <div class="insight-card-text">Static, repetitive interaction: no sense of progress, story, or meaningful challenge.</div>
+        </div>
+        <div class="insight-card">
+          <div class="insight-card-num">Problem 03</div>
+          <div class="insight-card-text">Unclear or delayed feedback: kids didn't know what to do next or whether their answer was right.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESEARCH → DESIGN -->
+    <div class="case-section">
+      <div class="case-section-label">Research → Design</div>
+
+      <div class="zigzag-row flip">
+        <div class="zigzag-text">
+          <h3 class="zigzag-heading" style="margin-top: 1.5rem;">Grounded in learning science, not intuition</h3>
+          <div class="design-cards" style="margin-top:1rem;">
+            <div class="design-card">
+              <div class="design-card-body">
+                <div class="design-card-title">Intrinsic motivation</div>
+                <div class="design-card-text">Kids engage more when the challenge feels meaningful.</div>
+              </div>
+            </div>
+            <div class="design-card">
+              <div class="design-card-body">
+                <div class="design-card-title">Spaced repetition</div>
+                <div class="design-card-text">Returning to hard words at the right intervals improves retention.</div>
+              </div>
+            </div>
+            <div class="design-card">
+              <div class="design-card-body">
+                <div class="design-card-title">Multi-sensory reinforcement</div>
+                <div class="design-card-text">Visual and audio feedback together speed up learning.</div>
+              </div>
+            </div>
+          </div>
+          <br><h3 class="zigzag-heading">The game arc structure</h3>
+          <p class="zigzag-body">The mission → boss battle progression is the core information architecture. Each mission is a spaced-repetition session, and the boss battle is the mastery check. I designed the progression before making any visual decisions.</p>
+        </div>
+        <div class="zigzag-visual">
+          <img src="images/wordtropolis/word_flow_chart.png" alt="Mission progression arc" style="width:100%; border-radius: var(--radius); display:block;">
+          <div class="img-caption">Game arc: how missions lead to the boss battle.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- KEY DESIGN DECISIONS -->
+    <div class="case-section">
+      <div class="case-section-label">Key Design Decisions</div>
+      <div class="design-cards">
+        <div class="design-card">
+          <div class="design-card-body">
+            <div class="design-card-title">Mission-based progression</div>
+            <div class="design-card-text">Learning is structured around visible goals and milestones to keep kids engaged over time.</div>
+          </div>
+        </div>
+        <div class="design-card">
+          <div class="design-card-body">
+            <div class="design-card-title">Adaptive challenge system</div>
+            <div class="design-card-text">Difficulty adjusts based on performance, balancing frustration and accomplishment.</div>
+          </div>
+        </div>
+        <div class="design-card">
+          <div class="design-card-body">
+            <div class="design-card-title">Multi-sensory feedback</div>
+            <div class="design-card-text">Visual celebration and audio cues on correct answers reinforce learning and keep young users engaged.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESIGN → BUILD -->
+    <div class="case-section">
+      <div class="case-section-label">Design → Build</div>
+      <div class="insight-statement" style="margin-bottom: 1rem;">
+        This wasn't just a concept.<br>
+        <em>It was a fully working interactive prototype.</em>
+      </div>
+      <p class="insight-support">
+        The full experience was drafted in Figma and implemented in Java Swing, so gameplay pacing, adaptive challenge, and feedback could be tried out beyond static mockups.
+      </p>
+
+      <div class="research-block">
+        <h3 class="zigzag-heading" style="margin-top: 1.5rem;">Designing through implementation</h3>
+        <p class="zigzag-body">Building it showed how much pacing, feedback timing, and adaptive challenge affected engagement in practice.</p>
+        <br><img src="images/wordtropolis/word_draft_to_finalized.png" alt="Figma draft next to the Java Swing build" style="width:100%; border-radius: var(--radius); display:block;">
+        <div class="img-caption">Figma draft → Java Swing build.</div>
+      </div>
+    </div>
+
+    <!-- FINAL OUTCOME -->
+    <div class="case-section">
+      <div class="case-section-label">Final Outcome</div>
+      <div class="outcome-grid">
+        <div class="outcome-screens">
+          <div class="screen-slot">
+            <img src="images/wordtropolis/word_cat_game.png" alt="Cat game mission screen">
+            <div class="img-caption">Mission screen: a spelling challenge tied to the cat character, part of the spaced-repetition loop.</div>
+          </div>
+          <div class="screen-slot">
+            <img src="images/wordtropolis/word_robber.png" alt="Robber obstacle screen">
+            <div class="img-caption">Story obstacle: gives the mission stakes beyond a plain word list.</div>
+          </div>
+          <div class="screen-slot">
+            <img src="images/wordtropolis/word_broken_bridge.png" alt="Broken bridge screen">
+            <div class="img-caption">Progress gate: the adaptive challenge blocks advancement until the word is mastered.</div>
+          </div>
+          <div class="screen-slot">
+            <img src="images/wordtropolis/word_boss_fight.png" alt="Boss fight screen">
+            <div class="img-caption">Boss battle: the mastery check that closes each mission arc.</div>
+          </div>
+        </div>
+        <div class="outcome-summary">
+          <div class="outcome-title">Outcome</div>
+          <ul class="outcome-bullets">
+            <li>Reimagined a traditional spelling game using behavioural and child-centred UX principles.</li>
+            <li>Explored how progression systems can support engagement and retention in learning.</li>
+            <li>Built a fully interactive prototype with adaptive challenge and multi-sensory feedback.</li>
+            <li>Treated the game structure as the foundation of the learning experience, not a decorative layer.</li>
+            <li>Presented to the whole class at the end of the course and graded by the TAs and professor, earning a strong grade. It was not tested with children directly (see Reflection).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- REFLECTION -->
+    <div class="reflection-block">
+      <div class="reflection-label">Reflection</div>
+      <p class="reflection-text">
+        "Working within a tight school timeline pushed me to prioritize decisions quickly and defend them clearly. With more time, I would have explored more advanced adaptive features and tested with children directly."
+      </p>
+    </div>
+
+    <a class="case-next" href="fitoday.html">
+      <span class="case-next-label">Back to the first case study</span>
+      <span class="case-next-title">Fitoday</span>
+    </a>
+
+  </div>
+</main>
+
+<div class="lightbox-overlay" id="lightboxOverlay">
+  <button class="lightbox-close" aria-label="Close image">✕</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+</div>
+
+<script src="js/case.js"></script>
+</body>
+</html>

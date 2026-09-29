@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HiHello | Yedam Lee</title>
+<meta name="description" content="HiHello case study: a digital letter-writing web app with a sealed envelope and a five-day wait, designed, coded, and deployed solo by Yedam Lee." />
+<meta property="og:title" content="HiHello | Yedam Lee" />
+<meta property="og:description" content="A digital letter-writing app, designed, coded, and deployed solo." />
+<meta property="og:image" content="images/hihello/hihello_mockup.png" />
+<script>try{if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="standalone-case">
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">YL.</a>
+  <div class="nav-links">
+    <a href="index.html#projects">Work</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☀️</button>
+  </div>
+</nav>
+
+<main class="case-page" id="case-hihello">
+  <div class="case-content">
+
+    <a href="index.html#projects" class="case-back">All work</a>
+
+    <!-- HERO -->
+    <div class="case-hero">
+      <div class="case-eyebrow">Solo Project · Designed, Coded &amp; Deployed · Live</div>
+      <h1 class="case-title">HiHello</h1>
+      <p class="case-subtitle">
+        HiHello is a digital letter-writing app. You pick a postcard style, write a note, attach up to two photos, then seal it before sending, with no edits after. I designed, coded, and deployed the whole thing solo, using it to explore how small rituals, not more features, can make a digital moment feel intentional.
+      </p>
+      <div class="case-meta">
+        <span class="case-meta-tag">Figma</span>
+        <span class="case-meta-tag">Responsive Web Design</span>
+        <span class="case-meta-tag">Front-End Development</span>
+        <span class="case-meta-tag">Deployment</span>
+        <span class="case-meta-tag">AI-Assisted Workflow</span>
+      </div>
+
+      <div class="live-link-row">
+        <a href="https://hihello.hi862.workers.dev" class="btn-primary" target="_blank" rel="noopener">Try the live app ↗</a>
+        <span class="live-link-note">hihello.hi862.workers.dev</span>
+      </div>
+
+      <div class="case-hero-visual" style="background: linear-gradient(135deg, #FBEFE8 0%, #F1D2C1 100%); min-height: 360px;">
+        <img src="images/hihello/hihello_mockup.png" alt="HiHello core interaction: postcard selection, note writing, photo attachment, and sealing" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
+      </div>
+    </div>
+
+    <!-- PROJECT SNAPSHOT -->
+    <div class="case-section">
+      <div class="case-section-label">Project Snapshot</div>
+
+      <div class="challenge-solution-grid">
+        <div class="cs-block">
+          <div class="cs-label">Challenge</div>
+          <div class="cs-text">Digital messages are instant and forgettable. They're sent in seconds, then buried in a feed, with no room left for the anticipation that made physical letters feel meaningful.</div>
+        </div>
+        <div class="cs-block">
+          <div class="cs-label">Solution</div>
+          <div class="cs-text">A digital letter-writing experience that brings back small rituals like choosing a card, adding photos, and sealing before sending, so a digital moment feels intentional again.</div>
+        </div>
+      </div>
+
+      <div class="outcome-summary" style="margin-top: 1.5rem;">
+        <ul class="outcome-bullets">
+          <li><strong>Role:</strong> Solo. Product Designer &amp; Developer</li>
+          <li><strong>Timeline:</strong> 5 weeks</li>
+          <li><strong>Tools:</strong> Figma, Claude Code, Cloudflare</li>
+          <li><strong>Status:</strong> Live on the web and used by 4 people so far (my friends and me)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="stat-num">5-day</div>
+        <div class="stat-label">wait before a sealed envelope unlocks</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">6</div>
+        <div class="stat-label">postcard styles, each designed in Figma</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">2</div>
+        <div class="stat-label">max photos per letter, a deliberate cap</div>
+      </div>
+    </div>
+
+    <!-- DESIGN QUESTION -->
+    <div class="case-section">
+      <div class="case-section-label">Design Question</div>
+      <div class="insight-statement">
+        How might we bring the intention and anticipation<br>
+        <em>of physical letters into digital communication without bringing back the hassle of physical mail?</em>
+      </div>
+    </div>
+
+    <!-- THE OPPORTUNITY -->
+    <div class="case-section">
+      <div class="case-section-label">The Opportunity</div>
+      <p class="insight-support">Instant messaging removed every step between thinking of someone and reaching them. That's mostly good, but it also erased the anticipation a physical letter still has. HiHello keeps the convenience of digital and puts a few of those steps back.</p>
+      <div class="flow-compare">
+        <div class="flow-compare-row">
+          <div class="flow-compare-label">Instant messaging</div>
+          <div class="flow-steps">Think → Type → Send → Read</div>
+        </div>
+        <div class="flow-compare-row">
+          <div class="flow-compare-label">Physical letter</div>
+          <div class="flow-steps">Think → Write → Personalize → Seal → Send → Wait → Open</div>
+        </div>
+        <div class="flow-compare-row accent">
+          <div class="flow-compare-label">HiHello</div>
+          <div class="flow-steps">Choose → Write → Personalize → Seal → Send → Wait → Open</div>
+        </div>
+      </div>
+      <p class="insight-support">The goal wasn't to make digital communication slower for its own sake. It was to make the waiting part of the experience.</p>
+    </div>
+
+    <!-- FROM IDEA TO INTERFACE -->
+    <div class="case-section">
+      <div class="case-section-label">From Idea to Interface</div>
+      <p class="insight-support">
+        Before opening Figma, I brainstormed what makes sending a physical letter fun in the first place.
+      </p>
+      <div class="zigzag-row">
+        <div class="zigzag-visual">
+          <img src="images/hihello/hihello_early_idea_gathering.jpg" alt="Early idea gathering notes" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
+        </div>
+        <div class="zigzag-text">
+          <p class="zigzag-body">I listed every part of sending a physical letter, kept the parts worth keeping, and cut the ones that just drain your energy.</p>
+        </div>
+      </div>
+      <div class="zigzag-row flip">
+        <div class="zigzag-text">
+          <h3 class="zigzag-heading">Sketching before building</h3>
+          <p class="zigzag-body">Rough hand-drawn mockups let me test a few ritual mechanics quickly before deciding which ones actually earned their friction.</p>
+        </div>
+        <div class="zigzag-visual">
+          <img src="images/hihello/hihello_early_sketches.jpg" alt="Early hand-drawn sketches" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
+        </div>
+      </div>
+    </div>
+
+    <!-- DESIGN PRINCIPLES -->
+    <div class="case-section">
+      <div class="case-section-label">Design Principles</div>
+      <div class="design-cards">
+        <div class="design-card">
+          <div class="design-card-body">
+            <div class="design-card-title">01 · Make sending intentional</div>
+            <div class="design-card-text">Sending should feel like something you deliberately made, not another disposable message.</div>
+          </div>
+        </div>
+        <div class="design-card">
+          <div class="design-card-body">
+            <div class="design-card-title">02 · Make digital feel tangible</div>
+            <div class="design-card-text">Envelopes, postcards, photos, and layered visual states borrow familiar physical cues.</div>
+          </div>
+        </div>
+        <div class="design-card">
+          <div class="design-card-body">
+            <div class="design-card-title">03 · Make personalization meaningful</div>
+            <div class="design-card-text">Choosing a postcard and adding photos makes the letter feel personal.</div>
+          </div>
+        </div>
+        <div class="design-card">
+          <div class="design-card-body">
+            <div class="design-card-title">04 · Treat waiting as part of the product</div>
+            <div class="design-card-text">Unlike most digital communication, HiHello adds a delay on purpose instead of engineering it away.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- USER FLOW -->
+    <div class="case-section">
+      <div class="case-section-label">User Flow</div>
+      <div class="mini-diagram">
+        <svg viewBox="0 0 760 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Compose, then a five-day wait, then receive">
+          <g style="font-family:'DM Mono',monospace; font-size:11px;">
+            <rect x="10" y="45" width="220" height="60" rx="10" style="fill:var(--bg); stroke:var(--border);"/>
+            <text x="120" y="68" text-anchor="middle" style="fill:var(--ink); font-weight:600;">Compose</text>
+            <text x="120" y="85" text-anchor="middle" style="fill:var(--ink3); font-size:9.5px;">choose · write · photos · seal</text>
+
+            <path d="M 240 75 L 280 75" style="stroke:var(--accent); stroke-width:1.5;" marker-end="url(#arrow3)"/>
+
+            <rect x="290" y="35" width="200" height="80" rx="10" stroke-dasharray="4 3" style="fill:var(--accent-pale); stroke:var(--accent);"/>
+            <text x="390" y="65" text-anchor="middle" style="fill:var(--accent); font-weight:700;">5-Day Wait</text>
+            <text x="390" y="83" text-anchor="middle" style="fill:var(--ink3); font-size:9.5px;">envelope locked</text>
+            <text x="390" y="97" text-anchor="middle" style="fill:var(--ink3); font-size:9.5px;">recipient notified, can't open</text>
+
+            <path d="M 500 75 L 540 75" style="stroke:var(--accent); stroke-width:1.5;" marker-end="url(#arrow3)"/>
+
+            <rect x="550" y="45" width="200" height="60" rx="10" style="fill:var(--bg); stroke:var(--border);"/>
+            <text x="650" y="68" text-anchor="middle" style="fill:var(--ink); font-weight:600;">Receive</text>
+            <text x="650" y="85" text-anchor="middle" style="fill:var(--ink3); font-size:9.5px;">notified · open · read · save</text>
+          </g>
+          <defs>
+            <marker id="arrow3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" style="fill:var(--accent);"/>
+            </marker>
+          </defs>
+        </svg>
+      </div>
+    </div>
+
+    <!-- FIRST IMPRESSION -->
+    <div class="case-section">
+      <div class="case-section-label">First Impression</div>
+      <div class="zigzag-row">
+        <div class="zigzag-text">
+          <h3 class="zigzag-heading">One message, one action</h3>
+          <p class="zigzag-body">Before writing anything, you're already asked to think of one person.</p>
+        </div>
+        <div class="zigzag-visual">
+          <img src="images/hihello/hihello_landing_page.png" alt="HiHello landing page" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
+        </div>
+      </div>
+    </div>
+
+    <!-- CHOOSING A CARD -->
+    <div class="case-section">
+      <div class="case-section-label">Design Decision · Choosing a Card</div>
+      <div class="zigzag-row flip">
+        <div class="zigzag-text">
+          <h3 class="zigzag-heading">Picking a card is picking a mood</h3>
+          <p class="zigzag-body">I designed all six postcard styles myself in Figma. Picking one stands in for choosing stationery before you write, a small ritual that makes the letter feel chosen.</p>
+        </div>
+        <div class="zigzag-visual">
+          <img src="images/hihello/hihello_postcard_picker.png" alt="Postcard picker with six styles" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
+        </div>
+      </div>
+    </div>
+
+    <!-- WRITING -->
+    <div class="case-section">
+      <div class="case-section-label">Writing</div>
+      <div class="zigzag-row">
+        <div class="zigzag-text">
+          <h3 class="zigzag-heading">A hard limit of two photos, on purpose</h3>
+          <p class="zigzag-body">Storage isn't the limit here, so the two-photo cap is a choice. A physical letter can't hold twenty pictures either.</p>
+        </div>
+        <div class="zigzag-visual">
+          <img src="images/hihello/hihello_writing_view.png" alt="Writing view with photo slots" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
+        </div>
+      </div>
+    </div>
+
+    <!-- SENDING -->
+    <div class="case-section">
+      <div class="case-section-label">Sending</div>
+      <div class="zigzag-row flip">
+        <div class="zigzag-text">
+          <h3 class="zigzag-heading">"Seal it" rather than "send it"</h3>
+          <p class="zigzag-body">The final action is sealing the letter, not sending a message. That word brings back the finality of dropping something in a mailbox. Once it's sealed, it's on its way.</p>
+        </div>
+        <div class="zigzag-visual">
+          <img src="images/hihello/hihello_seal_send.png" alt="Seal and send screen" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
+          <img src="images/hihello/hihello_to_be_shared.png" alt="Sealed envelope ready to share" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
+        </div>
+      </div>
+    </div>
+
+    <!-- WAITING -->
+    <div class="case-section">
+      <div class="case-section-label">Waiting</div>
+      <div class="zigzag-row">
+        <div class="zigzag-text">
+          <h3 class="zigzag-heading">The message is temporarily out of reach</h3>
+          <p class="zigzag-body">The recipient is notified that something is waiting for them, but can't open it yet. Showing that the envelope exists, but not what's inside, is what turns the delay into anticipation instead of just a hidden message.</p>
+        </div>
+        <div class="zigzag-visual">
+          <img src="images/hihello/hihello_waiting.png" alt="Locked envelope waiting screen" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
+        </div>
+      </div>
+    </div>
+
+    <!-- OPENING -->
+    <div class="case-section">
+      <div class="case-section-label">Opening</div>
+      <div class="zigzag-row flip">
+        <div class="zigzag-text">
+          <h3 class="zigzag-heading">Finally ready to be read</h3>
+          <p class="zigzag-body">When the wait ends, the recipient has to open the envelope themselves instead of just receiving a message. After that, they can save the letter as a PDF to keep.</p>
+        </div>
+        <div class="zigzag-visual">
+          <img src="images/hihello/hihello_ready_to_open.png" alt="Envelope ready to open" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
+          <img src="images/hihello/hihello_opened.png" alt="Opened letter" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
+        </div>
+      </div>
+    </div>
+
+    <!-- THE WAITING EXPERIENCE -->
+    <div class="case-section">
+      <div class="case-section-label">The Waiting Experience</div>
+      <div class="mini-diagram">
+        <svg viewBox="0 0 720 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Day 0 sealed, days 1 to 4 locked, day 5 unlocked">
+          <g style="font-family:'DM Mono',monospace; font-size:11px;">
+            <line x1="60" y1="30" x2="660" y2="30" style="stroke:var(--accent); stroke-width:2;"/>
+            <circle cx="60" cy="30" r="7" style="fill:var(--accent);"/>
+            <text x="60" y="55" text-anchor="middle" style="fill:var(--ink);">Day 0</text>
+            <text x="60" y="70" text-anchor="middle" style="fill:var(--ink3); font-size:9.5px;">Envelope sealed</text>
+
+            <circle cx="360" cy="30" r="7" style="fill:var(--accent);"/>
+            <text x="360" y="55" text-anchor="middle" style="fill:var(--ink);">Days 1 to 4</text>
+            <text x="360" y="70" text-anchor="middle" style="fill:var(--ink3); font-size:9.5px;">Locked: recipient notified, can't open</text>
+
+            <circle cx="660" cy="30" r="7" style="fill:var(--accent);"/>
+            <text x="660" y="55" text-anchor="middle" style="fill:var(--ink);">Day 5</text>
+            <text x="660" y="70" text-anchor="middle" style="fill:var(--ink3); font-size:9.5px;">Unlocked: ready to open</text>
+          </g>
+        </svg>
+      </div>
+
+      <p class="insight-support" style="margin-top:1.5rem;">
+        To be upfront: I didn't do research to validate five days specifically. It's an intentional product experiment, not a finding. So far only four people have used it (my friends and me), which is too few to answer any of the questions below.
+      </p>
+
+      <div class="finding-list" style="margin-top:1.5rem;">
+        <div class="finding-item">
+          <div class="finding-num">01</div>
+          <div>Does the wait create anticipation, or just frustration?</div>
+        </div>
+        <div class="finding-item">
+          <div class="finding-num">02</div>
+          <div>Is five days too long? Would 24 hours feel more natural?</div>
+        </div>
+        <div class="finding-item">
+          <div class="finding-num">03</div>
+          <div>Does the recipient understand <em>why</em> they have to wait?</div>
+        </div>
+        <div class="finding-item">
+          <div class="finding-num">04</div>
+          <div>Does anticipation actually make the message feel more meaningful once it's opened?</div>
+        </div>
+      </div>
+      <div class="img-caption" style="margin-top:0.8rem;">What I'd validate next: a simple A/B comparison of delay lengths (24 hours, 5 days, 14 days) with real senders and recipients.</div>
+    </div>
+
+    <!-- DESIGN → BUILD -->
+    <div class="case-section">
+      <div class="case-section-label">From Design to Product</div>
+      <div class="insight-statement" style="margin-bottom: 1rem;">
+        Designed, coded, and deployed,<br>
+        <em>solo, end to end.</em>
+      </div>
+      <p class="insight-support">
+        HiHello was designed in Figma and built as a fully responsive web app for mobile and desktop, then deployed on my own. I used AI-assisted development (Claude Code) to move faster through front-end implementation while making every interaction and layout decision myself.
+      </p>
+
+      <div class="mini-diagram">
+        <svg viewBox="0 0 760 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Figma to HTML, CSS and JS, to backend API, to Cloudflare, to live">
+          <g style="font-family:'DM Mono',monospace; font-size:10.5px;">
+            <rect x="5" y="35" width="130" height="45" rx="8" style="fill:var(--bg); stroke:var(--border);"/>
+            <text x="70" y="62" text-anchor="middle" style="fill:var(--ink); font-weight:600;">Figma</text>
+            <path d="M 140 57 L 165 57" style="stroke:var(--accent); stroke-width:1.5;" marker-end="url(#arrow4)"/>
+
+            <rect x="170" y="35" width="150" height="45" rx="8" style="fill:var(--bg); stroke:var(--border);"/>
+            <text x="245" y="62" text-anchor="middle" style="fill:var(--ink); font-weight:600;">HTML/CSS/JS</text>
+            <path d="M 325 57 L 350 57" style="stroke:var(--accent); stroke-width:1.5;" marker-end="url(#arrow4)"/>
+
+            <rect x="355" y="35" width="150" height="45" rx="8" style="fill:var(--accent-pale); stroke:var(--accent-mid);"/>
+            <text x="430" y="62" text-anchor="middle" style="fill:var(--accent); font-weight:600;">Backend API</text>
+            <path d="M 510 57 L 535 57" style="stroke:var(--accent); stroke-width:1.5;" marker-end="url(#arrow4)"/>
+
+            <rect x="540" y="35" width="130" height="45" rx="8" style="fill:var(--bg); stroke:var(--border);"/>
+            <text x="605" y="62" text-anchor="middle" style="fill:var(--ink); font-weight:600;">Cloudflare</text>
+            <path d="M 675 57 L 700 57" style="stroke:var(--accent); stroke-width:1.5;" marker-end="url(#arrow4)"/>
+
+            <rect x="705" y="35" width="50" height="45" rx="8" style="fill:var(--bg); stroke:var(--border);"/>
+            <text x="730" y="62" text-anchor="middle" style="fill:var(--ink); font-weight:600; font-size:9px;">Live</text>
+          </g>
+          <defs>
+            <marker id="arrow4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" style="fill:var(--accent);"/>
+            </marker>
+          </defs>
+        </svg>
+      </div>
+
+      <div class="live-link-row" style="margin-top:1.5rem;">
+        <a href="https://hihello.hi862.workers.dev" class="btn-ghost" target="_blank" rel="noopener">Send a letter on HiHello ↗</a>
+      </div>
+    </div>
+
+    <!-- REFLECTION -->
+    <div class="reflection-block">
+      <div class="reflection-label">Reflection</div>
+      <p class="reflection-text">
+        "This project pushed me to design friction on purpose, which felt backwards since most of my work is about removing it. The five-day wait is a bet, and I think that's fine. Not every decision needs research behind it yet, but it does need a clear hypothesis and a plan to test it. Next I want to run the delay-length comparison above with real senders and recipients, to see whether the wait actually makes a letter land differently or just annoys people."
+      </p>
+    </div>
+
+    <a class="case-next" href="wordtropolis.html">
+      <span class="case-next-label">Next case study</span>
+      <span class="case-next-title">Wordtropolis</span>
+    </a>
+
+  </div>
+</main>
+
+<div class="lightbox-overlay" id="lightboxOverlay">
+  <button class="lightbox-close" aria-label="Close image">✕</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+</div>
+
+<script src="js/case.js"></script>
+</body>
+</html>

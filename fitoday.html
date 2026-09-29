@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fitoday | Yedam Lee</title>
+<meta name="description" content="Fitoday case study: a social fashion app for honest outfit feedback, designed, researched, and built solo by Yedam Lee." />
+<meta property="og:title" content="Fitoday | Yedam Lee" />
+<meta property="og:description" content="A social fashion app for honest outfit feedback, designed and built solo." />
+<meta property="og:image" content="images/fitoday/fitoday_mockup.png" />
+<script>try{if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="standalone-case">
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">YL.</a>
+  <div class="nav-links">
+    <a href="index.html#projects">Work</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☀️</button>
+  </div>
+</nav>
+
+<main class="case-page" id="case-fitoday">
+  <div class="case-content">
+
+    <a href="index.html#projects" class="case-back">All work</a>
+
+    <!-- HERO -->
+    <div class="case-hero">
+      <div class="case-eyebrow">Product Design + Full-Stack Development · Research &amp; Design Complete · In Active Development</div>
+      <h1 class="case-title">Fitoday</h1>
+      <p class="case-subtitle">
+        Fitoday is a social fashion app where you post your outfit and get real feedback from people whose taste you trust, not just likes. I introduced a three-option rating (love it / it's okay / let's improve) paired with optional written comments, so responses stay fast to give but still useful to receive.
+      </p>
+      <div class="case-meta">
+        <span class="case-meta-tag">Figma</span>
+        <span class="case-meta-tag">Competitive Research</span>
+        <span class="case-meta-tag">Usability Testing</span>
+        <span class="case-meta-tag">Visual System</span>
+        <span class="case-meta-tag">Flutter / Firebase</span>
+      </div>
+
+      <div class="case-hero-visual" style="background: linear-gradient(135deg, #FBEFE8 0%, #F1D2C1 100%); min-height: 360px;">
+        <img src="images/fitoday/fitoday_mockup.png" alt="Fitoday core interaction: three-option rating, optional comments, and rating system" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
+      </div>
+    </div>
+
+    <!-- PROJECT SNAPSHOT -->
+    <div class="case-section">
+      <div class="case-section-label">Project Snapshot</div>
+
+      <div class="challenge-solution-grid">
+        <div class="cs-block">
+          <div class="cs-label">Challenge</div>
+          <div class="cs-text">Fashion platforms are built for sharing outfits, not improving them. People get likes, but rarely feedback they can actually learn from.</div>
+        </div>
+        <div class="cs-block">
+          <div class="cs-label">Solution</div>
+          <div class="cs-text">A social fashion app where every outfit post gets a fast, structured rating plus optional comments. Feedback is built to be quick to give and genuinely useful to receive.</div>
+        </div>
+      </div>
+
+      <div class="outcome-summary" style="margin-top: 1.5rem;">
+        <ul class="outcome-bullets">
+          <li><strong>Role:</strong> Solo. Product Designer, UX Researcher &amp; Full-Stack Developer</li>
+          <li><strong>Timeline:</strong> 8 to 10 weeks, ongoing</li>
+          <li><strong>Platform:</strong> iOS (Flutter)</li>
+          <li><strong>Stack:</strong> Flutter/Dart, Firebase (Auth, Firestore, Cloud Functions)</li>
+          <li><strong>Status:</strong> Research, PRD, and Figma design complete. Auth and backend security are in place; core Cloud Functions are still in progress.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="stat-num">12</div>
+        <div class="stat-label">survey respondents in early research</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">5</div>
+        <div class="stat-label">usability test participants</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1/day</div>
+        <div class="stat-label">post limit, a deliberate constraint and not a default</div>
+      </div>
+    </div>
+
+    <!-- THE SPARK -->
+    <div class="case-section">
+      <div class="case-section-label">The Spark</div>
+      <div class="insight-statement">
+        It didn't start with a market gap.
+      </div>
+      <p class="insight-support">
+        Scrolling through Instagram, I kept wondering why some outfits looked put together and mine didn't. What I wanted wasn't more inspiration. It was honest feedback I could learn from.
+      </p>
+    </div>
+
+    <!-- CORE INSIGHT / COMPETITIVE RESEARCH -->
+    <div class="case-section">
+      <div class="case-section-label">Core Insight</div>
+      <div class="insight-statement">
+        People weren't short on places<br>to post an outfit.
+        <em>They were short on a place to actually get feedback on it.</em>
+      </div>
+      <p class="insight-support">
+        A competitive review and a 12-person survey confirmed the pattern: plenty of places to post, almost nowhere built for honest, constructive feedback.
+      </p>
+
+      <div class="lit-review-notes">
+        <div class="sticky-note sticky-up">
+          <div class="sticky-quote-mark">"</div>
+          <div class="sticky-text">Pinterest used to be a kind of safe place... now it's filled with AI generated content I can never seem to get rid of.</div>
+          <div class="sticky-source">Pinterest user review</div>
+        </div>
+        <div class="sticky-note sticky-down">
+          <div class="sticky-quote-mark">"</div>
+          <div class="sticky-text">Their algorithm takes this kind of content to the highest peak... full of nudity, toxicity.</div>
+          <div class="sticky-source">Instagram user review</div>
+        </div>
+        <div class="sticky-note sticky-up">
+          <div class="sticky-quote-mark">"</div>
+          <div class="sticky-text">Another version of TikTok, depressing, clickbait, I wouldn't use it again.</div>
+          <div class="sticky-source">Lemon8 user review</div>
+        </div>
+        <div class="sticky-note sticky-down">
+          <div class="sticky-quote-mark">"</div>
+          <div class="sticky-text">I am scared that people will judge me. I don't think my fashion sense is that good enough.</div>
+          <div class="sticky-source">Survey participant</div>
+        </div>
+        <div class="img-caption">A sample of the competitive review and early survey responses that shaped the product.</div>
+      </div>
+
+      <div style="overflow-x:auto; margin-top:2rem;">
+        <table style="width:100%; border-collapse:collapse; font-family:'DM Mono',monospace; font-size:0.85rem;">
+          <thead>
+            <tr style="border-bottom:2px solid var(--accent);">
+              <th style="text-align:left; padding:10px 12px;">Platform</th>
+              <th style="text-align:left; padding:10px 12px;">Strength</th>
+              <th style="text-align:left; padding:10px 12px;">Where it falls short for fashion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:0.5px solid var(--border);">
+              <td style="padding:10px 12px;">Instagram</td>
+              <td style="padding:10px 12px;">Large audience</td>
+              <td style="padding:10px 12px;">Fashion content buried under unrelated content and algorithmic noise</td>
+            </tr>
+            <tr style="border-bottom:0.5px solid var(--border);">
+              <td style="padding:10px 12px;">Pinterest</td>
+              <td style="padding:10px 12px;">Inspiration discovery</td>
+              <td style="padding:10px 12px;">No way to get personal feedback on your own outfit</td>
+            </tr>
+            <tr style="border-bottom:0.5px solid var(--border);">
+              <td style="padding:10px 12px;">TikTok</td>
+              <td style="padding:10px 12px;">Discovery, virality</td>
+              <td style="padding:10px 12px;">Hard to track personal style progression over time</td>
+            </tr>
+            <tr>
+              <td style="padding:10px 12px;">BeReal</td>
+              <td style="padding:10px 12px;">Daily authenticity habit</td>
+              <td style="padding:10px 12px;">Not fashion-focused at all</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="img-caption" style="margin-top:0.5rem;">Comparison of existing fashion platforms. None are built around structured, private feedback.</div>
+    </div>
+
+    <!-- RESEARCH → REQUIREMENTS -->
+    <div class="case-section">
+      <div class="case-section-label">Research → Requirements</div>
+      <p class="insight-support">Before opening Figma, I wrote a PRD to turn the research findings into product requirements, so every design decision traced back to evidence.</p>
+      <div class="mini-diagram">
+        <svg viewBox="0 0 720 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Research findings lead to a PRD, which leads to design decisions">
+          <g style="font-family:'DM Mono',monospace; font-size:12px;">
+            <rect x="10" y="40" width="200" height="60" rx="10" style="fill:var(--bg); stroke:var(--border);"/>
+            <text x="110" y="65" text-anchor="middle" style="fill:var(--ink); font-weight:600;">Research findings</text>
+            <text x="110" y="82" text-anchor="middle" style="fill:var(--ink3); font-size:10px;">survey + competitive review</text>
+
+            <path d="M 220 70 L 260 70" style="stroke:var(--accent); stroke-width:1.5;" marker-end="url(#arrow)"/>
+
+            <rect x="270" y="40" width="180" height="60" rx="10" style="fill:var(--accent-pale); stroke:var(--accent-mid);"/>
+            <text x="360" y="65" text-anchor="middle" style="fill:var(--accent); font-weight:600;">PRD</text>
+            <text x="360" y="82" text-anchor="middle" style="fill:var(--ink3); font-size:10px;">requirements doc</text>
+
+            <path d="M 460 70 L 500 70" style="stroke:var(--accent); stroke-width:1.5;" marker-end="url(#arrow)"/>
+
+            <rect x="510" y="40" width="200" height="60" rx="10" style="fill:var(--bg); stroke:var(--border);"/>
+            <text x="610" y="65" text-anchor="middle" style="fill:var(--ink); font-weight:600;">Design decisions</text>
+            <text x="610" y="82" text-anchor="middle" style="fill:var(--ink3); font-size:10px;">onboarding, privacy, feedback</text>
+          </g>
+          <defs>
+            <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" style="fill:var(--accent);"/>
+            </marker>
+          </defs>
+        </svg>
+      </div>
+    </div>
+
+    <!-- WHO IT'S FOR -->
+    <div class="case-section">
+      <div class="case-section-label">Who It's For</div>
+      <div class="zigzag-row">
+        <div class="zigzag-visual">
+          <img src="images/fitoday/fitoday_chloe_persona.png" alt="Persona: Chloe Lin, Fashion Creator" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
+          <div class="img-caption">Persona: Chloe Lin, Fashion Creator.</div>
+        </div>
+        <div class="zigzag-visual">
+          <img src="images/fitoday/fitoday_marcus_persona.png" alt="Persona: Marcus Vance, Style Seeker" style="width:100%; height:100%; object-fit:cover; border-radius: inherit;">
+          <div class="img-caption">Persona: Marcus Vance, Style Seeker.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FROM WIREFRAME TO SCREEN -->
+    <div class="case-section">
+      <div class="case-section-label">From Wireframe to Screen</div>
+      <p class="insight-support" style="margin-bottom:1.5rem;">
+        I sketched rough drafts first to understand the user flow. I focused on the core interactions, then refined the visual design.
+      </p>
+
+      <div class="zigzag-row">
+        <div class="zigzag-visual">
+          <img src="images/fitoday/fitoday_wireframe_mainscreen.png" alt="Early wireframe of the home feed and rating system" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
+          <div class="img-caption">Early wireframe: home feed and rating system.</div>
+        </div>
+        <div class="zigzag-visual">
+          <video autoplay loop muted playsinline style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: inherit;">
+            <source src="videos/fitoday/fitoday_final_mainscreen.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="img-caption">Final UI: rating and optional feedback.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VISUAL SYSTEM / STYLE GUIDE -->
+    <div class="case-section">
+      <div class="case-section-label">Visual System</div>
+      <div class="zigzag-row flip">
+        <div class="zigzag-text">
+          <h3 class="zigzag-heading">One set of parts for every screen</h3>
+          <p class="zigzag-body">I designed Fitoday's visual system myself in Figma: type, colour, and components. Having it in one place meant the rating, comment, and profile screens all pulled from the same parts, and the Flutter build had a clear reference to match.</p>
+        </div>
+        <div class="zigzag-visual">
+          <img src="images/fitoday/fitoday_styleguide.png" alt="Fitoday style guide showing type, colour, and components" style="width:100%; height:100%; object-fit:contain; background:#fff; border-radius: var(--radius);">
+          <div class="img-caption">Fitoday style guide.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CRITICAL DESIGN DECISIONS -->
+    <div class="case-section">
+      <div class="case-section-label">Critical Design Decisions</div>
+      <p class="insight-support" style="margin-bottom:1.5rem;">Three deliberate constraints carry the product.</p>
+      <div class="design-cards">
+        <div class="design-card">
+          <div class="design-card-body">
+            <div class="design-card-title">One post per day</div>
+            <div class="design-card-text">Limiting users to one outfit a day encourages thoughtful posts, reduces feed clutter, and creates a habit people can realistically keep.</div>
+          </div>
+        </div>
+        <div class="design-card">
+          <div class="design-card-body">
+            <div class="design-card-title">Three-option rating, not likes</div>
+            <div class="design-card-text">Likes don't explain how to improve. Three simple ratings make feedback quick to give while encouraging more meaningful responses.</div>
+          </div>
+        </div>
+        <div class="design-card">
+          <div class="design-card-body">
+            <div class="design-card-title">Show who voted, hide what they voted</div>
+            <div class="design-card-text">Showing who voted, but not how they voted, balances honest feedback with accountability.</div>
+          </div>
+        </div>
+      </div>
+
+      <img src="images/fitoday/fitoday_profile.png" alt="Fitoday profile page" style="width:100%; height:auto; object-fit:contain; background:#fff; border-radius: var(--radius);">
+      <div class="img-caption">Profile page.</div>
+    </div>
+
+    <!-- VALIDATION & ITERATION -->
+    <div class="case-section">
+      <div class="case-section-label">Validation &amp; Iteration</div>
+      <p class="insight-support">
+        I tested with five participants using think-aloud sessions to find where people hesitated or expected something different.
+      </p>
+      <div class="finding-list">
+        <div class="finding-item">
+          <div class="finding-num">01</div>
+          <div>The three-option rating tested well. All five participants understood it right away with no explanation.</div>
+        </div>
+        <div class="finding-item">
+          <div class="finding-num">02</div>
+          <div>Several participants wanted a way to explain <em>why</em> they gave a rating, not just which of the three options they picked.<br><br>"but I want people to tell me WHERE to improve not just how good it looks"</div>
+        </div>
+        <div class="finding-item">
+          <div class="finding-num">03</div>
+          <div>One participant didn't want their past scores visible to others at all, a privacy need the original scope hadn't accounted for.</div>
+        </div>
+        <div class="finding-item">
+          <div class="finding-num">04</div>
+          <div>A participant who mis-tapped submit wanted to correct their vote, which showed a need to edit votes within the rating window.</div>
+        </div>
+      </div>
+
+      <div class="revision-block">
+        <div class="revision-label">Where I changed my mind</div>
+        <p class="zigzag-body" style="margin-bottom:1rem;">I assumed a three-option rating would be enough on its own. It wasn't. People wanted to say <em>why</em>, not just <em>what</em>. Five conversations changed three of my original assumptions:</p>
+        <ul class="outcome-bullets">
+          <li>Added optional comments after ratings, since a quick tap wasn't giving people enough room to actually help.</li>
+          <li>Added privacy controls after someone flatly said they didn't want their history visible, a need the original scope hadn't considered at all.</li>
+          <li>Allowed vote changes during the rating window after watching someone mis-tap with no way to fix it.</li>
+        </ul>
+        <img src="images/fitoday/fitoday_v1v2.png" alt="Comparison of version 1 and version 2 screens" style="width:100%; height:auto; object-fit:contain; background:#fff; border-radius: var(--radius); margin-top:1.2rem;">
+        <div class="img-caption">V1 → V2: what the testing above actually changed on screen.</div>
+      </div>
+    </div>
+
+    <!-- DESIGN → ENGINEERING -->
+    <div class="case-section">
+      <div class="case-section-label">Design → Engineering</div>
+      <p class="insight-support">Instead of stopping at the prototype, I'm building the product myself in Flutter and Firebase. Auth and backend security are in place; the remaining Cloud Functions are still in progress.</p>
+    </div>
+
+    <!-- REFLECTION -->
+    <div class="reflection-block">
+      <div class="reflection-label">Reflection</div>
+      <p class="reflection-text">
+        "Writing the PRD before opening Figma changed how I think about design decisions. Every screen and every constraint, from the one-post-a-day limit to the three-option rating, traces back to a requirement I wrote down before I knew what it would look like. That made trade-offs easier to defend, because I wasn't arguing for a design I liked. I was arguing for a requirement I'd already justified."
+      </p>
+    </div>
+
+    <a class="case-next" href="usri.html">
+      <span class="case-next-label">Next case study</span>
+      <span class="case-next-title">Student Well-being App</span>
+    </a>
+
+  </div>
+</main>
+
+<div class="lightbox-overlay" id="lightboxOverlay">
+  <button class="lightbox-close" aria-label="Close image">✕</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+</div>
+
+<script src="js/case.js"></script>
+</body>
+</html>

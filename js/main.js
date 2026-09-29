@@ -1,71 +1,46 @@
-// ── Cursor ──
 const cursor = document.getElementById('cursor');
 const ring = document.getElementById('cursor-ring');
-let mx = 0, my = 0, rx = 0, ry = 0;
-document.addEventListener('mousemove', e => {
-  mx = e.clientX; my = e.clientY;
-  cursor.style.transform = `translate(calc(${mx}px - 50%), calc(${my}px - 50%))`;
-});
-function animateRing() {
-  rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
-  ring.style.transform = `translate(calc(${rx}px - 50%), calc(${ry}px - 50%))`;
-  requestAnimationFrame(animateRing);
+const finePointer = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+if (cursor && ring && finePointer) {
+  let mx = -100, my = -100, rx = -100, ry = -100;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cursor.style.transform = `translate(calc(${mx}px - 50%), calc(${my}px - 50%))`;
+  });
+  (function animateRing() {
+    rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
+    ring.style.transform = `translate(calc(${rx}px - 50%), calc(${ry}px - 50%))`;
+    requestAnimationFrame(animateRing);
+  })();
 }
-animateRing();
 
-// ── Theme ──
 const toggle = document.getElementById('themeToggle');
-let dark = false;
-toggle.onclick = () => {
-  dark = !dark;
-  document.documentElement.setAttribute('data-theme', dark ? 'dark' : '');
-  toggle.textContent = dark ? '🌙' : '☀️';
-};
+function applyTheme(theme) {
+  if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+  else document.documentElement.removeAttribute('data-theme');
+  if (toggle) toggle.textContent = theme === 'dark' ? '🌙' : '☀️';
+}
+let savedTheme = null;
+try { savedTheme = localStorage.getItem('theme'); } catch (e) {}
+applyTheme(savedTheme === 'dark' ? 'dark' : 'light');
+if (toggle) {
+  toggle.addEventListener('click', () => {
+    const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+}
 
-// ── Reveal on scroll ──
+const caseRedirects = { fitoday: 'fitoday.html', usri: 'usri.html', hihello: 'hihello.html', word: 'wordtropolis.html' };
+const hashKey = window.location.hash.replace('#', '');
+if (caseRedirects[hashKey]) window.location.replace(caseRedirects[hashKey]);
+
 const reveals = document.querySelectorAll('.reveal');
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.12 });
 reveals.forEach(r => obs.observe(r));
 
-// ── Case Study Pages ──
-let activePage = null;
-
-function openCasePage(key) {
-  const page = document.getElementById('case-' + key);
-  if (!page) return;
-  if (activePage) activePage.classList.remove('open');
-  activePage = page;
-  page.scrollTop = 0;
-  page.classList.add('open');
-  document.body.style.overflow = 'hidden';
-  document.getElementById('caseBack').classList.add('visible');
-  // Push browser history so back button works naturally
-  history.pushState({ caseStudy: key }, '', '#' + key);
-}
-
-function closeCasePage() {
-  if (activePage) {
-    activePage.classList.remove('open');
-    activePage = null;
-  }
-  document.body.style.overflow = '';
-  document.getElementById('caseBack').classList.remove('visible');
-  history.pushState({}, '', window.location.pathname);
-}
-
-// Handle browser back button
-window.addEventListener('popstate', (e) => {
-  if (!e.state || !e.state.caseStudy) {
-    closeCasePage();
-  }
-});
-
-// Escape key
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCasePage(); });
-
-// ── Contact form ──
 function handleSubmit() {
   const name = document.getElementById('fname');
   const email = document.getElementById('femail');
@@ -105,26 +80,5 @@ function closeLightbox() {
   document.body.style.overflow = '';
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
-
-// Stop clicks on the image itself from closing the overlay
-document.getElementById('lightboxImg').addEventListener('click', e => e.stopPropagation());
-
-// Make all case-study images clickable (run after DOM ready)
-document.addEventListener('DOMContentLoaded', () => {
-  const selectors = [
-    '.case-hero-visual img',
-    '.zigzag-visual img',
-    '.research-block img',
-    '.screen-slot img',
-    '.outcome-screens img',
-    '.case-section img',
-    '.case-split img'
-  ];
-  document.querySelectorAll(selectors.join(', ')).forEach(img => {
-    img.classList.add('lightbox-trigger');
-    img.addEventListener('click', e => {
-      e.stopPropagation();
-      openLightbox(img.src, img.alt);
-    });
-  });
-});
+const lightboxImg = document.getElementById('lightboxImg');
+if (lightboxImg) lightboxImg.addEventListener('click', e => e.stopPropagation());
