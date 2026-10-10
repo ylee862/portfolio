@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fitoday | Yedam Lee</title>
+<meta name="description" content="Fitoday case study: a social fashion app for honest outfit feedback, researched, designed end to end, and built solo by Yedam Lee." />
+<meta property="og:title" content="Fitoday | Yedam Lee" />
+<meta property="og:description" content="A social fashion app for honest outfit feedback, from research to a full product design." />
+<meta property="og:image" content="https://ylee862.github.io/portfolio/images/fitoday/fitoday_hero_mockup.webp" />
+<script>try{if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<a class="skip-link" href="#content">Skip to case study</a>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="nav-logo">Yedam Lee <span>· Product &amp; UX Designer</span></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="index.html#work" aria-current="page">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="nav-resume" href="resume/Yedam_Lee_Resume_F.pdf" target="_blank" rel="noopener">Resume</a>
+      <button class="theme-toggle" id="themeToggle" type="button">Dark</button>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+  <div class="wrap case-top">
+    <div class="case-crumbs"><a href="index.html#work">← All work</a><span>Case study 01 / 04</span></div>
+    <h1 class="case-title">Fitoday</h1>
+
+    <div class="case-intro">
+      <p class="case-statement">A social fashion app where you post today's outfit and get feedback you can learn from, not just likes. I took it from research and a PRD through testing, then redesigned it from one core interaction into a complete product.</p>
+      <dl class="details">
+        <div class="details-row"><dt>Role</dt><dd>Solo: research, product, UI, build</dd></div>
+        <div class="details-row"><dt>Timeline</dt><dd>June 2026 – ongoing</dd></div>
+        <div class="details-row"><dt>Platform</dt><dd>iOS, built in Flutter</dd></div>
+        <div class="details-row"><dt>Tools</dt><dd>Figma, Claude Design, Flutter, Firebase</dd></div>
+        <div class="details-row"><dt>Status</dt><dd>Design complete, build in progress</dd></div>
+      </dl>
+    </div>
+
+    <figure class="case-cover">
+      <img src="images/fitoday/fitoday_hero_mockup.webp" alt="Fitoday V2 screens: today's feed with the three-option rating, a fit's results, and a profile" width="2400" height="971">
+    </figure>
+
+    <!-- 1. PROBLEM -->
+    <section class="cs" aria-labelledby="s-problem">
+      <header class="cs-head">
+        <p class="label" id="s-problem">Problem</p>
+        <p class="cs-summary">Fashion apps are built for sharing outfits, not for improving them.</p>
+      </header>
+      <div class="cs-body">
+        <p class="lede">It started with a personal question. Scrolling Instagram, I kept wondering why some outfits looked put together and mine didn't. What I wanted wasn't more inspiration. It was honest feedback I could learn from.</p>
+        <p>To check whether that was just me, I ran a 12-person survey and reviewed the platforms people already use for fashion. The pattern was clear: there are plenty of places to post an outfit and almost nowhere built for constructive feedback on it. People also told me why they don't ask for it: they're afraid of being judged.</p>
+
+        <ul class="quotes">
+          <li><q>I am scared that people will judge me. I don't think my fashion sense is good enough.</q><span class="src">Survey participant</span></li>
+          <li><q>Pinterest used to be a kind of safe place… now it's filled with AI generated content I can never seem to get rid of.</q><span class="src">Pinterest app review</span></li>
+          <li><q>Another version of TikTok, depressing, clickbait, I wouldn't use it again.</q><span class="src">Lemon8 app review</span></li>
+        </ul>
+
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>Platform</th><th>Good at</th><th>Falls short for outfit feedback</th></tr></thead>
+            <tbody>
+              <tr><td>Instagram</td><td>Large audience</td><td>Fashion is buried under unrelated content and algorithmic noise</td></tr>
+              <tr><td>Pinterest</td><td>Inspiration</td><td>No way to get feedback on your own outfit</td></tr>
+              <tr><td>TikTok</td><td>Discovery, virality</td><td>Hard to track your own style over time</td></tr>
+              <tr><td>BeReal</td><td>Daily posting habit</td><td>Not about fashion at all</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="figcap">None of the existing platforms are built around structured feedback.</p>
+      </div>
+    </section>
+
+    <!-- 2. USERS -->
+    <section class="cs" aria-labelledby="s-users">
+      <header class="cs-head">
+        <p class="label" id="s-users">Who it's for</p>
+        <p class="cs-summary">Two people who want feedback: one confident, one hesitant.</p>
+      </header>
+      <div class="cs-body">
+        <p>Chloe already posts her outfits and wants feedback that's more useful than "nice pic". Marcus wants to dress better but finds asking for advice intimidating. The product has to work for both: quick enough for Chloe's followers to give real feedback, and safe enough that Marcus will post at all.</p>
+        <div class="stack">
+          <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_chloe_persona.webp" alt="Persona: Chloe Lin, 23, content creator and fashion blogger" width="1920" height="1080"><figcaption>Chloe Lin, fashion creator.</figcaption></figure>
+          <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_marcus_persona.webp" alt="Persona: Marcus Vance, 26, marketing associate" width="1920" height="1080"><figcaption>Marcus Vance, style seeker.</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. REQUIREMENTS -->
+    <section class="cs" aria-labelledby="s-prd">
+      <header class="cs-head">
+        <p class="label" id="s-prd">Requirements</p>
+        <p class="cs-summary">A PRD turned the research into scope, so every design decision traces back to a goal.</p>
+      </header>
+      <div class="cs-body">
+        <p>Before opening Figma, I wrote a product requirements document. Its job was to say what Fitoday is for, what it will deliberately not do, and how I'd know it's working.</p>
+        <ul class="rows">
+          <li><span class="k">Goals</span><span class="v">A fashion-only community without general social media noise, a daily posting habit, and progress people can see over time.</span></li>
+          <li><span class="k">In the MVP</span><span class="v">One post per day with style and item tags, a three-option rating, a daily score stamped on each post, levels every 100 points, search by people, outfits and tags, and private accounts.</span></li>
+          <li><span class="k">Left out on purpose</span><span class="v">Comments, direct messages, video, in-app shopping and AI recommendations, to keep the focus on feedback.<span class="muted">Testing later brought back a narrow version of comments: an optional note attached to a rating.</span></span></li>
+          <li><span class="k">How I'd measure it</span><span class="v">Daily to monthly active users above 40%, the share of users who post every day, and ratings given per active user.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4. V1 -->
+    <section class="cs" aria-labelledby="s-v1">
+      <header class="cs-head">
+        <p class="label" id="s-v1">V1: the core loop</p>
+        <p class="cs-summary">Before designing the whole app, I tested the one interaction it depends on.</p>
+      </header>
+      <div class="cs-body">
+        <p>The riskiest assumption was simple: can people rate an outfit quickly and still say something useful? So V1 was only the feed and the rating. Three options instead of a like and one fit per person per day.</p>
+        <figure class="figure on-white"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_wireframe_mainscreen.webp" alt="Hand-drawn wireframes of the home feed and the rating flow" width="1438" height="494"><figcaption>Wireframes of the feed and the rating flow.</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- 4. TESTING -->
+    <section class="cs" aria-labelledby="s-test">
+      <header class="cs-head">
+        <p class="label" id="s-test">Testing</p>
+        <p class="cs-summary">The rating worked. People also wanted to say why.</p>
+      </header>
+      <div class="cs-body">
+        <p>I ran think-aloud sessions with five participants and watched for where they hesitated or expected something different. Each finding below is paired with what I changed.</p>
+        <ul class="rows">
+          <li><span class="k">Rating was instantly clear</span><span class="v">All five understood the three-option rating with no explanation.<span class="muted">Kept as is.</span></span></li>
+          <li><span class="k">A tap isn't enough</span><span class="v">"I want people to tell me <em>where</em> to improve, not just how good it looks."<span class="muted">Added an optional note after rating.</span></span></li>
+          <li><span class="k">Ratings felt exposing</span><span class="v">One participant didn't want their past ratings visible to anyone.<span class="muted">Added privacy by only showing ratings to the user.</span></span></li>
+          <li><span class="k">No way to undo</span><span class="v">A participant mis-tapped submit and couldn't fix it.<span class="muted">Ratings can be changed during the rating window.</span></span></li>
+        </ul>
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_v1v2.webp" alt="V1 screens before and after the testing changes: optional feedback note and re-rating" width="2400" height="902"><figcaption>Before and after: the optional note, and changing a rating within the window.</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- 5. V2 -->
+    <section class="cs" aria-labelledby="s-v2">
+      <header class="cs-head">
+        <p class="label" id="s-v2">V2: the full product</p>
+        <p class="cs-summary">V1 proved the rating but I was not satisfied with the design and needed a V2 that gives people a reason to open the app every day.</p>
+      </header>
+      <div class="cs-body">
+        <p>To ship, Fitoday needed everything around that moment: a way in, a safe place to post, a reason to come back, and something to show for it over time. I redesigned the whole product and carried the tested decisions forward. (The changes found in V1 testing was still applied.)</p>
+        <div class="facts">
+          <div><div class="n">~100</div><div class="t">screens across V1 and V2</div></div>
+          <div><div class="n">8</div><div class="t">flows, including empty, error and offline states</div></div>
+        </div>
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_onboarding.webp" alt="V2 onboarding and profile setup screens" width="2400" height="1910">
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_flow_overview.webp" alt="Every V2 screen grouped by flow" width="2400" height="2733"><figcaption>All of V2, grouped by flow: onboarding, sign-in, profile setup, posting, feed, discovery, profiles and settings.</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- V2 TESTING -->
+    <section class="cs" aria-labelledby="s-test2">
+      <header class="cs-head">
+        <p class="label" id="s-test2">Testing V2</p>
+        <p class="cs-summary">The same five testers saw their feedback in the product, and one revealed a new need.</p>
+      </header>
+      <div class="cs-body">
+        <p>I tested V2 with the same five participants. That made it a check on whether my changes answered what they'd told me and they responded well to seeing their opinions reflected in the design.</p>
+        <div class="callout">
+          <p class="label">A need I hadn't designed for</p>
+          <p class="pull">One participant wanted a trigger to help them use the app everyday.</p>
+          <p>They wanted a streak feature to maintain their daily usage and come back to the application everyday. This is the next feature I am thinking of and I am putting it into my wishlist for now.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. DECISIONS -->
+    <section class="cs" aria-labelledby="s-decisions">
+      <header class="cs-head">
+        <p class="label" id="s-decisions">Key decisions</p>
+        <p class="cs-summary">Three rules carry the product. I reversed one of them.</p>
+      </header>
+      <div class="cs-body">
+        <ul class="rows">
+          <li><span class="k">One post per day</span><span class="v">Encourages thoughtful posts, keeps the feed calm, and creates a habit people can realistically keep. It serves the PRD goal of daily use.</span></li>
+          <li><span class="k">Three options, not likes</span><span class="v">Likes don't say how to improve. Three options keep rating fast, and the note carries the why.</span></li>
+          <li><span class="k">Feedback with a name on it</span><span class="v">Notes are tied to who wrote them, so feedback is accountable and the poster knows whose taste it reflects.</span></li>
+        </ul>
+        <div class="callout">
+          <p class="label">Where I changed my mind</p>
+          <p class="pull">V1 showed who rated a fit but hid how they rated it. Once notes became the main way to give feedback, that split stopped making sense.</p>
+          <p>A note already says what someone thinks, so hiding their rating next to it was inconsistent. I dropped the hidden-rating rule. The fear of judgement from the research still needed an answer, so I moved protection to the audience level: private accounts, blocking and reporting.</p>
+          <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_voting_system.webp" alt="V1 profile and voters list, showing who voted but not what they voted" width="1805" height="1136"><figcaption>The V1 rule I dropped: the voters list showed who voted, but not what.</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. SYSTEM -->
+    <section class="cs" aria-labelledby="s-system">
+      <header class="cs-head">
+        <p class="label" id="s-system">Visual system</p>
+        <p class="cs-summary">One set of tokens, so about 100 screens feel like one app.</p>
+      </header>
+      <div class="cs-body">
+        <p>For V2 I rebuilt the visual system around tokens for colour, type and spacing: deep navy and white, a serif for headings, and a small set of components. It keeps onboarding, posting and settings consistent, and gives the Flutter build a single reference.</p>
+        <figure class="figure on-white" style="max-width:520px;"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_styleguide.webp" alt="Fitoday V2 style guide: typography, colour palette, spacing, radius and elevation" width="1024" height="2304"><figcaption>Fitoday V2 style guide.</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- 8. BUILD -->
+    <section class="cs" aria-labelledby="s-build">
+      <header class="cs-head">
+        <p class="label" id="s-build">Build status</p>
+        <p class="cs-summary">I'm building it myself, and designing every state first keeps decisions out of the code.</p>
+      </header>
+      <div class="cs-body">
+        <ul class="rows">
+          <li><span class="k">Done</span><span class="v">Research, PRD, V1 testing, full V2 design, V2 testing, authentication and backend security rules.</span></li>
+          <li><span class="k">In progress</span><span class="v">Core Cloud Functions in Firebase.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 9. REFLECTION -->
+    <section class="cs" aria-labelledby="s-reflect">
+      <header class="cs-head">
+        <p class="label" id="s-reflect">Reflection</p>
+        <p class="cs-summary">Most of the experience lives in the edges.</p>
+      </header>
+      <div class="cs-body">
+        <p class="reflection-text">Writing the PRD first meant every decision traced back to a requirement, not a preference. The redesign tested that: I kept what research and testing had earned, like the daily limit and the three-option rating, and let go of the hidden-rating rule once notes made it unnecessary.</p>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <a class="case-next" href="usri.html">
+      <span class="label">Next case study</span>
+      <span class="case-next-title">Student Well-being App</span>
+    </a>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>Designed and coded by Yedam Lee</span>
+    <span>© <span id="year">2026</span></span>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image">
+  <button class="lightbox-close" type="button">Close</button>
+  <img alt="">
+</div>
+
+<script src="js/site.js"></script>
+</body>
+</html>

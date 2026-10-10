@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HiHello | Yedam Lee</title>
+<meta name="description" content="HiHello case study: a digital letter-writing web app with a sealed envelope and a five-day wait, designed, coded, and deployed solo by Yedam Lee." />
+<meta property="og:title" content="HiHello | Yedam Lee" />
+<meta property="og:description" content="A digital letter-writing app, designed, coded, and deployed solo." />
+<meta property="og:image" content="https://ylee862.github.io/portfolio/images/hihello/hihello_mockup.webp" />
+<script>try{if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<a class="skip-link" href="#content">Skip to case study</a>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="nav-logo">Yedam Lee <span>· Product &amp; UX Designer</span></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="index.html#work" aria-current="page">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <!-- Résumé: add your PDF at resume/Yedam_Lee_Resume.pdf -->
+      <a class="nav-resume" href="resume/Yedam_Lee_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+      <button class="theme-toggle" id="themeToggle" type="button">Dark</button>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+  <div class="wrap case-top">
+    <div class="case-crumbs"><a href="index.html#work">← All work</a><span>Case study 03 / 04</span></div>
+    <h1 class="case-title">HiHello</h1>
+
+    <div class="case-intro">
+      <div class="hero-copy">
+        <p class="case-statement">A digital letter-writing app. You pick a postcard, write a note, add up to two photos, then seal it. Your friend can't open it for five days. I designed, coded and deployed it solo to explore how small rituals, not more features, can make a digital moment feel intentional.</p>
+        <div class="hero-actions">
+          <a href="https://hihello.hi862.workers.dev" class="btn btn-solid" target="_blank" rel="noopener">Try the live app ↗</a>
+        </div>
+      </div>
+      <dl class="details">
+        <div class="details-row"><dt>Role</dt><dd>Solo: product design and development</dd></div>
+        <div class="details-row"><dt>Timeline</dt><dd>5 weeks</dd></div>
+        <div class="details-row"><dt>Tools</dt><dd>Figma, Claude Code, Cloudflare</dd></div>
+        <div class="details-row"><dt>Status</dt><dd>Live, used by 4 people so far</dd></div>
+      </dl>
+    </div>
+
+    <figure class="case-cover">
+      <img src="images/hihello/hihello_mockup.webp" alt="HiHello mobile screens: landing, choosing a postcard, writing, adding photos, and the sealed envelope" width="2261" height="1177">
+    </figure>
+
+    <!-- 1. PROBLEM -->
+    <section class="cs" aria-labelledby="s-problem">
+      <header class="cs-head">
+        <p class="label" id="s-problem">Problem</p>
+        <p class="cs-summary">Messages are instant to send, and just as quick to forget.</p>
+      </header>
+      <div class="cs-body">
+        <p class="lede">How might we bring the intention and anticipation of physical letters into digital messaging, without bringing back the hassle of physical mail?</p>
+        <p>Instant messaging removed every step between thinking of someone and reaching them. That's mostly good, but it also erased the anticipation a letter still has. HiHello keeps the convenience of digital and puts a few of those steps back.</p>
+        <div class="compare">
+          <div class="compare-row"><span class="k">Instant message</span><ul class="steps"><li>Think</li><li>Type</li><li>Send</li><li>Read</li></ul></div>
+          <div class="compare-row"><span class="k">Physical letter</span><ul class="steps"><li>Think</li><li>Write</li><li>Personalize</li><li>Seal</li><li>Send</li><li>Wait</li><li>Open</li></ul></div>
+          <div class="compare-row"><span class="k">HiHello</span><ul class="steps on"><li>Choose</li><li>Write</li><li>Personalize</li><li>Seal</li><li>Send</li><li>Wait</li><li>Open</li></ul></div>
+        </div>
+        <p>The goal wasn't to make messaging slower for its own sake. It was to make the waiting part of the experience.</p>
+      </div>
+    </section>
+
+    <!-- 2. EXPLORATION -->
+    <section class="cs" aria-labelledby="s-explore">
+      <header class="cs-head">
+        <p class="label" id="s-explore">Exploration</p>
+        <p class="cs-summary">I listed what makes a letter fun, then cut the parts that are just a chore.</p>
+      </header>
+      <div class="cs-body">
+        <p>Before opening Figma, I wrote down every part of sending a physical letter. Waiting for it to arrive, choosing a pretty card, thinking of the person while writing, adding photos: worth keeping. Going to the post office: cut. Then I sketched by hand to try a few ritual mechanics quickly.</p>
+        <div class="grid-2">
+          <figure class="figure on-white"><img loading="lazy" decoding="async" src="images/hihello/hihello_early_idea_gathering.webp" alt="Handwritten list: what's the fun of sending postcards" width="2182" height="1538"><figcaption>What's fun about sending postcards?</figcaption></figure>
+          <figure class="figure on-white"><img loading="lazy" decoding="async" src="images/hihello/hihello_early_sketches.webp" alt="Hand-drawn sketches of the envelope, postcard and photo pickers" width="2182" height="1538"><figcaption>First sketches of the envelope and pickers.</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. PRINCIPLES -->
+    <section class="cs" aria-labelledby="s-principles">
+      <header class="cs-head">
+        <p class="label" id="s-principles">Principles</p>
+        <p class="cs-summary">Four rules decided which rituals earned their friction.</p>
+      </header>
+      <div class="cs-body">
+        <ul class="rows">
+          <li><span class="k">Sending is intentional</span><span class="v">It should feel like something you made, not another disposable message.</span></li>
+          <li><span class="k">Digital feels tangible</span><span class="v">Envelopes, postcards and photos borrow familiar physical cues.</span></li>
+          <li><span class="k">Personal, not decorated</span><span class="v">Choosing a card and adding photos make the letter feel like yours.</span></li>
+          <li><span class="k">Waiting is the product</span><span class="v">HiHello adds a delay on purpose instead of engineering it away.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4. THE RITUAL -->
+    <section class="cs" aria-labelledby="s-ritual">
+      <header class="cs-head">
+        <p class="label" id="s-ritual">The experience</p>
+        <p class="cs-summary">Choose, write, seal, wait, open. Each step borrows from a real letter.</p>
+      </header>
+      <div class="cs-body">
+        <p class="h3">Start with one person</p>
+        <p>The landing page has one message and one action. Before writing anything, you're already asked to think of someone.</p>
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/hihello/hihello_landing_page.webp" alt="HiHello landing page: share your feelings and thoughts with anyone you love, with a Let's write button" width="2400" height="1357"></figure>
+
+        <p class="h3">Picking a card is picking a mood</p>
+        <p>I designed all six postcard styles and the photo frames in Figma. Choosing one stands in for choosing stationery before you write. It's a short, fixed list on purpose: picking from six is quick, while designing your own card would slow people down before they've written a word.</p>
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/hihello/hihello_postcard_picker.webp" alt="Postcard picker with six styles next to the envelope preview" width="2400" height="1357"></figure>
+
+        <p class="h3">Two photos, on purpose</p>
+        <p>A physical letter can't hold twenty pictures either.</p>
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/hihello/hihello_writing_view.webp" alt="Writing view with two photos added to the envelope" width="2400" height="1363"></figure>
+
+        <p class="h3">"Seal it," not "send it"</p>
+        <p>The final action is sealing the letter. The word brings back the finality of dropping something in a mailbox: once it's sealed, it can't be edited. You then share a link with the person.</p>
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/hihello/hihello_to_be_shared.webp" alt="Sealed envelope with a link to share" width="2400" height="1361"></figure>
+
+        <p class="h3">Visible, but out of reach</p>
+        <p>The recipient sees that an envelope is waiting, but can't open it. Showing that it exists, but not what's inside, is what turns the delay into anticipation instead of a hidden message.</p>
+        <div class="grid-2">
+          <figure class="figure"><img loading="lazy" decoding="async" src="images/hihello/hihello_waiting.webp" alt="Locked envelope: you have mail, come back in 5 days" width="2400" height="1359"><figcaption>Days 1–4: locked.</figcaption></figure>
+          <figure class="figure"><img loading="lazy" decoding="async" src="images/hihello/hihello_ready_to_open.webp" alt="Envelope ready to open" width="2400" height="1361"><figcaption>Day 5: ready to open.</figcaption></figure>
+        </div>
+
+        <p class="h3">Opening it yourself</p>
+        <p>When the wait ends, the recipient opens the envelope themselves instead of just receiving a message, and can save the letter as a PDF.</p>
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/hihello/hihello_opened.webp" alt="Opened letter with photos and a Save as PDF button" width="2400" height="1361"></figure>
+      </div>
+    </section>
+
+    <!-- EARLY FEEDBACK -->
+    <section class="cs" aria-labelledby="s-feedback">
+      <header class="cs-head">
+        <p class="label" id="s-feedback">Early feedback</p>
+        <p class="cs-summary">Friends said they put more thought into what they wrote, which is the behaviour I designed for.</p>
+      </header>
+      <div class="cs-body">
+        <p>Three friends used HiHello to write real letters. Two described exactly what the rituals were meant to do: make sending feel deliberate.</p>
+        <ul class="quotes">
+          <li><q>This is so fun to play with. I sent my friends genuine messages that I thought about before writing.</q><span class="src">Friend, first-time user</span></li>
+          <li><q>I've never written letters to my friends before, but as I was writing I really put my thought into it.</q><span class="src">Friend, first-time user</span></li>
+          <li><q>I hope there's an actual domain for this, and I wish I could upload my own postcard designs.</q><span class="src">Friend, first-time user</span></li>
+        </ul>
+        <ul class="rows">
+          <li><span class="k">Custom domain</span><span class="v">Not yet. It runs on a free Cloudflare address while it's an experiment, so I'm not paying for a domain before it's proven.</span></li>
+          <li><span class="k">Upload your own postcard</span><span class="v">A possible next feature. For now the fixed set keeps choosing fast, but people who want to personalize further may value it.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 5. THE BET -->
+    <section class="cs" aria-labelledby="s-bet">
+      <header class="cs-head">
+        <p class="label" id="s-bet">Open questions</p>
+        <p class="cs-summary">The five-day wait is a hypothesis, not a finding.</p>
+      </header>
+      <div class="cs-body">
+        <p>To be upfront: I didn't do research to validate five days specifically. It's an intentional product experiment. The feedback above is encouraging about the writing, but none of it is about the wait itself, and four people (my friends and me) is too few to answer any of these:</p>
+        <ul class="rows plain">
+          <li><span class="v">Does the wait create anticipation, or just frustration?</span></li>
+          <li><span class="v">Is five days too long? Would 24 hours feel more natural?</span></li>
+          <li><span class="v">Does the recipient understand <em>why</em> they have to wait?</span></li>
+          <li><span class="v">Does anticipation actually make the letter feel more meaningful once it's opened?</span></li>
+        </ul>
+        <div class="callout">
+          <p class="label">What I'd test next</p>
+          <p>A simple A/B comparison of delay lengths (24 hours, 5 days, 14 days) with real senders and recipients, to see whether the wait makes a letter land differently or just annoys people.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. BUILD -->
+    <section class="cs" aria-labelledby="s-build">
+      <header class="cs-head">
+        <p class="label" id="s-build">Build</p>
+        <p class="cs-summary">Designed, coded and deployed solo, end to end.</p>
+      </header>
+      <div class="cs-body">
+        <p>I designed HiHello in Figma and built it as a responsive web app for mobile and desktop, with a small backend API, deployed on a free Cloudflare Workers address. I used Claude Code to move faster through front-end implementation, while making every interaction and layout decision myself.</p>
+        <ul class="steps"><li>Figma</li><li>HTML, CSS, JS</li><li>Backend API</li><li>Cloudflare</li><li>Live</li></ul>
+        <p><a href="https://hihello.hi862.workers.dev" class="btn btn-line" target="_blank" rel="noopener">Send a letter on HiHello ↗</a></p>
+      </div>
+    </section>
+
+    <!-- 7. REFLECTION -->
+    <section class="cs" aria-labelledby="s-reflect">
+      <header class="cs-head">
+        <p class="label" id="s-reflect">Reflection</p>
+        <p class="cs-summary">Designing friction on purpose, when most of my work removes it.</p>
+      </header>
+      <div class="cs-body">
+        <p class="reflection-text">The five-day wait is a bet, and if I had more time, I would test it with a larger group of users.</p>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <a class="case-next" href="wordtropolis.html">
+      <span class="label">Next case study</span>
+      <span class="case-next-title">Wordtropolis</span>
+    </a>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>Designed and coded by Yedam Lee</span>
+    <span>© <span id="year">2026</span></span>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image">
+  <button class="lightbox-close" type="button">Close</button>
+  <img alt="">
+</div>
+
+<script src="js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Student Well-being App | Yedam Lee</title>
+<meta name="description" content="Student well-being app case study: UX research and design for a self-assessment and skill-building app, from a UX research internship." />
+<meta property="og:title" content="Student Well-being App | Yedam Lee" />
+<meta property="og:description" content="UX research and design for a student well-being app that builds skills instead of just logging feelings." />
+<meta property="og:image" content="https://ylee862.github.io/portfolio/images/usri/usri_hero_section.webp" />
+<script>try{if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<a class="skip-link" href="#content">Skip to case study</a>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="nav-logo">Yedam Lee <span>· Product &amp; UX Designer</span></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="index.html#work" aria-current="page">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="nav-resume" href="resume/Yedam_Lee_Resume_F.pdf" target="_blank" rel="noopener">Resume</a>
+      <button class="theme-toggle" id="themeToggle" type="button">Dark</button>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+  <div class="wrap case-top">
+    <div class="case-crumbs"><a href="index.html#work">← All work</a><span>Case study 02 / 04</span></div>
+    <h1 class="case-title case-title--long">Student Well&#8209;being App</h1>
+
+    <div class="case-intro">
+      <p class="case-statement">A student well-being app that goes beyond logging feelings. A short self-assessment finds which of three research-backed competencies a student is weakest in, then a structured path helps them build it. During my internship I owned the research, journey maps and design, with senior UX designers reviewing each round.</p>
+      <dl class="details">
+        <div class="details-row"><dt>Role</dt><dd>UX researcher &amp; designer (intern)</dd></div>
+        <div class="details-row"><dt>Owned</dt><dd>Research, journey maps, UX and Figma design</dd></div>
+        <div class="details-row"><dt>Timeline</dt><dd>17 weeks, summer 2025</dd></div>
+        <div class="details-row"><dt>Team</dt><dd>Senior UX designers (review), education faculty, senior developers</dd></div>
+        <div class="details-row"><dt>Methods</dt><dd>Literature review, surveys, journey mapping, think-aloud testing</dd></div>
+        <div class="details-row"><dt>Status</dt><dd>Design complete, development ongoing</dd></div>
+      </dl>
+    </div>
+
+    <figure class="case-cover">
+      <img src="images/usri/usri_hero_section.webp" alt="Blurred screens of the student well-being app; the final UI is confidential" width="1860" height="1309">
+      <figcaption class="figcap">The final UI is confidential while development continues, so it's blurred here and the flows are shown as diagrams.</figcaption>
+    </figure>
+
+    <!-- 1. PROBLEM -->
+    <section class="cs" aria-labelledby="s-problem">
+      <header class="cs-head">
+        <p class="label" id="s-problem">Problem</p>
+        <p class="cs-summary">Well-being apps help students reflect, but never name the skill they need to build.</p>
+      </header>
+      <div class="cs-body">
+        <p class="lede">Existing apps already help students look back on how they felt, and many suggest actions that might help. What none of them do is tell a student which specific skill they're lacking, so the advice stays general and nothing builds over time.</p>
+        <ul class="quotes">
+          <li><q>Rating my mood feels pointless when nothing changes after.</q><span class="src">Pre-survey, student</span></li>
+          <li><q>The app I'm using is suggesting me tasks to do but I am unsure if that will actually help.</q><span class="src">Pre-survey, student</span></li>
+          <li><q>By the time I realize something's wrong, it's been going on for weeks.</q><span class="src">Pre-survey, student</span></li>
+        </ul>
+        <p>A competitive scan of Headspace, BetterHelp and I Am Sober showed the same gap.</p>
+        <ul class="rows">
+          <li><span class="k">What apps do</span><span class="v">Help students reflect on their feelings and suggest actions that could help them feel better.</span></li>
+          <li><span class="k">What's missing</span><span class="v">None name the competencies behind well-being, or identify which one a student is weakest in and could improve.</span></li>
+          <li><span class="k">Our approach</span><span class="v">Focus on the core competencies the literature links to student well-being, assess each one to find the weakest, then build it through targeted goals, challenges and reflection.</span></li>
+        </ul>
+        <figure class="figure" style="max-width:520px;"><img loading="lazy" decoding="async" src="images/usri/usri_competitive_research.webp" alt="Competitive research table comparing Headspace, BetterHelp and I Am Sober on diagnosis, impact on students, design and UX" width="1012" height="1280"><figcaption>Competitive scan: Headspace, BetterHelp and I Am Sober.</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- 2. FIRST PIVOT -->
+    <section class="cs" aria-labelledby="s-pivot1">
+      <header class="cs-head">
+        <p class="label" id="s-pivot1">First pivot</p>
+        <p class="cs-summary">We started with sleep tracking. The research talked us out of it.</p>
+      </header>
+      <div class="cs-body">
+        <p>Sleep felt like the obvious, safe lever for student well-being, and we got as far as a full sitemap. But the literature review kept pulling us away: sleep only explained part of the picture. Emotion regulation, resilience and social-emotional skills mattered just as much.</p>
+        <p>Sleep tracking was common and we wanted to approach the problem differently.</p>
+        <figure class="figure on-white"><img loading="lazy" decoding="async" src="images/usri/usri_sitemap.webp" alt="Sitemap for the abandoned sleep-tracking direction" width="1929" height="883"><figcaption>The sitemap for the sleep-tracking direction, before we dropped it.</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- 3. INSIGHT -->
+    <section class="cs" aria-labelledby="s-insight">
+      <header class="cs-head">
+        <p class="label" id="s-insight">Insight</p>
+        <p class="cs-summary">Students don't need another journal. They need guided practice in three skills.</p>
+      </header>
+      <div class="cs-body">
+        <p>The literature review pointed to three competencies as the real drivers of student well-being. Logging a feeling builds none of them but a guided practice does.</p>
+        <ul class="rows">
+          <li><span class="k">Emotion regulation</span><span class="v">Noticing and managing your emotions before they build up.</span></li>
+          <li><span class="k">Resilience &amp; adaptability</span><span class="v">Recovering from setbacks and adjusting to change.</span></li>
+          <li><span class="k">Social-emotional regulation</span><span class="v">Handling relationships and asking for support.</span></li>
+        </ul>
+        <p>Before designing any screens, I mapped how each competency would be measured and what progress looks like at each level, based on the literature.</p>
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/usri/usri_competency_levels.webp" alt="Tables defining developing, competent and exemplary levels for each of the three competencies" width="1859" height="780"><figcaption>How competency levels are defined and evaluated.</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- 4. USERS -->
+    <section class="cs" aria-labelledby="s-users">
+      <header class="cs-head">
+        <p class="label" id="s-users">Who it's for</p>
+        <p class="cs-summary">Students who already notice they're struggling, but don't know what to do next.</p>
+      </header>
+      <div class="cs-body">
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/usri/usri_persona.webp" alt="Personas: Jenna Andrews, an emotionally burnt-out fourth-year student, and Michael Lee, a stressed first-year balancing work and school" width="3797" height="1619"><figcaption>Jenna, a burnt-out fourth-year student, and Michael, a first-year balancing work and school.</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- 5. STRUCTURE -->
+    <section class="cs" aria-labelledby="s-structure">
+      <header class="cs-head">
+        <p class="label" id="s-structure">The experience</p>
+        <p class="cs-summary">One self-assessment, one weakest competency, one clear path.</p>
+      </header>
+      <div class="cs-body">
+        <p>Students start with a short self-assessment across the three competencies, which surfaces the one they're weakest in. From there, a loop of personal goals, guided challenges and monthly reflection tracks progress. Instead of free-form logging, the app gives them a starting point and a reason to come back.</p>
+        <div class="grid-2">
+          <figure class="figure on-white"><img loading="lazy" decoding="async" src="images/usri/usri_competency_progression.webp" alt="Diagram: the three competencies feed a loop of personal goal, guided challenge and monthly reflection" width="684" height="783"><figcaption>The progression loop, shown as a diagram since the final UI is confidential.</figcaption></figure>
+          <div>
+            <p class="h3">Low-fidelity first</p>
+          </div>
+        </div>
+        <figure class="figure on-white"><img loading="lazy" decoding="async" src="images/usri/usri_low_fidelity_prototype.webp" alt="Wireframes and low-fidelity prototype screens" width="1899" height="1295"><figcaption>Wireframes (top) and the low-fidelity prototype (bottom).</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- 6. TESTING -->
+    <section class="cs" aria-labelledby="s-test">
+      <header class="cs-head">
+        <p class="label" id="s-test">Testing</p>
+        <p class="cs-summary">We measured whether students thought differently about their emotions, not just whether they finished tasks.</p>
+      </header>
+      <div class="cs-body">
+        <div class="facts">
+          <div><div class="n">18</div><div class="t">students in a round of user testing</div></div>
+          <div><div class="n">72%</div><div class="t">(13 of 18) said the reflection experience would support their daily well-being</div></div>
+        </div>
+        <p>The testing session combined a pre-survey, a think-aloud walkthrough and a post-survey, then we grouped what we heard into what confused people, what worked and what to change.</p>
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/usri/usri_testing_analysis.webp" alt="Testing analysis board with sticky notes under confusion points, what worked and what to change" width="1920" height="1080"><figcaption>Testing analysis: confusion points, what worked, what to change.</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- 7. SECOND PIVOT -->
+    <section class="cs" aria-labelledby="s-pivot2">
+      <header class="cs-head">
+        <p class="label" id="s-pivot2">Second pivot</p>
+        <p class="cs-summary">Testing showed we had added too much. We cut back to the core.</p>
+      </header>
+      <div class="cs-body">
+        <div class="callout">
+          <p class="label">The comment that stopped the team</p>
+          <p class="pull">"This feels like it's lost its purpose. I don't even understand what the app is about."</p>
+          <p>Our first full prototype had multiple tracking views, detailed progress analytics and several features running in parallel. We re-read the literature review against our original goal. Most of what we'd added didn't serve it, so we cut it.</p>
+        </div>
+        <ul class="rows">
+          <li><span class="k">Onboarding</span><span class="v">Redesigned after students expected a traditional mood tracker.</span></li>
+          <li><span class="k">Charts and analytics</span><span class="v">Reduced, so students focus on reflecting instead of reading data.</span></li>
+          <li><span class="k">Social goal-sharing</span><span class="v">Strengthened, after participants described it as motivating.</span></li>
+          <li><span class="k">Reflection prompts</span><span class="v">Expanded, after testing suggested they improved emotional clarity.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 8. SYSTEM -->
+    <section class="cs" aria-labelledby="s-system">
+      <header class="cs-head">
+        <p class="label" id="s-system">Visual system</p>
+        <p class="cs-summary">A style guide kept 100+ screens consistent, and calmer than the first draft.</p>
+      </header>
+      <div class="cs-body">
+        <p>A style guide from the senior designer's colour palette and icon set, so every screen followed the same rules for colour, type and icons. We also moved from the navy low-fidelity look to warmer, calmer colours that suit the subject.</p>
+        <figure class="figure on-white" style="max-width:520px;"><img loading="lazy" decoding="async" src="images/usri/usri_styleguide.webp" alt="Style guide: logo, warm brown palette and typography scale" width="1096" height="1356"></figure>
+      </div>
+    </section>
+
+    <!-- 9. STATUS -->
+    <section class="cs" aria-labelledby="s-status">
+      <header class="cs-head">
+        <p class="label" id="s-status">Status</p>
+        <p class="cs-summary">Research and design are done; the backend and a chatbot are being built.</p>
+      </header>
+      <div class="cs-body">
+        <ul class="rows">
+          <li><span class="k">Done</span><span class="v">Research, design and a round of testing.</span></li>
+          <li><span class="k">In progress</span><span class="v">Backend and chatbot development.</span></li>
+          <li><span class="k">Shared</span><span class="v">Presented at a research-focused virtual conference.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 10. REFLECTION -->
+    <section class="cs" aria-labelledby="s-reflect">
+      <header class="cs-head">
+        <p class="label" id="s-reflect">Reflection</p>
+        <p class="cs-summary">From how people use an interface to why they behave the way they do.</p>
+      </header>
+      <div class="cs-body">
+        <p class="reflection-text">This project changed how I think about UX research. Rather than only asking how users interact with an interface, I got more interested in why they behave the way they do in the first place. That still shapes how I approach product design today.</p>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <a class="case-next" href="hihello.html">
+      <span class="label">Next case study</span>
+      <span class="case-next-title">HiHello</span>
+    </a>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>Designed and coded by Yedam Lee</span>
+    <span>© <span id="year">2026</span></span>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image">
+  <button class="lightbox-close" type="button">Close</button>
+  <img alt="">
+</div>
+
+<script src="js/site.js"></script>
+</body>
+</html>

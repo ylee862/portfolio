@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wordtropolis | Yedam Lee</title>
+<meta name="description" content="Wordtropolis case study: redesigning a spelling game for kids around missions and boss battles, prototyped in Figma and built in Java Swing." />
+<meta property="og:title" content="Wordtropolis | Yedam Lee" />
+<meta property="og:description" content="A gamified spelling game for kids, redesigned around missions and boss battles." />
+<meta property="og:image" content="https://ylee862.github.io/portfolio/images/wordtropolis/word_map.webp" />
+<script>try{if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<a class="skip-link" href="#content">Skip to case study</a>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="nav-logo">Yedam Lee <span>· Product &amp; UX Designer</span></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="index.html#work" aria-current="page">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <!-- Résumé: add your PDF at resume/Yedam_Lee_Resume.pdf -->
+      <a class="nav-resume" href="resume/Yedam_Lee_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+      <button class="theme-toggle" id="themeToggle" type="button">Dark</button>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+  <div class="wrap case-top">
+    <div class="case-crumbs"><a href="index.html#work">← All work</a><span>Case study 04 / 04</span></div>
+    <h1 class="case-title">Wordtropolis</h1>
+
+    <div class="case-intro">
+      <p class="case-statement">A spelling game for young learners that turns practice into missions and boss battles. On a team of six, I set the game's visual direction, built the first mission as the reference for everyone else, and kept the whole game consistent.</p>
+      <dl class="details">
+        <div class="details-row"><dt>Role</dt><dd>Visual direction and UI consistency</dd></div>
+        <div class="details-row"><dt>Timeline</dt><dd>12 weeks</dd></div>
+        <div class="details-row"><dt>Team</dt><dd>6 people, university HCI course</dd></div>
+        <div class="details-row"><dt>Tools</dt><dd>Figma, Java Swing</dd></div>
+      </dl>
+    </div>
+
+    <figure class="case-cover">
+      <img src="images/wordtropolis/word_map.webp" alt="Wordtropolis city map where kids choose a mission" width="1127" height="842">
+    </figure>
+
+    <!-- 1. PROBLEM -->
+    <section class="cs" aria-labelledby="s-problem">
+      <header class="cs-head">
+        <p class="label" id="s-problem">Problem</p>
+        <p class="cs-summary">The original game delivered words, but gave kids no reason to keep going.</p>
+      </header>
+      <div class="cs-body">
+        <p class="lede">Before redesigning anything, we evaluated the original spelling tool and found three failure points.</p>
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/wordtropolis/word_old_game.webp" alt="The original spelling game: Spelling Central with word search, alphabetical and missing-letter activities" width="2400" height="506"><figcaption>The original game, Spelling Central.</figcaption></figure>
+        <ul class="rows">
+          <li><span class="k">Low engagement</span><span class="v">It prioritized delivering content over motivation and reward.</span></li>
+          <li><span class="k">Repetitive</span><span class="v">The same static activities, with no sense of progress, story or challenge.</span></li>
+          <li><span class="k">Unclear feedback</span><span class="v">Kids didn't know what to do next or whether their answer was right.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 2. PRINCIPLES -->
+    <section class="cs" aria-labelledby="s-principles">
+      <header class="cs-head">
+        <p class="label" id="s-principles">Principles</p>
+        <p class="cs-summary">Three ideas from learning science, one for each failure point.</p>
+      </header>
+      <div class="cs-body">
+        <ul class="rows">
+          <li><span class="k">Intrinsic motivation</span><span class="v">Kids engage more when the challenge feels meaningful.<span class="muted">Answers low engagement.</span></span></li>
+          <li><span class="k">Spaced repetition</span><span class="v">Returning to hard words at the right intervals improves retention.<span class="muted">Answers repetitive practice.</span></span></li>
+          <li><span class="k">Multi-sensory feedback</span><span class="v">Visual and audio feedback together speed up learning.<span class="muted">Answers unclear feedback.</span></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. STRUCTURE -->
+    <section class="cs" aria-labelledby="s-structure">
+      <header class="cs-head">
+        <p class="label" id="s-structure">Game structure</p>
+        <p class="cs-summary">Missions are the practice. The boss battle is the mastery check.</p>
+      </header>
+      <div class="cs-body">
+        <p>The team designed the progression before any visual decisions. Kids pick their grade level, then choose missions on a city map. Each mission is a different kind of spelling practice: unscrambling, missing letters, alphabetical order, and listen-and-spell. Clearing them unlocks the final boss.</p>
+        <p>Teachers enter through their own path and can set a custom word list, so the same game works with what the class is actually learning.</p>
+        <div class="grid-2">
+          <figure class="figure on-white"><img loading="lazy" decoding="async" src="images/wordtropolis/word_flow_chart.webp" alt="Flow chart: start, role selection, grade or custom word list, city map, four missions, final boss, end screen" width="900" height="1210"><figcaption>The game arc, from role selection to the final boss.</figcaption></figure>
+          <div>
+            <p class="h3">Why missions</p>
+            <p>A city of missions turns a flat list of activities into a journey with a visible goal, which is what the original game was missing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MY ROLE -->
+    <section class="cs" aria-labelledby="s-role">
+      <header class="cs-head">
+        <p class="label" id="s-role">My role</p>
+        <p class="cs-summary">I set the look, built the first mission as a reference, and kept six people's work consistent.</p>
+      </header>
+      <div class="cs-body">
+        <ul class="rows">
+          <li><span class="k">Set the tone</span><span class="v">I found the pixel art the game is built from, which set its overall look and feel.</span></li>
+          <li><span class="k">Built the reference</span><span class="v">I built the cat-in-the-tree mission first, to show how characters, items and word blocks should be placed. The team reviewed it and agreed on it as the standard.</span></li>
+          <li><span class="k">Kept it consistent</span><span class="v">As teammates built the other missions, I made sure everyone used the same colour scheme, layouts and word blocks, so five builders' screens read as one game.</span></li>
+        </ul>
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/wordtropolis/word_cat_game.webp" alt="The cat-in-the-tree mission: unscramble the letters to rescue the cat" width="1836" height="1349"><figcaption>The cat-in-the-tree mission I built first, which became the template for the others.</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- 4. DECISIONS -->
+    <section class="cs" aria-labelledby="s-decisions">
+      <header class="cs-head">
+        <p class="label" id="s-decisions">Key decisions</p>
+        <p class="cs-summary">Visible goals, difficulty that adapts, and feedback kids can see and hear.</p>
+      </header>
+      <div class="cs-body">
+        <ul class="rows">
+          <li><span class="k">Mission progression</span><span class="v">Learning is structured around visible goals and milestones, so kids can see how far they've come.</span></li>
+          <li><span class="k">Rising difficulty</span><span class="v">The game gets harder each time a kid finishes a round. Words they got wrong come back until they get them right, and then harder words appear.</span></li>
+          <li><span class="k">Multi-sensory feedback</span><span class="v">Visual celebrations and audio cues on correct answers, plus a timer and score so kids always know where they stand.</span></li>
+        </ul>
+        <div class="grid-3">
+          <figure class="figure"><img loading="lazy" decoding="async" src="images/wordtropolis/word_robber.webp" alt="Mission: chase the robber by filling in missing letters" width="1840" height="1385"><figcaption>Story obstacle: a chase gives the mission stakes.</figcaption></figure>
+          <figure class="figure"><img loading="lazy" decoding="async" src="images/wordtropolis/word_broken_bridge.webp" alt="Mission: put words in alphabetical order to fix the bridge" width="1353" height="1022"><figcaption>Progress gate: the bridge stays broken until the words are right.</figcaption></figure>
+          <figure class="figure"><img loading="lazy" decoding="async" src="images/wordtropolis/word_boss_fight.webp" alt="Boss fight against the town mayor" width="1357" height="1015"><figcaption>Boss battle: the mastery check that closes the arc.</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. BUILD -->
+    <section class="cs" aria-labelledby="s-build">
+      <header class="cs-head">
+        <p class="label" id="s-build">Build</p>
+        <p class="cs-summary">A working game, not a mockup, so pacing could be tried for real.</p>
+      </header>
+      <div class="cs-body">
+        <p>We drafted the experience in Figma and built it in Java Swing, so pacing, feedback timing and difficulty could be played rather than imagined. These were judgments made by the team while playing it ourselves; we never tested it with children.</p>
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/wordtropolis/word_draft_to_finalized.webp" alt="Figma draft next to the finished Java Swing screens" width="2400" height="635"><figcaption>Figma draft → Java Swing build.</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- 6. OUTCOME -->
+    <section class="cs" aria-labelledby="s-outcome">
+      <header class="cs-head">
+        <p class="label" id="s-outcome">Outcome</p>
+        <p class="cs-summary">Presented to the class and graded well, but never tested with children.</p>
+      </header>
+      <div class="cs-body">
+        <ul class="rows">
+          <li><span class="k">Shipped</span><span class="v">A fully playable game with four mission types, rising difficulty and multi-sensory feedback.</span></li>
+          <li><span class="k">Evaluated</span><span class="v">Presented to the whole class and graded by the TAs and professor, earning a strong grade.</span></li>
+          <li><span class="k">Not yet</span><span class="v">Tested with children, the actual users.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 7. REFLECTION -->
+    <section class="cs" aria-labelledby="s-reflect">
+      <header class="cs-head">
+        <p class="label" id="s-reflect">Reflection</p>
+        <p class="cs-summary">A tight timeline taught me to decide quickly and defend it clearly.</p>
+      </header>
+      <div class="cs-body">
+        <p class="reflection-text">With more time, I would have explored more advanced adaptive features and, most importantly, tested with children directly.</p>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <a class="case-next" href="fitoday.html">
+      <span class="label">Back to the first case study</span>
+      <span class="case-next-title">Fitoday</span>
+    </a>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>Designed and coded by Yedam Lee</span>
+    <span>© <span id="year">2026</span></span>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image">
+  <button class="lightbox-close" type="button">Close</button>
+  <img alt="">
+</div>
+
+<script src="js/site.js"></script>
+</body>
+</html>
