@@ -4,9 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Fitoday | Yedam Lee</title>
-<meta name="description" content="Fitoday case study: a social fashion app for honest outfit feedback, researched, designed end to end, and built solo by Yedam Lee." />
+<meta name="description" content="Fitoday case study: a daily outfit log with levels, ratings and feedback, pivoted after a market check so it works even with few users. Researched, designed and built solo by Yedam Lee." />
 <meta property="og:title" content="Fitoday | Yedam Lee" />
-<meta property="og:description" content="A social fashion app for honest outfit feedback, from research to a full product design." />
+<meta property="og:description" content="From a social outfit-rating app to an outfit diary: research, a pivot decision, and privacy-first product design." />
 <meta property="og:image" content="https://ylee862.github.io/portfolio/images/fitoday/fitoday_hero_mockup.webp" />
 <script>try{if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,18 +36,33 @@
     <h1 class="case-title">Fitoday</h1>
 
     <div class="case-intro">
-      <p class="case-statement">A social fashion app where you post today's outfit and get feedback you can learn from, not just likes. I took it from research and a PRD through testing, then redesigned it from one core interaction into a complete product.</p>
+      <p class="case-statement">A social fashion app where you log what you wear each day, level up, and grow your style with feedback from the community. </p>
       <dl class="details">
         <div class="details-row"><dt>Role</dt><dd>Solo: research, product, UI, build</dd></div>
         <div class="details-row"><dt>Timeline</dt><dd>June 2026 – ongoing</dd></div>
-        <div class="details-row"><dt>Platform</dt><dd>iOS, built in Flutter</dd></div>
-        <div class="details-row"><dt>Tools</dt><dd>Figma, Claude Design, Flutter, Firebase</dd></div>
-        <div class="details-row"><dt>Status</dt><dd>Design complete, build in progress</dd></div>
+        <div class="details-row"><dt>Platform</dt><dd>iOS, Expo (React Native) + Supabase</dd></div>
+        <div class="details-row"><dt>Tools</dt><dd>Figma, Claude Code</dd></div>
+        <div class="details-row"><dt>Status</dt><dd>V3 prototype in user testing</dd></div>
       </dl>
     </div>
 
-    <figure class="case-cover">
-      <img src="images/fitoday/fitoday_hero_mockup.webp" alt="Fitoday V2 screens: today's feed with the three-option rating, a fit's results, and a profile" width="2400" height="971">
+    <section class="brief" aria-label="Project at a glance">
+      <div class="brief-item">
+        <p class="label">Problem</p>
+        <p class="brief-text">People want honest feedback on their outfits, and an easy way to keep track of what they wear.</p>
+      </div>
+      <div class="brief-item">
+        <p class="label">Solution</p>
+        <p class="brief-text"><strong>A daily outfit log.</strong> Log what you wore, come back to level up, and <strong>rate and give feedback</strong> to each other to grow your style.</p>
+      </div>
+      <div class="brief-item">
+        <p class="label">The pivot</p>
+        <p class="brief-text">V2 was built on ratings, so new users with few connections got nothing back. V3 keeps every feature but makes logging the core.</p>
+      </div>
+    </section>
+
+    <figure class="case-cover has-tag">
+      <img src="images/fitoday/fitoday_hero_mockup_v3.webp" alt="Fitoday V3 screens" width="2400" height="971">
     </figure>
 
     <!-- 1. PROBLEM -->
@@ -58,167 +73,159 @@
       </header>
       <div class="cs-body">
         <p class="lede">It started with a personal question. Scrolling Instagram, I kept wondering why some outfits looked put together and mine didn't. What I wanted wasn't more inspiration. It was honest feedback I could learn from.</p>
-        <p>To check whether that was just me, I ran a 12-person survey and reviewed the platforms people already use for fashion. The pattern was clear: there are plenty of places to post an outfit and almost nowhere built for constructive feedback on it. People also told me why they don't ask for it: they're afraid of being judged.</p>
+        <p class="lede">To check whether that was just me, I ran a 12-person survey and reviewed the platforms people already use for fashion. The pattern was clear: there are plenty of places to post an outfit and almost nowhere built for constructive feedback on it. People also told me why they don't ask for it: they're afraid of being judged.</p>
 
         <ul class="quotes">
           <li><q>I am scared that people will judge me. I don't think my fashion sense is good enough.</q><span class="src">Survey participant</span></li>
-          <li><q>Pinterest used to be a kind of safe place… now it's filled with AI generated content I can never seem to get rid of.</q><span class="src">Pinterest app review</span></li>
-          <li><q>Another version of TikTok, depressing, clickbait, I wouldn't use it again.</q><span class="src">Lemon8 app review</span></li>
+          <li><q>I am not an influencer, but I still want to improve my style.</q><span class="src">Survey participant</span></li>
+          <li><q>Posting on instagram everyday feels like a performance.</q><span class="src">Survey participant</span></li>
         </ul>
-
-        <div class="table-wrap">
-          <table class="table">
-            <thead><tr><th>Platform</th><th>Good at</th><th>Falls short for outfit feedback</th></tr></thead>
-            <tbody>
-              <tr><td>Instagram</td><td>Large audience</td><td>Fashion is buried under unrelated content and algorithmic noise</td></tr>
-              <tr><td>Pinterest</td><td>Inspiration</td><td>No way to get feedback on your own outfit</td></tr>
-              <tr><td>TikTok</td><td>Discovery, virality</td><td>Hard to track your own style over time</td></tr>
-              <tr><td>BeReal</td><td>Daily posting habit</td><td>Not about fashion at all</td></tr>
-            </tbody>
-          </table>
+        <div class="facts">
+          <div><div class="n">3.8M</div><div class="t">members in r/OUTFITS, where feedback requests are the top post type</div></div>
+          <div><div class="n">6M+</div><div class="t">members in r/malefashionadvice, with weekly “What I'm Wearing” threads</div></div>
         </div>
-        <p class="figcap">None of the existing platforms are built around structured feedback.</p>
+        <p>Instagram, Pinterest and TikTok are built for showing outfits, not improving them.</p>
       </div>
     </section>
 
-    <!-- 2. USERS -->
-    <section class="cs" aria-labelledby="s-users">
+    <!-- 2. V1-V2 DESIGN -->
+    <section class="cs" aria-labelledby="s-design">
       <header class="cs-head">
-        <p class="label" id="s-users">Who it's for</p>
-        <p class="cs-summary">Two people who want feedback: one confident, one hesitant.</p>
+        <p class="label" id="s-design">V1–V2: A feedback app</p>
+        <p class="cs-summary">Post one outfit a day. Others rate it in one tap.</p>
       </header>
       <div class="cs-body">
-        <p>Chloe already posts her outfits and wants feedback that's more useful than "nice pic". Marcus wants to dress better but finds asking for advice intimidating. The product has to work for both: quick enough for Chloe's followers to give real feedback, and safe enough that Marcus will post at all.</p>
-        <div class="stack">
-          <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_chloe_persona.webp" alt="Persona: Chloe Lin, 23, content creator and fashion blogger" width="1920" height="1080"><figcaption>Chloe Lin, fashion creator.</figcaption></figure>
-          <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_marcus_persona.webp" alt="Persona: Marcus Vance, 26, marketing associate" width="1920" height="1080"><figcaption>Marcus Vance, style seeker.</figcaption></figure>
+        <p class="lede">I designed for two people: Chloe, who posts and wants better feedback than “nice pic”, and Marcus, who wants to dress better but is afraid to ask.</p>
+        <div class="grid-2">
+          <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_chloe_persona.webp" alt="Persona: Chloe Lin, 23, content creator and fashion blogger" width="1920" height="1080"><figcaption>Chloe, fashion creator.</figcaption></figure>
+          <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_marcus_persona.webp" alt="Persona: Marcus Vance, 26, marketing associate" width="1920" height="1080"><figcaption>Marcus, style seeker.</figcaption></figure>
         </div>
-      </div>
-    </section>
-
-    <!-- 3. REQUIREMENTS -->
-    <section class="cs" aria-labelledby="s-prd">
-      <header class="cs-head">
-        <p class="label" id="s-prd">Requirements</p>
-        <p class="cs-summary">A PRD turned the research into scope, so every design decision traces back to a goal.</p>
-      </header>
-      <div class="cs-body">
-        <p>Before opening Figma, I wrote a product requirements document. Its job was to say what Fitoday is for, what it will deliberately not do, and how I'd know it's working.</p>
         <ul class="rows">
-          <li><span class="k">Goals</span><span class="v">A fashion-only community without general social media noise, a daily posting habit, and progress people can see over time.</span></li>
-          <li><span class="k">In the MVP</span><span class="v">One post per day with style and item tags, a three-option rating, a daily score stamped on each post, levels every 100 points, search by people, outfits and tags, and private accounts.</span></li>
-          <li><span class="k">Left out on purpose</span><span class="v">Comments, direct messages, video, in-app shopping and AI recommendations, to keep the focus on feedback.<span class="muted">Testing later brought back a narrow version of comments: an optional note attached to a rating.</span></span></li>
-          <li><span class="k">How I'd measure it</span><span class="v">Daily to monthly active users above 40%, the share of users who post every day, and ratings given per active user.</span></li>
+          <li><span class="k">One outfit a day</span><span class="v">Thoughtful posts, a calm feed, a habit people can keep.</span></li>
+          <li><span class="k">Three options, not likes</span><span class="v"><em>Improve</em>, <em>Okay</em> or <em>Love it</em>. Fast to tap, more useful than a like.</span></li>
+          <li><span class="k">24 hours per post</span><span class="v">Instead of a midnight cutoff that punishes late posters.</span></li>
         </ul>
+        <figure class="figure on-white"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_wireframe_mainscreen.webp" alt="Hand-drawn wireframes of the home feed and the rating flow" width="1438" height="494"><figcaption>V1 wireframes: the feed and the rating.</figcaption></figure>
       </div>
     </section>
 
-    <!-- 4. V1 -->
-    <section class="cs" aria-labelledby="s-v1">
-      <header class="cs-head">
-        <p class="label" id="s-v1">V1: the core loop</p>
-        <p class="cs-summary">Before designing the whole app, I tested the one interaction it depends on.</p>
-      </header>
-      <div class="cs-body">
-        <p>The riskiest assumption was simple: can people rate an outfit quickly and still say something useful? So V1 was only the feed and the rating. Three options instead of a like and one fit per person per day.</p>
-        <figure class="figure on-white"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_wireframe_mainscreen.webp" alt="Hand-drawn wireframes of the home feed and the rating flow" width="1438" height="494"><figcaption>Wireframes of the feed and the rating flow.</figcaption></figure>
-      </div>
-    </section>
-
-    <!-- 4. TESTING -->
+    <!-- 3. TESTING -->
     <section class="cs" aria-labelledby="s-test">
       <header class="cs-head">
-        <p class="label" id="s-test">Testing</p>
-        <p class="cs-summary">The rating worked. People also wanted to say why.</p>
+        <p class="label" id="s-test">User testing</p>
+        <p class="cs-summary">The rating worked. People wanted to say why, and a reason to come back.</p>
       </header>
       <div class="cs-body">
-        <p>I ran think-aloud sessions with five participants and watched for where they hesitated or expected something different. Each finding below is paired with what I changed.</p>
+        <p class="lede">Two rounds of think-aloud testing, V1 then V2, with the same five people.</p>
         <ul class="rows">
-          <li><span class="k">Rating was instantly clear</span><span class="v">All five understood the three-option rating with no explanation.<span class="muted">Kept as is.</span></span></li>
-          <li><span class="k">A tap isn't enough</span><span class="v">"I want people to tell me <em>where</em> to improve, not just how good it looks."<span class="muted">Added an optional note after rating.</span></span></li>
-          <li><span class="k">Ratings felt exposing</span><span class="v">One participant didn't want their past ratings visible to anyone.<span class="muted">Added privacy by only showing ratings to the user.</span></span></li>
-          <li><span class="k">No way to undo</span><span class="v">A participant mis-tapped submit and couldn't fix it.<span class="muted">Ratings can be changed during the rating window.</span></span></li>
+          <li><span class="k">Rating was instantly clear</span><span class="v">All five understood it with no explanation.<span class="muted">Kept as is.</span></span></li>
+          <li><span class="k">A tap isn't enough</span><span class="v">“I want people to tell me <em>where</em> to improve.”<span class="muted">Added an optional note, visible only to the poster.</span></span></li>
+          <li><span class="k">No way to undo</span><span class="v">A participant mis-tapped and couldn't fix it.<span class="muted">Ratings can be changed for 24 hours.</span></span></li>
+          <li><span class="k">A reason to return</span><span class="v">One participant asked for a streak.<span class="muted">Parked in the backlog. It later became the core of V3.</span></span></li>
         </ul>
-        <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_v1v2.webp" alt="V1 screens before and after the testing changes: optional feedback note and re-rating" width="2400" height="902"><figcaption>Before and after: the optional note, and changing a rating within the window.</figcaption></figure>
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_v1v2.webp" alt="V1 screens before and after the testing changes: optional feedback note and re-rating" width="2400" height="902"><figcaption>Before and after: the optional note, and changing a rating.</figcaption></figure>
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_flow_overview.webp" alt="Every V2 screen grouped by flow" width="2400" height="2733"><figcaption>V2: about 100 screens across 8 flows, including empty, error and offline states.</figcaption></figure>
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_onboarding_v2.webp" alt="Every V2 screen grouped by flow" width="2400" height="2733"></figure>
       </div>
     </section>
 
-    <!-- 5. V2 -->
-    <section class="cs" aria-labelledby="s-v2">
+    <!-- 4. MARKET CHECK -->
+    <section class="cs" aria-labelledby="s-market">
       <header class="cs-head">
-        <p class="label" id="s-v2">V2: the full product</p>
-        <p class="cs-summary">V1 proved the rating but I was not satisfied with the design and needed a V2 that gives people a reason to open the app every day.</p>
+        <p class="label" id="s-market">Market check</p>
+        <p class="cs-summary">Users liked the interaction. But I hadn't planned for an app with few users.</p>
       </header>
       <div class="cs-body">
-        <p>To ship, Fitoday needed everything around that moment: a way in, a safe place to post, a reason to come back, and something to show for it over time. I redesigned the whole product and carried the tested decisions forward. (The changes found in V1 testing were still applied.)</p>
+        <p class="lede">Before writing code, I checked which outfit apps survive and where users leave.</p>
+        <ul class="rows">
+          <li><span class="k">Similar apps don't last</span><span class="v">Lookbook.nu went offline in 2023. Go Try It On reached 400,000 users and still shut down.</span></li>
+          <li><span class="k">No plan for few users</span><span class="v">A score needed 5 ratings. New users with no connections would post, get nothing back, and leave.</span></li>
+        </ul>
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_timeline.webp" alt="Timeline from 2008 to 2026 of outfit feedback products: Lookbook.nu offline 2023, Fashism closed, Go Try It On shut down 2013, Sidewalk AI rater inactive since 2023, AuraRate launched 2026 with 1K+ downloads, and a wave of AI raters from 2024" width="2400" height="1526"><figcaption>Outfit feedback products, 2008–2026.</figcaption></figure>
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_cold_start.webp" alt="Chart: share of posts reaching 5 ratings by average ratings per post. 2 ratings on average gives 5%, 3 gives 19%, 5 gives 56%, 8 gives 90%" width="2400" height="1554"><figcaption>An illustrative model of the cold start problem, not measured data.</figcaption></figure>
+        <div class="callout">
+          <p class="label">My mistake</p>
+          <p class="pull">I tested whether people liked the product, but not whether it would hold up with few users, or in the market.</p>
+          <p>Next time, I will ensure the market check comes before the first wireframe. However, as I caught it before code, the only cost was a PRD rewrite, not a rebuilt app.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. PIVOT -->
+    <section class="cs" aria-labelledby="s-pivot">
+      <header class="cs-head">
+        <p class="label" id="s-pivot">The pivot</p>
+        <p class="cs-summary">Same features, new core: give every user a reason to come back, even with no followers.</p>
+      </header>
+      <div class="cs-body">
+        <p class="lede">I asked what would keep a user who has no connections yet. My own habit answered: I took outfit photos every day, then lost them in my camera roll.</p>
         <div class="facts">
-          <div><div class="n">~100</div><div class="t">screens across V1 and V2</div></div>
-          <div><div class="n">8</div><div class="t">flows, including empty, error and offline states</div></div>
+          <div><div class="n">~25%</div><div class="t">of clothes in UK wardrobes unworn for a year (WRAP, 6,000+ adults)</div></div>
+          <div><div class="n">52K</div><div class="t">people in r/TodayIWore, posting what they wore each day</div></div>
         </div>
-        <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_onboarding.webp" alt="V2 onboarding and profile setup screens" width="2400" height="1910">
-        <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_flow_overview.webp" alt="Every V2 screen grouped by flow" width="2400" height="2733"><figcaption>All of V2, grouped by flow: onboarding, sign-in, profile setup, posting, feed, discovery, profiles and settings.</figcaption></figure>
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_tracking.webp" alt="Comparison of how people track outfits: camera roll is easy to capture but has no calendar; closet apps have calendars and stats but require cataloging first; spreadsheets are manual with no photos; Fitoday is one photo a day plus a searchable calendar" width="2400" height="1216"><figcaption>Nothing is both effortless to log and easy to look back on.</figcaption></figure>
+        <ul class="rows">
+          <li><span class="k">New core</span><span class="v">Daily logging: log, look back, and level up with streaks.</span></li>
+          <li><span class="k">Kept, already tested</span><span class="v">Ratings, feedback notes and levels. Share an entry and the community helps you grow.</span></li>
+          <li><span class="k">New primary user</span><span class="v">Sam, a style tracker. Chloe moves to the community layer.</span></li>
+        </ul>
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_personas_v3.webp" alt="Two proto-personas: Sam Ortiz, a style tracker who wants to avoid repeating outfits and uses the diary privately; Chloe Lin, a fashion creator who shares chosen entries for feedback" width="2400" height="1604"><figcaption>V3 proto-personas, from secondary research.</figcaption></figure>
       </div>
     </section>
 
-    <!-- V2 TESTING -->
-    <section class="cs" aria-labelledby="s-test2">
+    <!-- 6. V3 DESIGN -->
+    <section class="cs" aria-labelledby="s-v3">
       <header class="cs-head">
-        <p class="label" id="s-test2">Testing V2</p>
-        <p class="cs-summary">The same five testers saw their feedback in the product, and one revealed a new need.</p>
-      </header>
-      <div class="cs-body">
-        <p>I tested V2 with the same five participants. That made it a check on whether my changes answered what they'd told me.</p>
-        <div class="callout">
-          <p class="label">A need I hadn't designed for</p>
-          <p class="pull">One participant wanted a trigger to help them use the app everyday.</p>
-          <p>They wanted a streak feature to maintain their daily usage and come back to the application everyday. This is the next feature I am thinking of and I am putting it into my wishlist for now.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. DECISIONS -->
-    <section class="cs" aria-labelledby="s-decisions">
-      <header class="cs-head">
-        <p class="label" id="s-decisions">Key decisions</p>
-        <p class="cs-summary">Three rules carry the product. I reversed one of them.</p>
+        <p class="label" id="s-v3">V3 prototype</p>
+        <p class="cs-summary">Log every day, level up, and share for feedback when you want it.</p>
       </header>
       <div class="cs-body">
         <ul class="rows">
-          <li><span class="k">One post per day</span><span class="v">Encourages thoughtful posts, keeps the feed calm, and creates a habit people can realistically keep. It serves the PRD goal of daily use.</span></li>
-          <li><span class="k">Three options, not likes</span><span class="v">Likes don't say how to improve. Three options keep rating fast, and the note carries the why.</span></li>
-          <li><span class="k">Feedback with a name on it</span><span class="v">Notes are tied to who wrote them, so feedback is accountable and the poster knows whose taste it reflects.</span></li>
+          <li><span class="k">Log in seconds</span><span class="v">A photo, then three taps or fewer.</span></li>
+          <li><span class="k">Look back</span><span class="v">A month calendar, stats, and “last worn” search.</span></li>
+          <li><span class="k">Pick an audience</span><span class="v">Only me, Followers or Public, per entry. Private by default.</span></li>
+          <li><span class="k">Level up</span><span class="v">Points for logging and streaks. Rating and giving feedback earn extra.</span></li>
         </ul>
-        <div class="callout">
-          <p class="label">Where I changed my mind</p>
-          <p class="pull">V1 showed who rated a fit but hid how they rated it. Once notes became the main way to give feedback, that split stopped making sense.</p>
-          <p>A note already says what someone thinks, so hiding their rating next to it was inconsistent. I dropped the hidden-rating rule. The fear of judgement from the research still needed an answer, so I moved protection to the audience level: private accounts, blocking and reporting.</p>
-          <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_voting_system.webp" alt="V1 profile and voters list, showing who voted but not what they voted" width="1805" height="1136"><figcaption>The V1 rule I dropped: the voters list showed who voted, but not what.</figcaption></figure>
+
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_main_flow_v3.webp" alt="V3 main flow" width="2400" height="1686"></figure>
+
+        <div class="slots">
+          <div class="slot" role="img"><figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_v3_log.webp" alt="Lo-fi logging flow: take a photo, add optional details and choose visibility, then see the entry in the calendar with a streak" width="2400" height="1686"><figcaption>The logging</figcaption></figure></div>
+          <div class="slot" role="img"><figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_v3_calendar.webp" alt="V3 calendar screen" width="2400" height="1686"><figcaption>The calendar</figcaption></figure></div>
+          <div class="slot" role="img"><figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_v3_search.webp" alt="V3 last worn search screen" width="2400" height="1686"><figcaption>The last worn search</figcaption></figure></div>
+          <div class="slot" role="img"><figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_v3_profile.webp" alt="V3 profile screen" width="2400" height="1686"><figcaption>The profile</figcaption></figure></div>
         </div>
       </div>
     </section>
 
-    <!-- 7. SYSTEM -->
-    <section class="cs" aria-labelledby="s-system">
+    <!-- 7. VALIDATING V3 -->
+    <section class="cs" aria-labelledby="s-validate">
       <header class="cs-head">
-        <p class="label" id="s-system">Visual system</p>
-        <p class="cs-summary">One set of tokens, so about 100 screens feel like one app.</p>
+        <p class="label" id="s-validate">V3 user testing</p>
+        <p class="cs-summary">The prototype is done. This time I want a bigger sample.</p>
+        <div class="cs-tags cs-status"><span class="ver ver--now">In progress</span></div>
       </header>
       <div class="cs-body">
-        <p>For V2 I rebuilt the visual system around tokens for colour, type and spacing: deep navy and white, a serif for headings, and a small set of components. It keeps onboarding, posting and settings consistent, and gives the Flutter build a single reference.</p>
-        <figure class="figure on-white" style="max-width:520px;"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_styleguide.webp" alt="Fitoday V2 style guide: typography, colour palette, spacing, radius and elevation" width="1024" height="2304"><figcaption>Fitoday V2 style guide.</figcaption></figure>
+        <p class="lede">The feedback features were tested in V1–V2. Logging is the new core, so it needs its own round, with more than five people.</p>
+        <ul class="rows">
+          <li><span class="k">Method</span><span class="v">A large group of AI-simulated users for breadth, plus a few real users to check the findings.</span></li>
+          <li><span class="k">Questions</span><span class="v">Does logging really take seconds? Would someone with no followers keep coming back?</span></li>
+          <li><span class="k">Results</span><span class="v muted">Coming soon.</span></li>
+        </ul>
       </div>
     </section>
 
-    <!-- 8. BUILD -->
+    <!-- 8. BUILD PLAN -->
     <section class="cs" aria-labelledby="s-build">
       <header class="cs-head">
-        <p class="label" id="s-build">Build status</p>
-        <p class="cs-summary">I'm building it myself, and designing every state first keeps decisions out of the code.</p>
+        <p class="label" id="s-build">Build plan</p>
+        <p class="cs-summary">The stack and safety rules are set. Code starts once testing confirms the design.</p>
       </header>
       <div class="cs-body">
         <ul class="rows">
-          <li><span class="k">Done</span><span class="v">Research, PRD, V1 testing, full V2 design, V2 testing, authentication and backend security rules.</span></li>
-          <li><span class="k">In progress</span><span class="v">Core Cloud Functions in Firebase.</span></li>
+          <li><span class="k">Stack</span><span class="v">Expo + Supabase</span></li>
+          <li><span class="k">Safety first</span><span class="v">Security and policy docs written before code: reporting, blocking, moderation, no tracking SDKs, birth date never stored.</span></li>
+          <li><span class="k">Then</span><span class="v">Build, TestFlight, App Store.</span></li>
         </ul>
       </div>
     </section>
@@ -227,18 +234,18 @@
     <section class="cs" aria-labelledby="s-reflect">
       <header class="cs-head">
         <p class="label" id="s-reflect">Reflection</p>
-        <p class="cs-summary">Most of the experience lives in the edges.</p>
+        <p class="cs-summary">It's really hard to validate a product without a real market and I shouldn't assume it will work.</p>
       </header>
       <div class="cs-body">
-        <p class="reflection-text">Writing the PRD first meant every decision traced back to a requirement, not a preference. The redesign tested that: I kept what research and testing had earned, like the daily limit and the three-option rating, and let go of the hidden-rating rule once notes made it unnecessary.</p>
+        <p class="reflection-text">This project taught me that a product cannot be built in one sitting. Understanding the market and user needs is crucial before any development begins.</p>
       </div>
     </section>
   </div>
 
   <div class="wrap">
-    <a class="case-next" href="usri.html">
+    <a class="case-next" href="wordtropolis.html">
       <span class="label">Next case study</span>
-      <span class="case-next-title">Student Well-being App</span>
+      <span class="case-next-title">Wordtropolis</span>
     </a>
   </div>
 </main>
