@@ -42,7 +42,7 @@
         <div class="details-row"><dt>Timeline</dt><dd>June 2026 – ongoing</dd></div>
         <div class="details-row"><dt>Platform</dt><dd>iOS, Expo (React Native) + Supabase</dd></div>
         <div class="details-row"><dt>Tools</dt><dd>Figma, Claude Code</dd></div>
-        <div class="details-row"><dt>Status</dt><dd>V3 prototype in user testing</dd></div>
+        <div class="details-row"><dt>Status</dt><dd>V3.1 tested with AI, build next</dd></div>
       </dl>
     </div>
 
@@ -62,7 +62,7 @@
     </section>
 
     <figure class="case-cover has-tag">
-      <img src="images/fitoday/fitoday_hero_mockup_v3.webp" alt="Fitoday V3 screens" width="2400" height="971">
+      <img src="images/fitoday/fitoday_hero_no_text.webp" alt="Fitoday V3 screens" width="2400" height="971">
     </figure>
 
     <!-- 1. PROBLEM -->
@@ -188,30 +188,25 @@
         </ul>
 
         <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_main_flow_v3.webp" alt="V3 main flow" width="2400" height="1686"></figure>
-
-        <div class="slots">
-          <div class="slot" role="img"><figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_v3_log.webp" alt="Lo-fi logging flow: take a photo, add optional details and choose visibility, then see the entry in the calendar with a streak" width="2400" height="1686"><figcaption>The logging</figcaption></figure></div>
-          <div class="slot" role="img"><figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_v3_calendar.webp" alt="V3 calendar screen" width="2400" height="1686"><figcaption>The calendar</figcaption></figure></div>
-          <div class="slot" role="img"><figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_v3_search.webp" alt="V3 last worn search screen" width="2400" height="1686"><figcaption>The last worn search</figcaption></figure></div>
-          <div class="slot" role="img"><figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_v3_profile.webp" alt="V3 profile screen" width="2400" height="1686"><figcaption>The profile</figcaption></figure></div>
-        </div>
       </div>
     </section>
 
-    <!-- 7. VALIDATING V3 -->
+    <!-- 7. AI USER TESTING -->
     <section class="cs" aria-labelledby="s-validate">
       <header class="cs-head">
-        <p class="label" id="s-validate">V3 user testing</p>
-        <p class="cs-summary">The prototype is done. This time I want a bigger sample.</p>
-        <div class="cs-tags cs-status"><span class="ver ver--now">In progress</span></div>
+        <p class="label" id="s-validate">AI user testing</p>
+        <p class="cs-summary">Few people to test with, so before coding I tested with AI, to see the design through eyes other than mine.</p>
       </header>
       <div class="cs-body">
-        <p class="lede">The feedback features were tested in V1–V2. Logging is the new core, so it needs its own round, with more than five people.</p>
+        <p class="lede">Two rounds of AI-simulated usability testing on the Figma screens: 8 personas, from an ideal user to a skeptic, a beginner and an accessibility-focused user, each trying the same 5 tasks.</p>
         <ul class="rows">
-          <li><span class="k">Method</span><span class="v">A large group of AI-simulated users for breadth, plus a few real users to check the findings.</span></li>
-          <li><span class="k">Questions</span><span class="v">Does logging really take seconds? Would someone with no followers keep coming back?</span></li>
-          <li><span class="k">Results</span><span class="v muted">Coming soon.</span></li>
+          <li><span class="k">What worked</span><span class="v">The primary action. Every persona found “Log today's outfit” right away.</span></li>
+          <li><span class="k">Biggest problem</span><span class="v">The payoff depended on tagging items, but tagging was framed as optional. Photo-only logs left search and stats empty.</span></li>
+          <li><span class="k">Also found</span><span class="v">No camera screen designed, a confusing privacy choice, and ratings shown as a ★ average before you rate.</span></li>
         </ul>
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_ai_round1_fixes.webp" alt="Five before-and-after pairs from round 1 to V3.1: ratings hidden until you rate with distinct icons; privacy choices that say where new entries start; a designed camera with framing guide and timer; one-tap item chips on Save; and Search my diary listing items with last-worn dates" width="2400" height="4064"><figcaption>What I changed after round 1.</figcaption></figure>
+        <p>Round 2 re-tested the new screens with the same personas. It also caught a problem I had just created: the new item chips pushed “Who can see this” below the fold, right when it matters most.</p>
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_ai_round2_fixes.webp" alt="Two follow-up fixes after round 2: Who can see this pinned above Save on every log, and a What did you wear field on the first log when there are no past items" width="2400" height="1590"><figcaption>Follow-up fixes after round 2.</figcaption></figure>
       </div>
     </section>
 
@@ -219,13 +214,13 @@
     <section class="cs" aria-labelledby="s-build">
       <header class="cs-head">
         <p class="label" id="s-build">Build plan</p>
-        <p class="cs-summary">The stack and safety rules are set. Code starts once testing confirms the design.</p>
+        <p class="cs-summary">The design held up in two rounds. Next: build it, then test with real users.</p>
       </header>
       <div class="cs-body">
         <ul class="rows">
           <li><span class="k">Stack</span><span class="v">Expo + Supabase</span></li>
           <li><span class="k">Safety first</span><span class="v">Security and policy docs written before code: reporting, blocking, moderation, no tracking SDKs, birth date never stored.</span></li>
-          <li><span class="k">Then</span><span class="v">Build, TestFlight, App Store.</span></li>
+          <li><span class="k">Then</span><span class="v">Build, a TestFlight beta with real users, then the App Store.</span></li>
         </ul>
       </div>
     </section>
