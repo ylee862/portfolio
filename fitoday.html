@@ -70,8 +70,8 @@
     </figure>
 
     <ol class="phases" aria-label="Project progress">
-      <li class="done"><a href="#s-problem"><span class="st">Done</span><span class="ph">Survey + PRD</span></a></li>
-      <li class="done"><a href="#s-history"><span class="st">Done</span><span class="ph">V1–V2, tested with 5 people</span></a></li>
+      <li class="done"><a href="#s-pivot"><span class="st">Done</span><span class="ph">Survey + PRD</span></a></li>
+      <li class="done"><a href="#s-pivot"><span class="st">Done</span><span class="ph">V1–V2, tested with 5 people</span></a></li>
       <li class="done"><a href="#s-pivot"><span class="st">Done</span><span class="ph">Pivot to a diary</span></a></li>
       <li class="done"><a href="#s-validate"><span class="st">Done</span><span class="ph">V3, AI-simulated testing</span></a></li>
       <li class="now"><a href="#s-build"><span class="st">Now</span><span class="ph">Built, in App Store review</span></a></li>
@@ -92,7 +92,7 @@
           <li><span class="k">Level up</span><span class="v">Points for logging and streaks. Rating and giving feedback earn extra.</span></li>
         </ul>
 
-        <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_main_flow_v3.webp" alt="V3 main flow" width="3200" height="1600"><figcaption>The main flow: log, look back, share.</figcaption></figure>
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_main_flow_v3.webp" alt="V3 main flow" width="3200" height="1600"><figcaption>The main flow: log, look back, share. Sample photos.</figcaption></figure>
 
         <div class="slots">
           <figure class="shot"><video src="images/fitoday/fitoday_log_today.mp4" poster="images/fitoday/fitoday_log_today_poster.webp" autoplay muted loop playsinline preload="metadata" width="900" height="1950" aria-label="Screen recording: open the camera, take a photo, tap two items, save; today fills in on the calendar"></video><figcaption><span class="slot-name">Log today</span><span class="slot-note">Photo + 3 taps or fewer</span></figcaption></figure>
@@ -101,19 +101,38 @@
           <figure class="shot"><video src="images/fitoday/fitoday_visibility.mp4" poster="images/fitoday/fitoday_visibility_poster.webp" autoplay muted loop playsinline preload="metadata" width="900" height="1950" aria-label="Screen recording: changing who can see an entry from Only me to Followers"></video><figcaption><span class="slot-name">Who can see this</span><span class="slot-note">Private by default</span></figcaption></figure>
         </div>
 
-        <p class="h3">Design system</p>
+      </div>
+    </section>
+
+    <section class="cs" aria-labelledby="s-ds">
+      <header class="cs-head">
+        <p class="label" id="s-ds">Design system</p>
+        <p class="cs-summary">One set of components for every screen and state.</p>
+      </header>
+      <div class="cs-body">
         <p>About 30 reusable Figma components (Auto Layout, Variants) cover every screen, including empty, error and offline states.</p>
         <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_components.webp" alt="Fitoday component library: type scale, icons, buttons, chips, toggle and segmented control, rating, calendar day, navigation, toast, offline and error states, visibility selector, and the colour palette" width="3200" height="1332"><figcaption>The component library, captured from the built app.</figcaption></figure>
       </div>
     </section>
 
-    <!-- 1. PROBLEM -->
-    <section class="cs" aria-labelledby="s-problem">
+    <!-- PIVOT (short) -->
+    <section class="cs" aria-labelledby="s-pivot">
       <header class="cs-head">
-        <p class="label" id="s-problem">Problem</p>
-        <p class="cs-summary">Fashion apps are built for sharing outfits, not for improving them.</p>
+        <p class="label" id="s-pivot">The pivot</p>
+        <p class="cs-summary">V1–V2 tested well but needed a crowd. V3 keeps every feature and makes daily logging the core, so the app works with zero followers.</p>
       </header>
       <div class="cs-body">
+        <ul class="rows">
+          <li><span class="k">New core</span><span class="v">Daily logging: log, look back, and level up with streaks.</span></li>
+          <li><span class="k">Kept, already tested</span><span class="v">Ratings, feedback notes and levels. Share an entry and the community helps you grow.</span></li>
+          <li><span class="k">New primary user</span><span class="v">Sam, a style tracker. Chloe moves to the community layer.</span></li>
+        </ul>
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_tracking.webp" alt="Comparison of how people track outfits: camera roll is easy to capture but has no calendar; closet apps have calendars and stats but require cataloging first; spreadsheets are manual with no photos; Fitoday is one photo a day plus a searchable calendar" width="2400" height="1260"><figcaption>Nothing is both effortless to log and easy to look back on.</figcaption></figure>
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_personas_v3.webp" alt="Two proto-personas: Sam Ortiz, a style tracker who wants to avoid repeating outfits and uses the diary privately; Chloe Lin, a fashion creator who shares chosen entries for feedback" width="2400" height="1760"><figcaption>V3 proto-personas, from secondary research.</figcaption></figure>
+        <details class="archive">
+          <summary>Background: the problem, V1–V2, user testing and the market check</summary>
+          <div class="archive-body">
+          <p class="h3">Problem: Fashion apps are built for sharing outfits, not for improving them.</p>
         <p class="lede">It started with a personal question. Scrolling Instagram, I kept wondering why some outfits looked put together and mine didn't. What I wanted wasn't more inspiration. It was honest feedback I could learn from.</p>
         <p class="lede">To check whether that was just me, I ran a 12-person survey and reviewed the platforms people already use for fashion. The pattern was clear: there are plenty of places to post an outfit and almost nowhere built for constructive feedback on it. People also told me why they don't ask for it: they're afraid of being judged.</p>
 
@@ -123,22 +142,9 @@
           <li><q>Posting on instagram everyday feels like a performance.</q><span class="src">Survey participant</span></li>
         </ul>
         <div class="facts">
-          <div><div class="n">3.8M</div><div class="t">members in r/OUTFITS, where feedback requests are the top post type</div></div>
           <div><div class="n">6M+</div><div class="t">members in r/malefashionadvice, with weekly “What I'm Wearing” threads</div></div>
         </div>
         <p>Instagram, Pinterest and TikTok are built for showing outfits, not improving them.</p>
-      </div>
-    </section>
-
-    <section class="cs" aria-labelledby="s-history">
-      <header class="cs-head">
-        <p class="label" id="s-history">How I got here</p>
-        <p class="cs-summary">V1–V2 was a rating app that 5 testers understood instantly. A market check showed it would fail new users, so I pivoted before writing code.</p>
-      </header>
-      <div class="cs-body">
-        <details class="archive">
-          <summary>V1–V2 design, user testing and the market check</summary>
-          <div class="archive-body">
           <p class="h3">V1–V2: A feedback app: Post one outfit a day. Others rate it in one tap.</p>
         <p class="lede">I designed for two people: Chloe, who posts and wants better feedback than “nice pic”, and Marcus, who wants to dress better but is afraid to ask.</p>
         <div class="grid-2">
@@ -176,28 +182,6 @@
         </div>
           </div>
         </details>
-      </div>
-    </section>
-
-    <!-- 5. PIVOT -->
-    <section class="cs" aria-labelledby="s-pivot">
-      <header class="cs-head">
-        <p class="label" id="s-pivot">The pivot</p>
-        <p class="cs-summary">Same features, new core: give every user a reason to come back, even with no followers.</p>
-      </header>
-      <div class="cs-body">
-        <p class="lede">I asked what would keep a user who has no connections yet. My own habit answered: I took outfit photos every day, then lost them in my camera roll.</p>
-        <div class="facts">
-          <div><div class="n">~25%</div><div class="t">of clothes in UK wardrobes unworn for a year (WRAP, 6,000+ adults)</div></div>
-          <div><div class="n">52K</div><div class="t">people in r/TodayIWore, posting what they wore each day</div></div>
-        </div>
-        <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_tracking.webp" alt="Comparison of how people track outfits: camera roll is easy to capture but has no calendar; closet apps have calendars and stats but require cataloging first; spreadsheets are manual with no photos; Fitoday is one photo a day plus a searchable calendar" width="2400" height="1260"><figcaption>Nothing is both effortless to log and easy to look back on.</figcaption></figure>
-        <ul class="rows">
-          <li><span class="k">New core</span><span class="v">Daily logging: log, look back, and level up with streaks.</span></li>
-          <li><span class="k">Kept, already tested</span><span class="v">Ratings, feedback notes and levels. Share an entry and the community helps you grow.</span></li>
-          <li><span class="k">New primary user</span><span class="v">Sam, a style tracker. Chloe moves to the community layer.</span></li>
-        </ul>
-        <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_personas_v3.webp" alt="Two proto-personas: Sam Ortiz, a style tracker who wants to avoid repeating outfits and uses the diary privately; Chloe Lin, a fashion creator who shares chosen entries for feedback" width="2400" height="1760"><figcaption>V3 proto-personas, from secondary research.</figcaption></figure>
       </div>
     </section>
 
