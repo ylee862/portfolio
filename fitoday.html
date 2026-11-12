@@ -39,14 +39,14 @@
       <p class="case-statement">An outfit diary where you log what you wear each day, look back on a calendar, level up, and share an entry for feedback from the community when you want it.</p>
       <dl class="details">
         <div class="details-row"><dt>Role</dt><dd>Solo: research, product, UI, build</dd></div>
-        <div class="details-row"><dt>Timeline</dt><dd>June 2026 – ongoing</dd></div>
+        <div class="details-row"><dt>Timeline</dt><dd>June 2026 – present</dd></div>
         <div class="details-row"><dt>Platform</dt><dd>iOS, Expo (React Native) + Supabase</dd></div>
         <div class="details-row"><dt>Tools</dt><dd>Figma, Claude Code</dd></div>
-        <div class="details-row"><dt>Status</dt><dd>V3.1 tested with AI, build next</dd></div>
+        <div class="details-row"><dt>Status</dt><dd>Built and submitted; in App Store review (Nov 2026)</dd></div>
       </dl>
     </div>
 
-    <section class="brief" aria-label="Project at a glance">
+    <section class="brief brief--4" aria-label="Project at a glance">
       <div class="brief-item">
         <p class="label">Problem</p>
         <p class="brief-text">People want honest feedback on their outfits, and an easy way to keep track of what they wear.</p>
@@ -59,11 +59,53 @@
         <p class="label">The pivot</p>
         <p class="brief-text">V2 was built on ratings, so new users with few connections got nothing back. V3 keeps every feature but makes logging the core.</p>
       </div>
+      <div class="brief-item">
+        <p class="label">Where it is now</p>
+        <p class="brief-text"><strong>In App Store review.</strong> Built with Expo + Supabase. Real-user testing starts after launch.</p>
+      </div>
     </section>
 
     <figure class="case-cover has-tag">
       <img src="images/fitoday/fitoday_hero_no_text.webp" alt="Fitoday V3 screens" width="2400" height="971">
     </figure>
+
+    <ol class="phases" aria-label="Project progress">
+      <li class="done"><a href="#s-problem"><span class="st">Done</span><span class="ph">Survey + PRD</span></a></li>
+      <li class="done"><a href="#s-history"><span class="st">Done</span><span class="ph">V1–V2, tested with 5 people</span></a></li>
+      <li class="done"><a href="#s-pivot"><span class="st">Done</span><span class="ph">Pivot to a diary</span></a></li>
+      <li class="done"><a href="#s-validate"><span class="st">Done</span><span class="ph">V3, AI-simulated testing</span></a></li>
+      <li class="now"><a href="#s-build"><span class="st">Now</span><span class="ph">Built, in App Store review</span></a></li>
+      <li class="next"><span class="st">Next</span><span class="ph">Real-user testing</span></li>
+    </ol>
+
+
+    <section class="cs" aria-labelledby="s-v3">
+      <header class="cs-head">
+        <p class="label" id="s-v3">The product</p>
+        <p class="cs-summary">Log every day, level up, and share for feedback when you want it.</p>
+      </header>
+      <div class="cs-body">
+        <ul class="rows">
+          <li><span class="k">Log in seconds</span><span class="v">Take a photo and post it with a caption.</span></li>
+          <li><span class="k">Look back</span><span class="v">A month calendar, stats, and “last worn” search.</span></li>
+          <li><span class="k">Pick an audience</span><span class="v">Only me, Followers or Public, per entry. Private by default.</span></li>
+          <li><span class="k">Level up</span><span class="v">Points for logging and streaks. Rating and giving feedback earn extra.</span></li>
+        </ul>
+
+        <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_main_flow_v3.webp" alt="V3 main flow" width="2400" height="1686"><figcaption>The main flow: log, look back, share.</figcaption></figure>
+
+        <div class="slots">
+          <div class="slot"><span class="slot-tag">Screenshot</span><span class="slot-cap"><span class="slot-name">Log today</span><span class="slot-note">Photo + 3 taps or fewer</span></span></div>
+          <div class="slot"><span class="slot-tag">Screenshot</span><span class="slot-cap"><span class="slot-name">Calendar</span><span class="slot-note">Look back by month</span></span></div>
+          <div class="slot"><span class="slot-tag">Screenshot</span><span class="slot-cap"><span class="slot-name">Last worn</span><span class="slot-note">Search your own diary</span></span></div>
+          <div class="slot"><span class="slot-tag">Screenshot</span><span class="slot-cap"><span class="slot-name">Who can see this</span><span class="slot-note">Private by default</span></span></div>
+        </div>
+
+        <p class="h3">Design system</p>
+        <p>About 30 reusable Figma components (Auto Layout, Variants) cover every screen, including empty, error and offline states.</p>
+        <div class="slot slot--wide"><span class="slot-tag">Image</span><span class="slot-cap"><span class="slot-name">Component library</span><span class="slot-note">Export a frame of the Figma components page here</span></span></div>
+      </div>
+    </section>
 
     <!-- 1. PROBLEM -->
     <section class="cs" aria-labelledby="s-problem">
@@ -88,13 +130,16 @@
       </div>
     </section>
 
-    <!-- 2. V1-V2 DESIGN -->
-    <section class="cs" aria-labelledby="s-design">
+    <section class="cs" aria-labelledby="s-history">
       <header class="cs-head">
-        <p class="label" id="s-design">V1–V2: A feedback app</p>
-        <p class="cs-summary">Post one outfit a day. Others rate it in one tap.</p>
+        <p class="label" id="s-history">How I got here</p>
+        <p class="cs-summary">V1–V2 was a rating app that 5 testers understood instantly. A market check showed it would fail new users, so I pivoted before writing code.</p>
       </header>
       <div class="cs-body">
+        <details class="archive">
+          <summary>V1–V2 design, user testing and the market check</summary>
+          <div class="archive-body">
+          <p class="h3">V1–V2: A feedback app: Post one outfit a day. Others rate it in one tap.</p>
         <p class="lede">I designed for two people: Chloe, who posts and wants better feedback than “nice pic”, and Marcus, who wants to dress better but is afraid to ask.</p>
         <div class="grid-2">
           <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_chloe_persona.webp" alt="Persona: Chloe Lin, 23, content creator and fashion blogger" width="1920" height="1080"><figcaption>Chloe, fashion creator.</figcaption></figure>
@@ -106,16 +151,7 @@
           <li><span class="k">24 hours per post</span><span class="v">Instead of a midnight cutoff that punishes late posters.</span></li>
         </ul>
         <figure class="figure on-white"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_wireframe_mainscreen.webp" alt="Hand-drawn wireframes of the home feed and the rating flow" width="1438" height="494"><figcaption>V1 wireframes: the feed and the rating.</figcaption></figure>
-      </div>
-    </section>
-
-    <!-- 3. TESTING -->
-    <section class="cs" aria-labelledby="s-test">
-      <header class="cs-head">
-        <p class="label" id="s-test">User testing</p>
-        <p class="cs-summary">The rating worked. People wanted to say why, and a reason to come back.</p>
-      </header>
-      <div class="cs-body">
+          <p class="h3">User testing: The rating worked. People wanted to say why, and a reason to come back.</p>
         <p class="lede">Two rounds of think-aloud testing, V1 then V2, with the same five people.</p>
         <ul class="rows">
           <li><span class="k">Rating was instantly clear</span><span class="v">All five understood it with no explanation.<span class="muted">Kept as is.</span></span></li>
@@ -126,16 +162,7 @@
         <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_v1v2.webp" alt="V1 screens before and after the testing changes: optional feedback note and re-rating" width="2400" height="902"><figcaption>Before and after: the optional note, and changing a rating.</figcaption></figure>
         <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_flow_overview.webp" alt="Every V2 screen grouped by flow" width="2400" height="2733"><figcaption>V2: about 100 screens across 8 flows, including empty, error and offline states.</figcaption></figure>
         <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_onboarding_v2.webp" alt="V2 onboarding screens" width="2400" height="2733"></figure>
-      </div>
-    </section>
-
-    <!-- 4. MARKET CHECK -->
-    <section class="cs" aria-labelledby="s-market">
-      <header class="cs-head">
-        <p class="label" id="s-market">Market check</p>
-        <p class="cs-summary">Users liked the interaction. But I hadn't planned for an app with few users.</p>
-      </header>
-      <div class="cs-body">
+          <p class="h3">Market check: Users liked the interaction. But I hadn't planned for an app with few users.</p>
         <p class="lede">Before writing code, I checked which outfit apps survive and where users leave.</p>
         <ul class="rows">
           <li><span class="k">Similar apps don't last</span><span class="v">Lookbook.nu went offline in 2023. Go Try It On reached 400,000 users and still shut down.</span></li>
@@ -143,10 +170,12 @@
         </ul>
         <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_timeline.webp" alt="Timeline from 2008 to 2026 of outfit feedback products: Lookbook.nu offline 2023, Fashism closed, Go Try It On shut down 2013, Sidewalk AI rater inactive since 2023, AuraRate launched 2026 with 1K+ downloads, and a wave of AI raters from 2024" width="2400" height="1526"><figcaption>Outfit feedback products, 2008–2026.</figcaption></figure>
         <div class="callout">
-          <p class="label">My mistake</p>
+          <p class="label">What I'd do differently</p>
           <p class="pull">I tested whether people liked the product, but not whether it would hold up with few users, or in the market.</p>
           <p>Next time, I will ensure the market check comes before the first wireframe. However, as I caught it before code, the only cost was a PRD rewrite, not a rebuilt app.</p>
         </div>
+          </div>
+        </details>
       </div>
     </section>
 
@@ -172,23 +201,6 @@
       </div>
     </section>
 
-    <!-- 6. V3 DESIGN -->
-    <section class="cs" aria-labelledby="s-v3">
-      <header class="cs-head">
-        <p class="label" id="s-v3">V3 prototype</p>
-        <p class="cs-summary">Log every day, level up, and share for feedback when you want it.</p>
-      </header>
-      <div class="cs-body">
-        <ul class="rows">
-          <li><span class="k">Log in seconds</span><span class="v">Take a photo and post it with a caption.</span></li>
-          <li><span class="k">Look back</span><span class="v">A month calendar, stats, and “last worn” search.</span></li>
-          <li><span class="k">Pick an audience</span><span class="v">Only me, Followers or Public, per entry. Private by default.</span></li>
-          <li><span class="k">Level up</span><span class="v">Points for logging and streaks. Rating and giving feedback earn extra.</span></li>
-        </ul>
-
-        <figure class="figure"><img loading="lazy" decoding="async" src="images/fitoday/fitoday_main_flow_v3.webp" alt="V3 main flow" width="2400" height="1686"></figure>
-      </div>
-    </section>
 
     <!-- 7. AI USER TESTING -->
     <section class="cs" aria-labelledby="s-validate">
@@ -209,17 +221,18 @@
       </div>
     </section>
 
-    <!-- 8. BUILD PLAN -->
+    <!-- CHANGED: build plan is now build + launch -->
     <section class="cs" aria-labelledby="s-build">
       <header class="cs-head">
-        <p class="label" id="s-build">Build plan</p>
-        <p class="cs-summary">The design held up in two rounds. Next: build it, then test with real users.</p>
+        <p class="label" id="s-build">Build and launch</p>
+        <p class="cs-summary">Built with Expo + Supabase and submitted to the App Store. Next: test the AI predictions with real users.</p>
       </header>
       <div class="cs-body">
         <ul class="rows">
-          <li><span class="k">Stack</span><span class="v">Expo + Supabase</span></li>
-          <li><span class="k">Safety first</span><span class="v">Security and policy docs written before code: reporting, blocking, moderation, no tracking SDKs, birth date never stored.</span></li>
-          <li><span class="k">Then</span><span class="v">Build, a TestFlight beta with real users, then the App Store.</span></li>
+          <li><span class="k">Stack</span><span class="v">Expo (React Native) + Supabase</span></li>
+          <li><span class="k">Safety first</span><span class="v">Security and policy docs written before code.</span></li>
+          <li><span class="k">Status</span><span class="v">In App Store review (Nov 2026).</span></li>
+          <li><span class="k">Next</span><span class="v">Test with the first real users and compare against the AI-simulated predictions.</span></li>
         </ul>
       </div>
     </section>
@@ -228,10 +241,10 @@
     <section class="cs" aria-labelledby="s-reflect">
       <header class="cs-head">
         <p class="label" id="s-reflect">Reflection</p>
-        <p class="cs-summary">It's really hard to validate a product without a real market and I shouldn't assume it will work.</p>
+        <p class="cs-summary">Test whether a product survives with few users, not just whether people like it.</p>
       </header>
       <div class="cs-body">
-        <p class="reflection-text">This project taught me that a product cannot be built in one sitting. Understanding the market and user needs is crucial before any development begins.</p>
+        <p class="reflection-text">Think-aloud testing told me people liked the rating. It couldn't tell me that new users would post and get nothing back. Next time, the market check comes before the first wireframe.</p>
       </div>
     </section>
   </div>
